@@ -1,0 +1,54 @@
+# Pontos de calibração: decode puro (prefill desagregado), DeepSeek-R1/V3 671B.
+modelo:
+  nome: DeepSeek-R1/V3
+  camadas: 61
+  parametros_totais: 671000000000
+  parametros_ativos: 37000000000
+  kv_dim_por_camada: 576     # MLA: kv_lora_rank 512 + rope 64
+  heads: 128
+  attn_dim_efetiva: 1088     # 576 (scores) + 512 (valores), MLA absorvido
+  rotulo: PUBLICADO
+  fonte: https://huggingface.co/deepseek-ai/DeepSeek-R1/blob/main/config.json
+
+pontos:
+  P1_H100_SGLang_2025_05:
+    gpu: H100_SXM
+    medido_tok_s_gpu: 2788      # 22,3 mil tokens/s por nó de 8 GPUs
+    rotulo: MEDIDO
+    fonte: https://lmsys.org/blog/2025-05-05-large-scale-ep/
+    data: 2025-05
+    contexto_medio: 2000
+    batch_por_gpu: 256          # HIPÓTESE: blog não informa; regime limitado por cálculo
+    ep: 72                      # 9 nós de decode
+    bytes_peso: 1.0             # FP8
+    precisao_moe: fp8
+    precisao_atencao: bf16
+  P2_GB200_SGLang_2025_09:
+    gpu: GB200
+    medido_tok_s_gpu: 13386
+    rotulo: MEDIDO
+    fonte: https://lmsys.org/blog/2025-09-25-gb200-part-2
+    data: 2025-09
+    contexto_medio: 2000
+    batch_por_gpu: 256          # HIPÓTESE
+    ep: 48                      # 12 nós de decode
+    bytes_peso: 0.5625          # NVFP4 com escalas
+    precisao_moe: fp4
+    precisao_atencao: fp8
+  P3_GB300_SGLang_2026_02_longctx:
+    gpu: GB300
+    medido_tok_s_gpu: 226.2
+    rotulo: MEDIDO
+    fonte: https://lmsys.org/blog/2026-02-19-gb300-longctx
+    data: 2026-02
+    contexto_medio: 132000      # 128K de entrada + metade de 8K de saída
+    batch_por_gpu: 40           # publicado no blog
+    ep: 8
+    bytes_peso: 0.5625
+    precisao_moe: fp4
+    precisao_atencao: fp8
+
+gpus:   # pico DENSO por precisão, TFLOP/s; banda TB/s; memória GB
+  H100_SXM: {mem_gb: 80, banda_tb_s: 3.35, bf16: 989, fp8: 1979, fp4: null, rotulo: PUBLICADO}
+  GB200:    {mem_gb: 186, banda_tb_s: 8.0, bf16: 2500, fp8: 5000, fp4: 10000, rotulo: PUBLICADO}
+  GB300:    {mem_gb: 288, banda_tb_s: 8.0, bf16: 2500, fp8: 5000, fp4: 15000, rotulo: ESTIMADO, nota: "FP4 15 PF publicado; FP8/BF16 iguais ao GB200 assumidos"}

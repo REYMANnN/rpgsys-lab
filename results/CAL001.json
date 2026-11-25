@@ -1,0 +1,41 @@
+{
+  "commit": "8b60873307e8c09850af7caeded50a56a335d267",
+  "inputs_sha256": "4294c8c26701a309788045cf21bbce449a3b4cf20a8c012effeb9a61dda8944d",
+  "job": "CAL001",
+  "outputs": {
+    "eta": 0.1814,
+    "pontos": {
+      "P1_H100_SGLang_2025_05": {
+        "cego": false,
+        "erro": -0.0932,
+        "eta_implicito": 0.2,
+        "medido": 2788,
+        "previsto": 2528.1,
+        "regime": "calculo"
+      },
+      "P2_GB200_SGLang_2025_09": {
+        "cego": true,
+        "erro": -0.0454,
+        "eta_implicito": 0.19,
+        "medido": 13386,
+        "previsto": 12777.9,
+        "regime": "calculo"
+      },
+      "P3_GB300_SGLang_2026_02_longctx": {
+        "cego": false,
+        "erro": 0.1028,
+        "eta_implicito": 0.1645,
+        "medido": 226.2,
+        "previsto": 249.5,
+        "regime": "memoria"
+      }
+    },
+    "veredito": "APROVADO"
+  },
+  "outputs_sha256": "ed756065a0f7d8edb604f9f27e8b699b6cf96c08bc3f19d144beaa39f591d0b9",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 8.3e-05,
+  "seed": 0
+}

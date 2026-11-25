@@ -19,7 +19,7 @@ from typing import Any, Callable
 
 def sha256_of(obj: Any) -> str:
     """Hash canônico de um objeto JSON (chaves ordenadas, sem espaços)."""
-    payload = json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    payload = json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False, default=str)
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
@@ -47,7 +47,7 @@ class Manifest:
     outputs: dict = field(default_factory=dict)
 
     def to_json(self) -> str:
-        return json.dumps(asdict(self), sort_keys=True, indent=2, ensure_ascii=False)
+        return json.dumps(asdict(self), sort_keys=True, indent=2, ensure_ascii=False, default=str)
 
 
 def run_job(name: str, fn: Callable[[dict, int], dict], inputs: dict, seed: int, runner: str = "local") -> Manifest:

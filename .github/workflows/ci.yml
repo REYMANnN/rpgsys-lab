@@ -16,6 +16,8 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m pytest -q
       - run: python run_local.py 42 > manifest_github.json && cat manifest_github.json
+      - name: Calibração CAL001 (pré-registrada)
+        run: python -m jobs.calibrate
       - uses: actions/upload-artifact@v4
         with:
           name: manifest-github

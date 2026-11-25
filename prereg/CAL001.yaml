@@ -1,0 +1,30 @@
+# PRÉ-REGISTRO CAL001 — calibração do modelo analítico de decode (fase 2).
+id: CAL001
+data: 2026-11-25
+objetivo: >
+  Verificar se o modelo de decode (roofline de cálculo e memória com uma única
+  eficiência de sistema eta) reproduz throughput publicado de GPUs reais em
+  DeepSeek-R1/V3, antes de ser usado para prever qualquer design nosso.
+modelo: lab/decode_model.py (versão do commit desta calibração)
+parametro_ajustado: "eta (um único número, comum a todas as GPUs)"
+metodo_de_ajuste: "média geométrica do eta implícito nos pontos de calibração"
+regra_de_escolha_dos_pontos: >
+  Cronológica: o ponto mais antigo e o mais recente calibram; o ponto do meio
+  é o cego. Regra fixada para não escolher pontos pelo resultado.
+pontos_de_calibracao: [P1_H100_SGLang_2025_05, P3_GB300_SGLang_2026_02_longctx]
+ponto_cego: P2_GB200_SGLang_2025_09
+criterio:
+  aprovado: "erro <= 20% em cada ponto de calibração E no ponto cego"
+  reprovado: "qualquer erro > 20%"
+controles:
+  - "positivo: uma GPU comparada com ela mesma dá razão 1,000"
+  - "negativo: dobrar a banda de memória num ponto limitado por memória tem que aumentar o throughput previsto; dobrar a banda num ponto limitado por cálculo não pode mudá-lo"
+declaracao_de_contaminacao: >
+  Antes deste arquivo, foi feita uma conta exploratória à mão com os mesmos
+  pontos (sem código versionado). Por isso a escolha dos pontos segue a regra
+  cronológica acima, não o resultado. Registrado para o auditor.
+limite_conhecido: >
+  No GB200, o mesmo hardware teve 7.583, 9.087 e 13.386 tokens/s/GPU com
+  versões diferentes de software (variação de 1,8x). Logo eta mede maturidade
+  de software tanto quanto hardware, e entra nas campanhas como faixa aplicada
+  igualmente aos dois lados.

@@ -36,3 +36,13 @@ python run_local.py 42
 - `prereg/C001.yaml` — primeira campanha: existe design de pilha própria com
   vantagem >= 3x em custo E energia por token contra a melhor GPU comprável?
   Travado por hash em `prereg/LOCK.txt`; a CI falha se ele mudar.
+
+## Fase 2 — modelo de decode calibrado
+
+- `lab/decode_model.py` — roofline de cálculo e memória por passo de decode,
+  com uma única eficiência de sistema `eta`, aplicada igual a todo hardware.
+- `prereg/CAL001.yaml` — regra de calibração travada antes da rodada.
+- `results/CAL001.json` — resultado: APROVADO (erros -9,3%, +10,3% e -4,5% no
+  ponto cego GB200), eta = 0,181.
+- Limite: no mesmo GB200 o software variou 1,8x entre versões; `eta` entra nas
+  campanhas como faixa aplicada aos dois lados.
