@@ -1,0 +1,24 @@
+# PRÉ-REGISTRO S001 — estresse da placa C003 (produto fixo: o vencedor nominal da C003). Escrito antes de rodar.
+id: S001
+data: 2026-11-25
+produto: "HBM4x12 | calc 400 mm² | SRAM 2 GB | AMA tf100 | rede 0,4 TB/s | 8 LPDDR5X | microcanais (C003)"
+definicao_de_consideravelmente_melhor: "custo >= 2,0x E energia >= 2,0x contra a MELHOR GPU de cada critério, em W1 e W2 (mínimo dos quatro números)"
+fatores_um_por_vez:
+  Z_espera_s: [2, 5, 10, 16.8, 30]           # W1 e W2 recebem o mesmo Z
+  preco_hbm_x: [1.0, 1.5, 2.25, 3.0]          # multiplica HBM3E e HBM4; repasse às GPUs 0,5
+  repasse_gpu: [0.0, 0.25, 0.5, 1.0]          # com HBM x2,25
+  nosso_software_x: [1.0, 0.8, 0.6, 0.4]
+  software_gpu_x: [1.0, 1.15, 1.3, 1.5]       # GPUs ficam mais eficientes (software melhora)
+  preco_gpu_x: [1.0, 0.8, 0.7, 0.5]           # Nvidia/AMD cortam preço
+  volume_placas: [50000, 30000, 15000, 5000]
+  nre_usd: [100e6, 200e6, 400e6]
+  contexto_x: [0.5, 1.0, 2.0]
+  potencia_pilha_w: [40, 50, 65, 80]
+  h_microcanal: [600000, 300000, 100000, 30000]
+  lateral_x: [1, 2, 3]
+combinacoes:
+  dupla: "todas as duplas entre os 12 fatores, cada um no seu 3º nível"
+  tempestade_moderada: "todos os fatores no 2º nível ruim ao mesmo tempo"
+  tempestade_severa: "todos no 3º nível ao mesmo tempo"
+saida: "para cada fator, o nível em que a placa deixa de ser consideravelmente melhor (ponto de quebra), e a tabela das duplas"
+regra: "falha térmica (> 90 °C) = placa reprovada naquele cenário"
