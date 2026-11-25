@@ -9,6 +9,7 @@ from pathlib import Path
 
 import pyarrow.parquet as pq
 
+from lab.guards import salvar_resultado
 from lab.manifest import run_job
 from lab.params import prereg_travado
 
@@ -81,5 +82,7 @@ if __name__ == "__main__":
     t = pq.read_table(ROOT / "data" / "lmcache_timing.parquet").to_pydict()
     rows = list(zip(t["session_id"], t["model"], t["pre_gap"], t["output_length"]))
     man = run_job("MED001", lambda i, s: _arred(medir(i, s)), {"rows": rows}, seed=20261125)
-    (ROOT / "results" / "MED001.json").write_text(man.to_json(), encoding="utf-8")
+    import sys as _s
+    rev = _s.argv[1] if len(_s.argv) > 1 else ""
+    salvar_resultado(ROOT / "results" / f"MED001{rev}.json", man.to_json())
     print(json.dumps(man.outputs, indent=1, ensure_ascii=False))

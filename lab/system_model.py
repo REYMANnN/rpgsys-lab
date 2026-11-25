@@ -87,7 +87,9 @@ def avaliar(d: Disp, wl: dict, p: dict, n_max_mult: int = 6) -> Resultado:
         opex = p_media / 1000 * p["H"] * p["p_kwh"] * p["pue"]
         tco = capex + opex
         tokens = tok_s * p["H"] * 3600
-        r = Resultado(True, n, tok_s, t, tco / tokens * 1e6, tok_s / (p_media * p["pue"]), tco)
+        bits = 8 * (bw + B * ctx * kvt)
+        r = Resultado(True, n, tok_s, t, tco / tokens * 1e6, tok_s / (p_media * p["pue"]), tco,
+                      extra={"bits_por_passo": bits, "potencia_media_w": p_media})
         if r.custo_usd_mtok < melhor.custo_usd_mtok:
             melhor = r
     return melhor

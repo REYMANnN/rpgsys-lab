@@ -9,6 +9,7 @@ from dataclasses import replace
 from pathlib import Path
 
 from lab.designs import espaco, placa
+from lab.guards import checar_energia_fisica, checar_vantagem, salvar_resultado
 from lab.manifest import run_job
 from lab.params import load, prereg_travado
 from lab.system_model import Disp, avaliar
@@ -100,7 +101,8 @@ def avaliar_design(P_mem, p, args, wls, refs, restricao_tpp):
         (gc, rc), (ge, re_), _ = refs[w]
         out[w] = dict(A_custo=rc.custo_usd_mtok / r.custo_usd_mtok, A_energia=r.tok_por_j / re_.tok_por_j,
                       n=r.n, custo_usd_mtok=r.custo_usd_mtok, tok_por_j=r.tok_por_j,
-                      gpu_custo=gc, gpu_energia=ge)
+                      gpu_custo=gc, gpu_energia=ge, passo_s=r.passo_s,
+                      bits_por_passo=r.extra.get("bits_por_passo", 0.0), potencia_media_w=r.extra.get("potencia_media_w", 0.0))
     return out
 
 
@@ -180,6 +182,15 @@ def campanha(inputs, seed):
         v = "B_ZONA_CINZA"
     else:
         v = "C_REPROVADO"
+    guardas = []
+    for w in ("W1", "W2"):
+        o = t1.get(w) or {}
+        if o:
+            guardas += checar_vantagem(f"{w}.A_custo", o["A_custo"]) + checar_vantagem(f"{w}.A_energia", o["A_energia"])
+            guardas += checar_energia_fisica(w, o["potencia_media_w"], o["passo_s"], o["bits_por_passo"])
+    if guardas:
+        v = "INVALIDO_GUARDA"
+    res["guardas"] = guardas
     res["veredito"] = {"classe": v, "nota_nominal_min_W1W2": round(nn, 3), "nota_adversa_min_W1W2": round(na, 3), "mc_frac": mc}
     return res
 
@@ -238,5 +249,5 @@ if __name__ == "__main__":
     man = run_job(camp, lambda i, s: _arred(campanha(i, s)), inputs, seed=20261125)
     (ROOT / "results").mkdir(exist_ok=True)
     rev = sys.argv[3] if len(sys.argv) > 3 else ""
-    (ROOT / "results" / f"{camp}{rev}_mc{mc_n}.json").write_text(man.to_json(), encoding="utf-8")
+    salvar_resultado(ROOT / "results" / f"{camp}{rev}_mc{mc_n}.json", man.to_json())
     print(json.dumps(man.outputs["veredito"], indent=2))

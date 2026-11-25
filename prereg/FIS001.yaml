@@ -1,0 +1,24 @@
+# PRÉ-REGISTRO FIS001 — Lab 2 v0: temperatura da pilha HBM com lógica no base die
+# (finalistas da C001b-r1) e densidade de rack. Escrito antes de rodar.
+id: FIS001
+data: 2026-11-25
+pergunta: "A pilha HBM com a lógica de atenção no base die fica abaixo do limite térmico da DRAM?"
+modelo: "lab/fisico.py — condução 1D da base até a placa fria, através de 12 camadas de DRAM"
+limite: "junção da DRAM 95 °C (JEDEC/fornecedores), margem 5 °C -> 90 °C"
+casos:
+  conservador: "todo o calor da pilha (DRAM + lógica) nasce no base die e atravessa as 12 camadas"
+  distribuido: "a lógica nasce no base die; o calor da DRAM é distribuído ao longo da pilha (atravessa metade do caminho, em média)"
+resfriamento: ["líquido direto no chip (placa fria)", "ar (dissipador com aletas)"]
+teste_de_plausibilidade:
+  descricao: "pilha HBM 12-high padrão (sem lógica extra), 40 W, resfriamento líquido"
+  faixa_aceita_C: [50, 85]
+  base: "simulações publicadas de pilhas 12-high: ~60 °C (imec, 2,5D, placa fria ótima) a ~80 °C (FEA de 12 camadas)"
+  natureza: "PLAUSIBILIDADE, não calibração: as fontes não publicam todas as condições"
+criterio_por_design:
+  aprovado: "T nominal <= 90 °C no caso CONSERVADOR com líquido"
+  zona_cinza: "T nominal <= 90 °C só no caso DISTRIBUÍDO com líquido"
+  reprovado: "T nominal > 90 °C também no caso distribuído com líquido"
+monte_carlo: {sorteios: 10000, semente: 20261125, saida: "probabilidade de T <= 90 °C em cada caso"}
+saidas:
+  - "orçamento máximo de potência de lógica por pilha (W) em cada caso"
+  - "densidade de rack a ar (limite 40 kW, faixa 30–50) e potência por placa"

@@ -93,3 +93,25 @@ C001b-r1, melhor design: 12 pilhas HBM4 com atenção no base die (AMA),
 limite de exportação (TPP < 4.800): 8 pilhas HBM4 + AMA, custo 4,09x,
 energia 6,94x. Maior incerteza: Z (54% da variância do custo); preço da HBM4 (17%).
 Controle negativo (mesma placa sem AMA): 2,17x — não passa no critério A.
+
+## Lab 2 v0 — FIS001 (térmico da pilha e rack)
+
+`results/FIS001_mc10000.json`. Veredito do finalista: **ZONA CINZA**.
+- Pilha HBM com a lógica de atenção no base die, resfriamento líquido:
+  96 °C no caso conservador (limite 90 °C com margem), 80 °C no distribuído.
+  Monte Carlo: 22% / 56% dos sorteios abaixo de 90 °C.
+- Orçamento de lógica por pilha: 29 W (conservador) a 49 W (distribuído);
+  o finalista usa 37 W. A ar: reprova (126 °C).
+- Teste de plausibilidade (pilha padrão 40 W, líquido): 51–67 °C, dentro da
+  faixa publicada. Não é calibração: falta medição.
+- Rack: ~34 placas por rack a ar pela potência, mas as pilhas pedem líquido no chip.
+
+## Placar
+
+`python -m jobs.progresso` — hoje: **25,5%** até "engenheiro confirma
+fabricável" (pesos e critérios em `gates/engenheiro.yaml`).
+
+## Riscos abertos que o modelo ainda não cobre
+- Ligação entre as nossas placas (rede entre chips) entra só como custo, sem
+  penalidade de desempenho: favorece a gente. Gate G12.
+- Acesso a base die customizado de HBM (hoje só para gigantes): não é custo, é acesso.

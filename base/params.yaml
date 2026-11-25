@@ -92,3 +92,17 @@ memoria_commodity:
 infra_energia:
   p_infra_w_por_acel: {nominal: 250, low: 150, high: 400, unidade: W, rotulo: ESTIMADO,
      nota: "CPU, RAM, placa de rede e ventilação do servidor + fatia do switch, por acelerador. Aplicado a quem NÃO tem preço/potência de rack (nós, MI355X, H200)"}
+
+# ---- Lab 2 v0 (FIS001) ----
+termico:
+  camadas_dram: {nominal: 12, low: 12, high: 12, unidade: camadas, rotulo: PUBLICADO}
+  espessura_ligacao_um: {nominal: 20, low: 10, high: 30, unidade: µm, rotulo: ESTIMADO, nota: "camada de microbumps/NCF entre dies"}
+  k_ligacao_w_mk: {nominal: 3.0, low: 1.5, high: 6.0, unidade: W/m·K, rotulo: ESTIMADO, critico: true, nota: "condutividade efetiva da camada de ligação com bumps térmicos; ligação híbrida fica no high"}
+  espessura_die_um: {nominal: 40, low: 30, high: 60, unidade: µm, rotulo: ESTIMADO}
+  r_tim_m2k_w: {nominal: 0.00001, low: 0.000005, high: 0.00003, unidade: m²K/W, rotulo: ESTIMADO}
+  h_liquido_w_m2k: {nominal: 300000, low: 100000, high: 300000, unidade: W/m²K, rotulo: PUBLICADO, nota: "imec: placa fria de 30 W/cm²K como melhor caso", fonte: "https://morethanmoore.substack.com/p/solving-the-problems-of-hbm-on-logic"}
+  h_ar_w_m2k: {nominal: 20000, low: 10000, high: 40000, unidade: W/m²K, rotulo: ESTIMADO, nota: "dissipador a ar referido à área da pilha"}
+  area_pilha_mm2: {nominal: 121, low: 100, high: 150, unidade: mm², rotulo: ESTIMADO}
+  t_refrigerante_c: {nominal: 35, low: 25, high: 45, unidade: °C, rotulo: ESTIMADO}
+  t_limite_dram_c: {nominal: 95, low: 95, high: 95, unidade: °C, rotulo: PUBLICADO, fonte: "https://docs.amd.com/r/en-US/xapp1377-heatsinks-thermal/Obtaining-Thermal-and-Power-Targets-to-Use-with-Thermal-Simulation"}
+  limite_rack_ar_kw: {nominal: 40, low: 30, high: 50, unidade: kW, rotulo: PUBLICADO, fonte: "https://www.datacenterknowledge.com/ai-data-centers/ai-rack-density-s-real-limits-power-cooling-failure-risk", nota: "Uptime: ar impraticável acima de ~50 kW; outras fontes 30–40 kW"}

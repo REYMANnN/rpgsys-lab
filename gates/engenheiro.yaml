@@ -1,0 +1,23 @@
+# Placar até a meta: "um engenheiro independente roda o laboratório, lê os logs
+# e conclui que a placa é real e fabricável".
+# status: 1 = cumprido com evidência; 0.5 = parcial (evidência existe, limite aberto); 0 = não.
+# Pesos são julgamento (HIPÓTESE), fixados aqui e só mudam com registro no git.
+gates:
+  - {id: G01, peso: 4,  nome: "Laboratório reproduzível (CI verde; mesmo hash GitHub e Modal)", status: 1, evidencia: ".github/workflows/ci.yml"}
+  - {id: G02, peso: 3,  nome: "Base de premissas rotulada, sem erro bloqueante", status: 1, evidencia: "base/params.yaml"}
+  - {id: G03, peso: 2,  nome: "Erros viram verificações permanentes", status: 1, evidencia: "LICOES.md"}
+  - {id: G04, peso: 6,  nome: "Modelo de desempenho calibrado contra GPUs reais", status: 1, evidencia: "results/CAL001.json"}
+  - {id: G05, peso: 5,  nome: "Carga agêntica medida (tempo de espera, tamanho de resposta)", status: 0.5, evidencia: "results/MED001.json", limite: "dados de benchmark; falta uso real em produção"}
+  - {id: G06, peso: 10, nome: "Campanha econômica com veredito A (>= 3x custo e energia, robusto)", status: 0.5, evidencia: "results/C001b-r1_mc10000.json", limite: "veredito B (zona cinza)"}
+  - {id: G07, peso: 6,  nome: "Térmico da pilha e do chip calibrado contra medição", status: 0, evidencia: "results/FIS001_mc10000.json", limite: "só plausibilidade"}
+  - {id: G08, peso: 6,  nome: "Finalista passa no térmico com margem", status: 0.5, evidencia: "results/FIS001_mc10000.json", limite: "zona cinza: 96 °C no caso conservador"}
+  - {id: G09, peso: 5,  nome: "Arquitetura do finalista especificada (blocos, interfaces, orçamento de área e potência)", status: 0, evidencia: null}
+  - {id: G10, peso: 10, nome: "RTL dos blocos críticos do finalista verificado (testes + prova formal)", status: 0, evidencia: null, limite: "RTL de atenção da AMA antiga existe, mas não é do finalista"}
+  - {id: G11, peso: 8,  nome: "Síntese e layout em PDK aberto com timing fechado (blocos críticos)", status: 0, evidencia: null}
+  - {id: G12, peso: 5,  nome: "Rede entre chips e escala modelada", status: 0, evidencia: null}
+  - {id: G13, peso: 5,  nome: "Software: PyTorch/SGLang rodando sobre o simulador", status: 0, evidencia: null}
+  - {id: G14, peso: 8,  nome: "Placa: esquemático, layout e DRC em formato padrão", status: 0, evidencia: null}
+  - {id: G15, peso: 6,  nome: "Integridade de energia e de sinal da placa", status: 0, evidencia: null}
+  - {id: G16, peso: 4,  nome: "Ar/líquido e rack simulados (CFD) e calibrados", status: 0, evidencia: null}
+  - {id: G17, peso: 4,  nome: "Pacote do engenheiro: um comando reproduz tudo", status: 0, evidencia: null}
+  - {id: G18, peso: 3,  nome: "Revisão por engenheiro independente", status: 0, evidencia: null}

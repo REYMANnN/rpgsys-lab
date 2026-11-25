@@ -1,0 +1,62 @@
+{
+  "commit": "81365e54ef03dd2021e9c36bc3d1fb45744dfbf6",
+  "inputs_sha256": "00219941db550641cedececcc276c93f908dee0cca7c2fbfa8c2150a05c74d06",
+  "job": "FIS001",
+  "outputs": {
+    "com_restricao_tpp:HBM4x8|calc100|sram0|AMA": {
+      "T_ar_conservador_C": 125.9655435473617,
+      "T_ar_distribuido_C": 102.21474888747613,
+      "T_liquido_conservador_C": 96.42284382284382,
+      "T_liquido_distribuido_C": 80.38554778554777,
+      "mc_prob_ok_liquido": {
+        "conservador": 0.2321,
+        "distribuido": 0.5689
+      },
+      "orcamento_logica_ar_conservador_W": 6.3142398286937995,
+      "orcamento_logica_ar_distribuido_W": 26.314239828693797,
+      "orcamento_logica_liquido_conservador_W": 28.59011627906977,
+      "orcamento_logica_liquido_distribuido_W": 48.59011627906977,
+      "p_dram_w": 40.0,
+      "p_logica_w": 36.599999999999994,
+      "placas_por_rack_ar": {
+        "high": 61,
+        "low": 37,
+        "nominal": 49
+      },
+      "veredito": "ZONA_CINZA"
+    },
+    "plausibilidade_ok": true,
+    "plausibilidade_pilha_padrao_40W_liquido_C": {
+      "conservador": 67.07459207459208,
+      "distribuido": 51.03729603729604
+    },
+    "sem_restricao_tpp:HBM4x12|calc200|sram2048|AMA": {
+      "T_ar_conservador_C": 125.9655435473617,
+      "T_ar_distribuido_C": 102.21474888747613,
+      "T_liquido_conservador_C": 96.42284382284382,
+      "T_liquido_distribuido_C": 80.38554778554777,
+      "mc_prob_ok_liquido": {
+        "conservador": 0.2178,
+        "distribuido": 0.5575
+      },
+      "orcamento_logica_ar_conservador_W": 6.3142398286937995,
+      "orcamento_logica_ar_distribuido_W": 26.314239828693797,
+      "orcamento_logica_liquido_conservador_W": 28.59011627906977,
+      "orcamento_logica_liquido_distribuido_W": 48.59011627906977,
+      "p_dram_w": 40.0,
+      "p_logica_w": 36.599999999999994,
+      "placas_por_rack_ar": {
+        "high": 42,
+        "low": 25,
+        "nominal": 34
+      },
+      "veredito": "ZONA_CINZA"
+    }
+  },
+  "outputs_sha256": "582eea8f86b29055c61f1659834867949a84ab44c3f4c6a103c72f58898790f6",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 0.152841,
+  "seed": 20261125
+}
