@@ -40,3 +40,15 @@ H200:
   tdp_w: {valor: 700, rotulo: PUBLICADO}
   preco_usd: {nominal: 27000, low: 22000, high: 32000, rotulo: PUBLICADO, preco_inclui_infra: false}
   nota: "geração anterior; entra porque estoque barato é ameaça real (achado do CERT V3)"
+
+# ---- Fase 3: especificações usadas pelo modelo de sistema (por GPU/slot) ----
+# potencia_slot_w inclui a parte de CPU/rede/switch quando o preço é de rack.
+modelo_sistema:
+  B300:          {mem_gb: 288, banda_tb_s: 8.0,  fp4: 15000, fp8: 5000,  potencia_slot_w: 1400, preco_usd: 86500,  inclui_infra: true,  bytes_peso: 0.5625, rotulo: DERIVADO}
+  MI355X:        {mem_gb: 288, banda_tb_s: 8.0,  fp4: 10066, fp8: 5033,  potencia_slot_w: 1400, preco_usd: 30000,  inclui_infra: false, bytes_peso: 0.5625, rotulo: DERIVADO}
+  Rubin_VR200:   {mem_gb: 288, banda_tb_s: 22.0, fp4: 35000, fp8: 17500, potencia_slot_w: 2780, preco_usd: 108300, inclui_infra: true,  bytes_peso: 0.5625, rotulo: ESTIMADO,
+                  nota: "rack US$7,8M/72; 200 kW/72; FP4 denso ~35 PF e FP8 metade ESTIMADOS"}
+  MI455X_Helios: {mem_gb: 432, banda_tb_s: 23.3, fp4: 40000, fp8: 20000, potencia_slot_w: 2500, preco_usd: 72900,  inclui_infra: true,  bytes_peso: 0.5625, rotulo: ESTIMADO,
+                  nota: "2,9 EF FP4/72 ~40 PF; potência por slot sem fonte (HIPÓTESE)"}
+  H200:          {mem_gb: 141, banda_tb_s: 4.8,  fp4: 1979,  fp8: 1979,  potencia_slot_w: 700,  preco_usd: 27000,  inclui_infra: false, bytes_peso: 1.0, rotulo: PUBLICADO,
+                  nota: "sem FP4: pesos em FP8"}

@@ -1,0 +1,1975 @@
+{
+  "commit": "610b6071ff423c184a9d5ac349aaabef8bdc6651",
+  "inputs_sha256": "4c75ba8240d9880c807ed68dcaee6a077abb530b106622cda44631d5534553ba",
+  "job": "C001",
+  "outputs": {
+    "adverso|com_restricao_tpp": {
+      "gpus": {
+        "W1": {
+          "B300": [
+            15.593,
+            0.046,
+            4
+          ],
+          "H200": [
+            14.637,
+            0.041,
+            9
+          ],
+          "MI355X": [
+            7.464,
+            0.046,
+            4
+          ],
+          "MI455X_Helios": [
+            10.145,
+            0.035,
+            3
+          ],
+          "Rubin_VR200": [
+            19.536,
+            0.024,
+            4
+          ]
+        },
+        "W2": {
+          "B300": [
+            39.735,
+            0.018,
+            7
+          ],
+          "H200": [
+            33.273,
+            0.018,
+            14
+          ],
+          "MI355X": [
+            19.021,
+            0.018,
+            7
+          ],
+          "MI455X_Helios": [
+            25.318,
+            0.014,
+            5
+          ],
+          "Rubin_VR200": [
+            51.219,
+            0.009,
+            7
+          ]
+        },
+        "W3": {
+          "B300": [
+            60.458,
+            0.012,
+            4
+          ],
+          "H200": [
+            50.592,
+            0.012,
+            8
+          ],
+          "MI355X": [
+            28.941,
+            0.012,
+            4
+          ],
+          "MI455X_Helios": [
+            40.493,
+            0.009,
+            3
+          ],
+          "Rubin_VR200": [
+            78.031,
+            0.006,
+            4
+          ]
+        }
+      },
+      "n_designs": 270,
+      "top10": [
+        {
+          "W1": {
+            "A_custo": 0.9182,
+            "A_energia": 2.7293,
+            "custo_usd_mtok": 8.1289,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1259
+          },
+          "W2": {
+            "A_custo": 0.9461,
+            "A_energia": 2.8121,
+            "custo_usd_mtok": 20.1053,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0509
+          },
+          "W3": {
+            "A_custo": 0.9009,
+            "A_energia": 2.6777,
+            "custo_usd_mtok": 32.1266,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0318
+          },
+          "design": "HBM3Ex12|calc50|sram0|plain",
+          "meta": {
+            "area_mm2": 50,
+            "asp": 53563,
+            "bom": 14930,
+            "mfg": 32138,
+            "potencia_w": 697,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.918,
+            "A_energia": 2.724,
+            "custo_usd_mtok": 8.1309,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1256
+          },
+          "W2": {
+            "A_custo": 0.9458,
+            "A_energia": 2.8064,
+            "custo_usd_mtok": 20.1117,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0508
+          },
+          "W3": {
+            "A_custo": 0.9006,
+            "A_energia": 2.6723,
+            "custo_usd_mtok": 32.137,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0318
+          },
+          "design": "HBM3Ex12|calc50|sram64|plain",
+          "meta": {
+            "area_mm2": 66,
+            "asp": 53579,
+            "bom": 14938,
+            "mfg": 32147,
+            "potencia_w": 699,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9173,
+            "A_energia": 2.7082,
+            "custo_usd_mtok": 8.1371,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1249
+          },
+          "W2": {
+            "A_custo": 0.9449,
+            "A_energia": 2.7896,
+            "custo_usd_mtok": 20.1311,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0505
+          },
+          "W3": {
+            "A_custo": 0.8997,
+            "A_energia": 2.6562,
+            "custo_usd_mtok": 32.1684,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0316
+          },
+          "design": "HBM3Ex12|calc50|sram256|plain",
+          "meta": {
+            "area_mm2": 114,
+            "asp": 53627,
+            "bom": 14962,
+            "mfg": 32176,
+            "potencia_w": 703,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9145,
+            "A_energia": 2.647,
+            "custo_usd_mtok": 8.1619,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1221
+          },
+          "W2": {
+            "A_custo": 0.9412,
+            "A_energia": 2.7243,
+            "custo_usd_mtok": 20.2084,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0493
+          },
+          "W3": {
+            "A_custo": 0.8962,
+            "A_energia": 2.5939,
+            "custo_usd_mtok": 32.294,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0308
+          },
+          "design": "HBM3Ex12|calc50|sram1024|plain",
+          "meta": {
+            "area_mm2": 306,
+            "asp": 53820,
+            "bom": 15061,
+            "mfg": 32292,
+            "potencia_w": 720,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9138,
+            "A_energia": 2.5862,
+            "custo_usd_mtok": 8.1684,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1193
+          },
+          "W2": {
+            "A_custo": 0.9432,
+            "A_energia": 2.6695,
+            "custo_usd_mtok": 20.1657,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0483
+          },
+          "W3": {
+            "A_custo": 0.8982,
+            "A_energia": 2.5419,
+            "custo_usd_mtok": 32.2231,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0302
+          },
+          "design": "HBM3Ex12|calc100|sram0|plain",
+          "meta": {
+            "area_mm2": 100,
+            "asp": 53623,
+            "bom": 14960,
+            "mfg": 32174,
+            "potencia_w": 734,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9135,
+            "A_energia": 2.5814,
+            "custo_usd_mtok": 8.1706,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.119
+          },
+          "W2": {
+            "A_custo": 0.9429,
+            "A_energia": 2.6644,
+            "custo_usd_mtok": 20.1721,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0482
+          },
+          "W3": {
+            "A_custo": 0.8979,
+            "A_energia": 2.5371,
+            "custo_usd_mtok": 32.2336,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0302
+          },
+          "design": "HBM3Ex12|calc100|sram64|plain",
+          "meta": {
+            "area_mm2": 116,
+            "asp": 53639,
+            "bom": 14968,
+            "mfg": 32183,
+            "potencia_w": 736,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9128,
+            "A_energia": 2.5671,
+            "custo_usd_mtok": 8.1772,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1184
+          },
+          "W2": {
+            "A_custo": 0.942,
+            "A_energia": 2.6493,
+            "custo_usd_mtok": 20.1915,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0479
+          },
+          "W3": {
+            "A_custo": 0.897,
+            "A_energia": 2.5226,
+            "custo_usd_mtok": 32.265,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.03
+          },
+          "design": "HBM3Ex12|calc100|sram256|plain",
+          "meta": {
+            "area_mm2": 164,
+            "asp": 53687,
+            "bom": 14993,
+            "mfg": 32212,
+            "potencia_w": 740,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9108,
+            "A_energia": 2.5696,
+            "custo_usd_mtok": 8.1949,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1185
+          },
+          "W2": {
+            "A_custo": 0.9365,
+            "A_energia": 2.6419,
+            "custo_usd_mtok": 20.3116,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0478
+          },
+          "W3": {
+            "A_custo": 0.8916,
+            "A_energia": 2.5152,
+            "custo_usd_mtok": 32.4615,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0299
+          },
+          "design": "HBM3Ex12|calc50|sram2048|plain",
+          "meta": {
+            "area_mm2": 562,
+            "asp": 54078,
+            "bom": 15192,
+            "mfg": 32447,
+            "potencia_w": 742,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9098,
+            "A_energia": 2.5114,
+            "custo_usd_mtok": 8.2038,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1158
+          },
+          "W2": {
+            "A_custo": 0.9384,
+            "A_energia": 2.5904,
+            "custo_usd_mtok": 20.2688,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0469
+          },
+          "W3": {
+            "A_custo": 0.8935,
+            "A_energia": 2.4663,
+            "custo_usd_mtok": 32.3905,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0293
+          },
+          "design": "HBM3Ex12|calc100|sram1024|plain",
+          "meta": {
+            "area_mm2": 356,
+            "asp": 53880,
+            "bom": 15092,
+            "mfg": 32328,
+            "potencia_w": 757,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9059,
+            "A_energia": 2.4409,
+            "custo_usd_mtok": 8.2396,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1126
+          },
+          "W2": {
+            "A_custo": 0.9337,
+            "A_energia": 2.5157,
+            "custo_usd_mtok": 20.372,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0455
+          },
+          "W3": {
+            "A_custo": 0.8889,
+            "A_energia": 2.3951,
+            "custo_usd_mtok": 32.558,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0285
+          },
+          "design": "HBM3Ex12|calc100|sram2048|plain",
+          "meta": {
+            "area_mm2": 612,
+            "asp": 54138,
+            "bom": 15223,
+            "mfg": 32483,
+            "potencia_w": 780,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        }
+      ]
+    },
+    "adverso|sem_restricao_tpp": {
+      "gpus": {
+        "W1": {
+          "B300": [
+            15.593,
+            0.046,
+            4
+          ],
+          "H200": [
+            14.637,
+            0.041,
+            9
+          ],
+          "MI355X": [
+            7.464,
+            0.046,
+            4
+          ],
+          "MI455X_Helios": [
+            10.145,
+            0.035,
+            3
+          ],
+          "Rubin_VR200": [
+            19.536,
+            0.024,
+            4
+          ]
+        },
+        "W2": {
+          "B300": [
+            39.735,
+            0.018,
+            7
+          ],
+          "H200": [
+            33.273,
+            0.018,
+            14
+          ],
+          "MI355X": [
+            19.021,
+            0.018,
+            7
+          ],
+          "MI455X_Helios": [
+            25.318,
+            0.014,
+            5
+          ],
+          "Rubin_VR200": [
+            51.219,
+            0.009,
+            7
+          ]
+        },
+        "W3": {
+          "B300": [
+            60.458,
+            0.012,
+            4
+          ],
+          "H200": [
+            50.592,
+            0.012,
+            8
+          ],
+          "MI355X": [
+            28.941,
+            0.012,
+            4
+          ],
+          "MI455X_Helios": [
+            40.493,
+            0.009,
+            3
+          ],
+          "Rubin_VR200": [
+            78.031,
+            0.006,
+            4
+          ]
+        }
+      },
+      "n_designs": 783,
+      "top10": [
+        {
+          "W1": {
+            "A_custo": 0.9182,
+            "A_energia": 2.7293,
+            "custo_usd_mtok": 8.1289,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1259
+          },
+          "W2": {
+            "A_custo": 0.9461,
+            "A_energia": 2.8121,
+            "custo_usd_mtok": 20.1053,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0509
+          },
+          "W3": {
+            "A_custo": 0.9009,
+            "A_energia": 2.6777,
+            "custo_usd_mtok": 32.1266,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0318
+          },
+          "design": "HBM3Ex12|calc50|sram0|plain",
+          "meta": {
+            "area_mm2": 50,
+            "asp": 53563,
+            "bom": 14930,
+            "mfg": 32138,
+            "potencia_w": 697,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.918,
+            "A_energia": 2.724,
+            "custo_usd_mtok": 8.1309,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1256
+          },
+          "W2": {
+            "A_custo": 0.9458,
+            "A_energia": 2.8064,
+            "custo_usd_mtok": 20.1117,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0508
+          },
+          "W3": {
+            "A_custo": 0.9006,
+            "A_energia": 2.6723,
+            "custo_usd_mtok": 32.137,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0318
+          },
+          "design": "HBM3Ex12|calc50|sram64|plain",
+          "meta": {
+            "area_mm2": 66,
+            "asp": 53579,
+            "bom": 14938,
+            "mfg": 32147,
+            "potencia_w": 699,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9173,
+            "A_energia": 2.7082,
+            "custo_usd_mtok": 8.1371,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1249
+          },
+          "W2": {
+            "A_custo": 0.9449,
+            "A_energia": 2.7896,
+            "custo_usd_mtok": 20.1311,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0505
+          },
+          "W3": {
+            "A_custo": 0.8997,
+            "A_energia": 2.6562,
+            "custo_usd_mtok": 32.1684,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0316
+          },
+          "design": "HBM3Ex12|calc50|sram256|plain",
+          "meta": {
+            "area_mm2": 114,
+            "asp": 53627,
+            "bom": 14962,
+            "mfg": 32176,
+            "potencia_w": 703,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9145,
+            "A_energia": 2.647,
+            "custo_usd_mtok": 8.1619,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1221
+          },
+          "W2": {
+            "A_custo": 0.9412,
+            "A_energia": 2.7243,
+            "custo_usd_mtok": 20.2084,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0493
+          },
+          "W3": {
+            "A_custo": 0.8962,
+            "A_energia": 2.5939,
+            "custo_usd_mtok": 32.294,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0308
+          },
+          "design": "HBM3Ex12|calc50|sram1024|plain",
+          "meta": {
+            "area_mm2": 306,
+            "asp": 53820,
+            "bom": 15061,
+            "mfg": 32292,
+            "potencia_w": 720,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9138,
+            "A_energia": 2.5862,
+            "custo_usd_mtok": 8.1684,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1193
+          },
+          "W2": {
+            "A_custo": 0.9432,
+            "A_energia": 2.6695,
+            "custo_usd_mtok": 20.1657,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0483
+          },
+          "W3": {
+            "A_custo": 0.8982,
+            "A_energia": 2.5419,
+            "custo_usd_mtok": 32.2231,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0302
+          },
+          "design": "HBM3Ex12|calc100|sram0|plain",
+          "meta": {
+            "area_mm2": 100,
+            "asp": 53623,
+            "bom": 14960,
+            "mfg": 32174,
+            "potencia_w": 734,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9135,
+            "A_energia": 2.5814,
+            "custo_usd_mtok": 8.1706,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.119
+          },
+          "W2": {
+            "A_custo": 0.9429,
+            "A_energia": 2.6644,
+            "custo_usd_mtok": 20.1721,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0482
+          },
+          "W3": {
+            "A_custo": 0.8979,
+            "A_energia": 2.5371,
+            "custo_usd_mtok": 32.2336,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0302
+          },
+          "design": "HBM3Ex12|calc100|sram64|plain",
+          "meta": {
+            "area_mm2": 116,
+            "asp": 53639,
+            "bom": 14968,
+            "mfg": 32183,
+            "potencia_w": 736,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9128,
+            "A_energia": 2.5671,
+            "custo_usd_mtok": 8.1772,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1184
+          },
+          "W2": {
+            "A_custo": 0.942,
+            "A_energia": 2.6493,
+            "custo_usd_mtok": 20.1915,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0479
+          },
+          "W3": {
+            "A_custo": 0.897,
+            "A_energia": 2.5226,
+            "custo_usd_mtok": 32.265,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.03
+          },
+          "design": "HBM3Ex12|calc100|sram256|plain",
+          "meta": {
+            "area_mm2": 164,
+            "asp": 53687,
+            "bom": 14993,
+            "mfg": 32212,
+            "potencia_w": 740,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9108,
+            "A_energia": 2.5696,
+            "custo_usd_mtok": 8.1949,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1185
+          },
+          "W2": {
+            "A_custo": 0.9365,
+            "A_energia": 2.6419,
+            "custo_usd_mtok": 20.3116,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0478
+          },
+          "W3": {
+            "A_custo": 0.8916,
+            "A_energia": 2.5152,
+            "custo_usd_mtok": 32.4615,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0299
+          },
+          "design": "HBM3Ex12|calc50|sram2048|plain",
+          "meta": {
+            "area_mm2": 562,
+            "asp": 54078,
+            "bom": 15192,
+            "mfg": 32447,
+            "potencia_w": 742,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9098,
+            "A_energia": 2.5114,
+            "custo_usd_mtok": 8.2038,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1158
+          },
+          "W2": {
+            "A_custo": 0.9384,
+            "A_energia": 2.5904,
+            "custo_usd_mtok": 20.2688,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0469
+          },
+          "W3": {
+            "A_custo": 0.8935,
+            "A_energia": 2.4663,
+            "custo_usd_mtok": 32.3905,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0293
+          },
+          "design": "HBM3Ex12|calc100|sram1024|plain",
+          "meta": {
+            "area_mm2": 356,
+            "asp": 53880,
+            "bom": 15092,
+            "mfg": 32328,
+            "potencia_w": 757,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 0.9083,
+            "A_energia": 2.3482,
+            "custo_usd_mtok": 8.2173,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.1083
+          },
+          "W2": {
+            "A_custo": 0.9376,
+            "A_energia": 2.4238,
+            "custo_usd_mtok": 20.2865,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 5,
+            "tok_por_j": 0.0439
+          },
+          "W3": {
+            "A_custo": 0.8928,
+            "A_energia": 2.308,
+            "custo_usd_mtok": 32.4162,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0274
+          },
+          "design": "HBM3Ex12|calc200|sram0|plain",
+          "meta": {
+            "area_mm2": 200,
+            "asp": 53742,
+            "bom": 15021,
+            "mfg": 32245,
+            "potencia_w": 809,
+            "tf_fp4": 1880,
+            "tpp": 7520
+          }
+        }
+      ]
+    },
+    "controles": {
+      "negativo_placa_burra_nota": 0.924,
+      "positivo_gpu_vs_ela_mesma": 1.0
+    },
+    "monte_carlo": {
+      "A_custo_p10_p50_p90": [
+        1.0236,
+        1.2931,
+        1.8697
+      ],
+      "A_energia_p10_p50_p90": [
+        1.744,
+        2.346,
+        3.3776
+      ],
+      "design": "HBM3Ex12|calc50|sram0|AMA",
+      "frac_passa_3x": 0.0026,
+      "sobol_S1_A_custo": {
+        "Z": 0.6417,
+        "eta": 0.0355,
+        "hbm3e_usd_gb": 0.0387,
+        "nre": 0.015,
+        "p_pcb": 0.0042,
+        "p_pkg": 0.0241,
+        "premium": 0.0625,
+        "volume": 0.0445,
+        "w_pilha": 0.0037,
+        "yield": 0.0655
+      },
+      "sobol_S1_A_energia": {
+        "Z": 0.5304,
+        "ama_w": 0.0611,
+        "eta": 0.0281,
+        "gddr7_usd_gb": 0.0032,
+        "hbm4_usd_gb": 0.0024,
+        "nre": 0.0031,
+        "p_vrm": 0.0023,
+        "pj_flop": 0.0037,
+        "premium": 0.0026,
+        "w_pilha": 0.2969
+      },
+      "sorteios": 10000,
+      "validos": 10000
+    },
+    "nominal|com_restricao_tpp": {
+      "gpus": {
+        "W1": {
+          "B300": [
+            12.115,
+            0.059,
+            7
+          ],
+          "H200": [
+            9.908,
+            0.061,
+            13
+          ],
+          "MI355X": [
+            5.8,
+            0.059,
+            7
+          ],
+          "MI455X_Helios": [
+            3.933,
+            0.091,
+            3
+          ],
+          "Rubin_VR200": [
+            6.548,
+            0.071,
+            4
+          ]
+        },
+        "W2": {
+          "B300": [
+            18.711,
+            0.038,
+            7
+          ],
+          "H200": [
+            15.061,
+            0.04,
+            14
+          ],
+          "MI355X": [
+            8.957,
+            0.038,
+            7
+          ],
+          "MI455X_Helios": [
+            8.482,
+            0.042,
+            5
+          ],
+          "Rubin_VR200": [
+            17.115,
+            0.027,
+            7
+          ]
+        },
+        "W3": {
+          "B300": [
+            30.283,
+            0.024,
+            4
+          ],
+          "H200": [
+            25.371,
+            0.024,
+            8
+          ],
+          "MI355X": [
+            14.497,
+            0.024,
+            4
+          ],
+          "MI455X_Helios": [
+            20.257,
+            0.018,
+            3
+          ],
+          "Rubin_VR200": [
+            39.03,
+            0.012,
+            4
+          ]
+        }
+      },
+      "n_designs": 270,
+      "top10": [
+        {
+          "W1": {
+            "A_custo": 2.1673,
+            "A_energia": 3.7183,
+            "custo_usd_mtok": 1.8147,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3402
+          },
+          "W2": {
+            "A_custo": 1.9074,
+            "A_energia": 3.2725,
+            "custo_usd_mtok": 4.447,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1388
+          },
+          "W3": {
+            "A_custo": 1.3652,
+            "A_energia": 2.4484,
+            "custo_usd_mtok": 10.6184,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0581
+          },
+          "design": "HBM3Ex12|calc50|sram0|AMA",
+          "meta": {
+            "area_mm2": 50,
+            "asp": 31328,
+            "bom": 13961,
+            "mfg": 18797,
+            "potencia_w": 763,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1674,
+            "A_energia": 3.7131,
+            "custo_usd_mtok": 1.8146,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3397
+          },
+          "W2": {
+            "A_custo": 1.9067,
+            "A_energia": 3.2665,
+            "custo_usd_mtok": 4.4487,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1386
+          },
+          "W3": {
+            "A_custo": 1.3647,
+            "A_energia": 2.4439,
+            "custo_usd_mtok": 10.6226,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.058
+          },
+          "design": "HBM3Ex12|calc50|sram64|AMA",
+          "meta": {
+            "area_mm2": 66,
+            "asp": 31340,
+            "bom": 13967,
+            "mfg": 18804,
+            "potencia_w": 765,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1676,
+            "A_energia": 3.6975,
+            "custo_usd_mtok": 1.8144,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3383
+          },
+          "W2": {
+            "A_custo": 1.9046,
+            "A_energia": 3.2489,
+            "custo_usd_mtok": 4.4536,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1378
+          },
+          "W3": {
+            "A_custo": 1.3631,
+            "A_energia": 2.4305,
+            "custo_usd_mtok": 10.6353,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0577
+          },
+          "design": "HBM3Ex12|calc50|sram256|AMA",
+          "meta": {
+            "area_mm2": 114,
+            "asp": 31376,
+            "bom": 13986,
+            "mfg": 18826,
+            "potencia_w": 769,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1581,
+            "A_energia": 3.5454,
+            "custo_usd_mtok": 1.8224,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3243
+          },
+          "W2": {
+            "A_custo": 1.8994,
+            "A_energia": 3.1203,
+            "custo_usd_mtok": 4.4659,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1324
+          },
+          "W3": {
+            "A_custo": 1.3595,
+            "A_energia": 2.3346,
+            "custo_usd_mtok": 10.6636,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0554
+          },
+          "design": "HBM3Ex12|calc100|sram0|AMA",
+          "meta": {
+            "area_mm2": 100,
+            "asp": 31375,
+            "bom": 13985,
+            "mfg": 18825,
+            "potencia_w": 800,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1582,
+            "A_energia": 3.5407,
+            "custo_usd_mtok": 1.8223,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3239
+          },
+          "W2": {
+            "A_custo": 1.8987,
+            "A_energia": 3.1149,
+            "custo_usd_mtok": 4.4676,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1321
+          },
+          "W3": {
+            "A_custo": 1.3589,
+            "A_energia": 2.3305,
+            "custo_usd_mtok": 10.6678,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0553
+          },
+          "design": "HBM3Ex12|calc100|sram64|AMA",
+          "meta": {
+            "area_mm2": 116,
+            "asp": 31387,
+            "bom": 13991,
+            "mfg": 18832,
+            "potencia_w": 802,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1585,
+            "A_energia": 3.5267,
+            "custo_usd_mtok": 1.8221,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3226
+          },
+          "W2": {
+            "A_custo": 1.8966,
+            "A_energia": 3.0988,
+            "custo_usd_mtok": 4.4725,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1314
+          },
+          "W3": {
+            "A_custo": 1.3573,
+            "A_energia": 2.3183,
+            "custo_usd_mtok": 10.6804,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.055
+          },
+          "design": "HBM3Ex12|calc100|sram256|AMA",
+          "meta": {
+            "area_mm2": 164,
+            "asp": 31423,
+            "bom": 14010,
+            "mfg": 18854,
+            "potencia_w": 806,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1686,
+            "A_energia": 3.637,
+            "custo_usd_mtok": 1.8136,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3327
+          },
+          "W2": {
+            "A_custo": 1.8962,
+            "A_energia": 3.1801,
+            "custo_usd_mtok": 4.4735,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1349
+          },
+          "W3": {
+            "A_custo": 1.3566,
+            "A_energia": 2.3783,
+            "custo_usd_mtok": 10.6859,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0565
+          },
+          "design": "HBM3Ex12|calc50|sram1024|AMA",
+          "meta": {
+            "area_mm2": 306,
+            "asp": 31520,
+            "bom": 14059,
+            "mfg": 18912,
+            "potencia_w": 786,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1595,
+            "A_energia": 3.4725,
+            "custo_usd_mtok": 1.8213,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3177
+          },
+          "W2": {
+            "A_custo": 1.8882,
+            "A_energia": 3.0362,
+            "custo_usd_mtok": 4.4924,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1288
+          },
+          "W3": {
+            "A_custo": 1.3509,
+            "A_energia": 2.2708,
+            "custo_usd_mtok": 10.731,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0539
+          },
+          "design": "HBM3Ex12|calc100|sram1024|AMA",
+          "meta": {
+            "area_mm2": 356,
+            "asp": 31567,
+            "bom": 14083,
+            "mfg": 18940,
+            "potencia_w": 823,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.17,
+            "A_energia": 3.5604,
+            "custo_usd_mtok": 1.8124,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3257
+          },
+          "W2": {
+            "A_custo": 1.885,
+            "A_energia": 3.0928,
+            "custo_usd_mtok": 4.5,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1312
+          },
+          "W3": {
+            "A_custo": 1.3481,
+            "A_energia": 2.3122,
+            "custo_usd_mtok": 10.7533,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0549
+          },
+          "design": "HBM3Ex12|calc50|sram2048|AMA",
+          "meta": {
+            "area_mm2": 562,
+            "asp": 31713,
+            "bom": 14157,
+            "mfg": 19028,
+            "potencia_w": 808,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1609,
+            "A_energia": 3.4036,
+            "custo_usd_mtok": 1.82,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3114
+          },
+          "W2": {
+            "A_custo": 1.8771,
+            "A_energia": 2.9566,
+            "custo_usd_mtok": 4.5189,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1254
+          },
+          "W3": {
+            "A_custo": 1.3425,
+            "A_energia": 2.2104,
+            "custo_usd_mtok": 10.7985,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0525
+          },
+          "design": "HBM3Ex12|calc100|sram2048|AMA",
+          "meta": {
+            "area_mm2": 612,
+            "asp": 31760,
+            "bom": 14181,
+            "mfg": 19056,
+            "potencia_w": 846,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        }
+      ]
+    },
+    "nominal|sem_restricao_tpp": {
+      "gpus": {
+        "W1": {
+          "B300": [
+            12.115,
+            0.059,
+            7
+          ],
+          "H200": [
+            9.908,
+            0.061,
+            13
+          ],
+          "MI355X": [
+            5.8,
+            0.059,
+            7
+          ],
+          "MI455X_Helios": [
+            3.933,
+            0.091,
+            3
+          ],
+          "Rubin_VR200": [
+            6.548,
+            0.071,
+            4
+          ]
+        },
+        "W2": {
+          "B300": [
+            18.711,
+            0.038,
+            7
+          ],
+          "H200": [
+            15.061,
+            0.04,
+            14
+          ],
+          "MI355X": [
+            8.957,
+            0.038,
+            7
+          ],
+          "MI455X_Helios": [
+            8.482,
+            0.042,
+            5
+          ],
+          "Rubin_VR200": [
+            17.115,
+            0.027,
+            7
+          ]
+        },
+        "W3": {
+          "B300": [
+            30.283,
+            0.024,
+            4
+          ],
+          "H200": [
+            25.371,
+            0.024,
+            8
+          ],
+          "MI355X": [
+            14.497,
+            0.024,
+            4
+          ],
+          "MI455X_Helios": [
+            20.257,
+            0.018,
+            3
+          ],
+          "Rubin_VR200": [
+            39.03,
+            0.012,
+            4
+          ]
+        }
+      },
+      "n_designs": 783,
+      "top10": [
+        {
+          "W1": {
+            "A_custo": 2.1673,
+            "A_energia": 3.7183,
+            "custo_usd_mtok": 1.8147,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3402
+          },
+          "W2": {
+            "A_custo": 1.9074,
+            "A_energia": 3.2725,
+            "custo_usd_mtok": 4.447,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1388
+          },
+          "W3": {
+            "A_custo": 1.3652,
+            "A_energia": 2.4484,
+            "custo_usd_mtok": 10.6184,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0581
+          },
+          "design": "HBM3Ex12|calc50|sram0|AMA",
+          "meta": {
+            "area_mm2": 50,
+            "asp": 31328,
+            "bom": 13961,
+            "mfg": 18797,
+            "potencia_w": 763,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1674,
+            "A_energia": 3.7131,
+            "custo_usd_mtok": 1.8146,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3397
+          },
+          "W2": {
+            "A_custo": 1.9067,
+            "A_energia": 3.2665,
+            "custo_usd_mtok": 4.4487,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1386
+          },
+          "W3": {
+            "A_custo": 1.3647,
+            "A_energia": 2.4439,
+            "custo_usd_mtok": 10.6226,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.058
+          },
+          "design": "HBM3Ex12|calc50|sram64|AMA",
+          "meta": {
+            "area_mm2": 66,
+            "asp": 31340,
+            "bom": 13967,
+            "mfg": 18804,
+            "potencia_w": 765,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1676,
+            "A_energia": 3.6975,
+            "custo_usd_mtok": 1.8144,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3383
+          },
+          "W2": {
+            "A_custo": 1.9046,
+            "A_energia": 3.2489,
+            "custo_usd_mtok": 4.4536,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1378
+          },
+          "W3": {
+            "A_custo": 1.3631,
+            "A_energia": 2.4305,
+            "custo_usd_mtok": 10.6353,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0577
+          },
+          "design": "HBM3Ex12|calc50|sram256|AMA",
+          "meta": {
+            "area_mm2": 114,
+            "asp": 31376,
+            "bom": 13986,
+            "mfg": 18826,
+            "potencia_w": 769,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1581,
+            "A_energia": 3.5454,
+            "custo_usd_mtok": 1.8224,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3243
+          },
+          "W2": {
+            "A_custo": 1.8994,
+            "A_energia": 3.1203,
+            "custo_usd_mtok": 4.4659,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1324
+          },
+          "W3": {
+            "A_custo": 1.3595,
+            "A_energia": 2.3346,
+            "custo_usd_mtok": 10.6636,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0554
+          },
+          "design": "HBM3Ex12|calc100|sram0|AMA",
+          "meta": {
+            "area_mm2": 100,
+            "asp": 31375,
+            "bom": 13985,
+            "mfg": 18825,
+            "potencia_w": 800,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1582,
+            "A_energia": 3.5407,
+            "custo_usd_mtok": 1.8223,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3239
+          },
+          "W2": {
+            "A_custo": 1.8987,
+            "A_energia": 3.1149,
+            "custo_usd_mtok": 4.4676,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1321
+          },
+          "W3": {
+            "A_custo": 1.3589,
+            "A_energia": 2.3305,
+            "custo_usd_mtok": 10.6678,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0553
+          },
+          "design": "HBM3Ex12|calc100|sram64|AMA",
+          "meta": {
+            "area_mm2": 116,
+            "asp": 31387,
+            "bom": 13991,
+            "mfg": 18832,
+            "potencia_w": 802,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1585,
+            "A_energia": 3.5267,
+            "custo_usd_mtok": 1.8221,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3226
+          },
+          "W2": {
+            "A_custo": 1.8966,
+            "A_energia": 3.0988,
+            "custo_usd_mtok": 4.4725,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1314
+          },
+          "W3": {
+            "A_custo": 1.3573,
+            "A_energia": 2.3183,
+            "custo_usd_mtok": 10.6804,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.055
+          },
+          "design": "HBM3Ex12|calc100|sram256|AMA",
+          "meta": {
+            "area_mm2": 164,
+            "asp": 31423,
+            "bom": 14010,
+            "mfg": 18854,
+            "potencia_w": 806,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1686,
+            "A_energia": 3.637,
+            "custo_usd_mtok": 1.8136,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3327
+          },
+          "W2": {
+            "A_custo": 1.8962,
+            "A_energia": 3.1801,
+            "custo_usd_mtok": 4.4735,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1349
+          },
+          "W3": {
+            "A_custo": 1.3566,
+            "A_energia": 2.3783,
+            "custo_usd_mtok": 10.6859,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0565
+          },
+          "design": "HBM3Ex12|calc50|sram1024|AMA",
+          "meta": {
+            "area_mm2": 306,
+            "asp": 31520,
+            "bom": 14059,
+            "mfg": 18912,
+            "potencia_w": 786,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.1595,
+            "A_energia": 3.4725,
+            "custo_usd_mtok": 1.8213,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3177
+          },
+          "W2": {
+            "A_custo": 1.8882,
+            "A_energia": 3.0362,
+            "custo_usd_mtok": 4.4924,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1288
+          },
+          "W3": {
+            "A_custo": 1.3509,
+            "A_energia": 2.2708,
+            "custo_usd_mtok": 10.731,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0539
+          },
+          "design": "HBM3Ex12|calc100|sram1024|AMA",
+          "meta": {
+            "area_mm2": 356,
+            "asp": 31567,
+            "bom": 14083,
+            "mfg": 18940,
+            "potencia_w": 823,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.17,
+            "A_energia": 3.5604,
+            "custo_usd_mtok": 1.8124,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.3257
+          },
+          "W2": {
+            "A_custo": 1.885,
+            "A_energia": 3.0928,
+            "custo_usd_mtok": 4.5,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1312
+          },
+          "W3": {
+            "A_custo": 1.3481,
+            "A_energia": 2.3122,
+            "custo_usd_mtok": 10.7533,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0549
+          },
+          "design": "HBM3Ex12|calc50|sram2048|AMA",
+          "meta": {
+            "area_mm2": 562,
+            "asp": 31713,
+            "bom": 14157,
+            "mfg": 19028,
+            "potencia_w": 808,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 2.14,
+            "A_energia": 3.2437,
+            "custo_usd_mtok": 1.8378,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "tok_por_j": 0.2967
+          },
+          "W2": {
+            "A_custo": 1.8834,
+            "A_energia": 2.8548,
+            "custo_usd_mtok": 4.5037,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "tok_por_j": 0.1211
+          },
+          "W3": {
+            "A_custo": 1.348,
+            "A_energia": 2.1359,
+            "custo_usd_mtok": 10.7538,
+            "gpu_custo": "MI355X",
+            "gpu_energia": "B300",
+            "n": 3,
+            "tok_por_j": 0.0507
+          },
+          "design": "HBM3Ex12|calc200|sram0|AMA",
+          "meta": {
+            "area_mm2": 200,
+            "asp": 31469,
+            "bom": 14033,
+            "mfg": 18882,
+            "potencia_w": 875,
+            "tf_fp4": 1880,
+            "tpp": 7520
+          }
+        }
+      ]
+    },
+    "veredito": {
+      "classe": "C_REPROVADO",
+      "mc_frac": 0.0026,
+      "nota_adversa_min_W1W2": 0.918,
+      "nota_nominal_min_W1W2": 1.907
+    }
+  },
+  "outputs_sha256": "208abb93ceaa451be1ab7d55e7d41861a78ea909d17e21c38c21d6cae2d459d0",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 50.331032,
+  "seed": 20261125
+}

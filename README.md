@@ -49,3 +49,20 @@ python run_local.py 42
 - Sensibilidade registrada: o batch por GPU de P1 e P2 não foi publicado
   (HIPÓTESE 256). P1 não depende dele. O ponto cego P2 só passa se o batch for
   >= ~128 por GPU (128: -17,7%; 64: -44%, reprova).
+
+## Campanha C001 — resultado (25/11/2026)
+
+**Veredito: C — REPROVADO** pelo critério travado em `prereg/C001.yaml`.
+Arquivo: `results/C001_mc10000.json` (hash de saída no manifesto).
+
+- Melhor design: 12 pilhas HBM3E com atenção feita junto da memória (AMA),
+  pouco cálculo central. Nominal: custo 2,17x / energia 3,72x (W1);
+  custo 1,91x / energia 3,27x (W2). Energia passa de 3x; custo não.
+- Monte Carlo (10.000 sorteios): 0,26% passam 3x nas duas métricas.
+  Mediana: custo 1,29x, energia 2,35x.
+- Maior incerteza: tempo de "pensar" do agente entre chamadas (Z), ~64% da
+  variância do custo; W por pilha de HBM, ~30% da variância da energia.
+- Cenário adverso: 0,92x em custo (o prêmio do base die customizado anula a AMA).
+- Controle negativo: a mesma placa sem a lógica junto da memória fica em 0,92x;
+  a lógica é o que cria a vantagem. Controle positivo: 1,000.
+- Limite de exportação (TPP < 4.800): não muda o melhor design (TPP 1.880).

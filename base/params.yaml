@@ -57,3 +57,33 @@ empresa:
 
 cambio:
   usd_brl: {nominal: 5.0, low: 4.8, high: 5.6, unidade: R$/US$, rotulo: PUBLICADO, fonte: "cotação comercial ~R$5,0 (out–nov/2026)", nota: "só para relatórios"}
+
+# ---- Adicionado na fase 3 (antes de rodar a C001): parâmetros de projeto ----
+projeto:
+  tf_fp4_por_mm2: {nominal: 9.4, low: 6.0, high: 11.0, unidade: TFLOP/s por mm², rotulo: ESTIMADO, critico: true,
+     nota: "B300: ~15 PF FP4 denso em ~1.600 mm² de silício lógico"}
+  pj_por_flop_fp4: {nominal: 0.072, low: 0.05, high: 0.12, unidade: pJ/FLOP, rotulo: ESTIMADO, critico: true,
+     nota: "B300: (1.400 W − 8 pilhas × 40 W) / 15 PF"}
+  sram_mb_por_mm2: {nominal: 4.0, low: 3.0, high: 5.0, unidade: MB/mm², rotulo: ESTIMADO, nota: "nó 3 nm, ~32 Mb/mm² de macro"}
+  sram_w_por_mb: {nominal: 0.02, low: 0.01, high: 0.05, unidade: W/MB, rotulo: ESTIMADO}
+  area_max_mm2: {nominal: 1600, low: 1600, high: 1600, unidade: mm², rotulo: PUBLICADO, nota: "2 dies no limite de retícula (~800 mm² cada), como B200/B300"}
+  ama_k_banda_interna: {nominal: 8, low: 4, high: 16, unidade: x banda externa, rotulo: HIPÓTESE, critico: true,
+     nota: "banda interna da pilha vista pela lógica no base die; AttAcc usa 9–16x"}
+  ama_tf_fp8_por_pilha: {nominal: 150, low: 50, high: 300, unidade: TFLOP/s, rotulo: HIPÓTESE, critico: true}
+  ama_w_logica_por_pilha: {nominal: 15, low: 8, high: 30, unidade: W, rotulo: HIPÓTESE}
+  atividade_media: {nominal: 0.8, low: 0.6, high: 0.9, unidade: fração do pico, rotulo: ESTIMADO, nota: "aplicada igual a GPUs e a nós"}
+  eta_sistema: {nominal: 0.181, low: 0.10, high: 0.25, unidade: fração, rotulo: CALIBRADO, nota: "CAL001; faixa por maturidade de software, igual aos dois lados"}
+  tpp_limite: {nominal: 4800, low: 4800, high: 4800, unidade: TPP, rotulo: HIPÓTESE, nota: "limite de controle de exportação por chip, a confirmar com advogado; TPP = TOPS x bits"}
+  bytes_peso_fp4: {nominal: 0.5625, low: 0.5625, high: 0.5625, unidade: bytes/parâmetro, rotulo: PUBLICADO, nota: "NVFP4 com escalas; igual para todos que suportam FP4"}
+
+memorias:
+  HBM3E: {cap_gb: 36, banda_tb_s: 1.0, w: 40, usd_gb_ref: hbm3e_usd_gb, maturidade: COMERCIAL, rotulo: PUBLICADO}
+  HBM4:  {cap_gb: 36, banda_tb_s: 2.75, w: 50, usd_gb_ref: hbm4_usd_gb, maturidade: COMERCIAL_2026, rotulo: ESTIMADO, nota: "Rubin: 22 TB/s em 8 pilhas"}
+  LPDDR5X: {cap_gb: 32, banda_tb_s: 0.136, w: 6, usd_gb_ref: lpddr5x_usd_gb, maturidade: COMERCIAL, rotulo: ESTIMADO}
+  GDDR7: {cap_gb: 3, banda_tb_s: 0.128, w: 4, usd_gb_ref: gddr7_usd_gb, maturidade: COMERCIAL, rotulo: ESTIMADO}
+
+memoria_commodity:
+  lpddr5x_usd_gb: {nominal: 19.5, low: 10.0, high: 21.0, unidade: US$/GB, rotulo: PUBLICADO, critico: true,
+     fonte: "https://wccftech.com/mobile-dram-prices-expected-to-increase-by-100-quarter-over-quarter-as-long-term-agreements-now-getting-signed-at-prices-as-high-as-21-gb/",
+     nota: "contratos LTA entre US$7,8 e 21/GB; módulo LPDDR5 ~US$19,3–19,8/GB no 2T26"}
+  gddr7_usd_gb: {nominal: 15.0, low: 10.0, high: 25.0, unidade: US$/GB, rotulo: HIPÓTESE, critico: true, nota: "sem fonte direta"}
