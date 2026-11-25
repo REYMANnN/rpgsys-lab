@@ -1,0 +1,20 @@
+# PRÉ-REGISTRO TCAL001 — calibração do modelo térmico 1D (lab/fisico.py).
+# Declaração: antes deste arquivo foi feita uma conta exploratória à mão com o
+# ponto imec 3D (R ~ 1,06 K/W). A regra abaixo foi escrita depois disso e não
+# depende do resultado: 1 parâmetro ajustado num ponto, os outros são testes.
+id: TCAL001
+data: 2026-11-25
+parametro_ajustado: "k_ligacao_w_mk (condutividade efetiva entre dies), único"
+ponto_de_calibracao:
+  nome: imec_IEDM2025_3D_HBM_sobre_GPU_sem_mitigacao
+  medido_C: 141.7
+  fonte: "https://iconnect007.com/article/148033/imec-advances-3d-hbmongpu-thermals-through-systemtech-cooptimization/148030/ein"
+  condicoes: "4 pilhas de 12 dies com ligação híbrida sobre GPU de ~400 W, placa fria de 30 W/cm²K no topo"
+  hipoteses_de_condicao: {potencia_logica_por_pilha_w: 100, potencia_dram_por_pilha_w: 30, t_refrigerante_c: 25, caso: conservador}
+pontos_de_teste:
+  - {nome: imec_2_5D_HBM_ao_lado, medido_C: 60, condicao: "pilha 30 W, sem lógica embaixo, mesma placa fria, caso distribuído", natureza: "o modelo 1D ignora o calor lateral da GPU vizinha: erro para baixo é esperado"}
+  - {nome: H100_campo_estresse_DCGM, medido_C: [80, 93], fonte: "https://vineethac.blogspot.com/search/label/H100", condicao: "HBM3 ao lado de GPU a 700 W; potência por pilha e resfriamento não publicados", natureza: "faixa de sanidade apenas"}
+criterio:
+  aprovado: "k ajustado dentro da faixa física 0,5–20 W/m·K E erro no ponto imec 2,5D <= 25 °C"
+  reprovado: "caso contrário"
+uso: "o k calibrado substitui o nominal de k_ligacao_w_mk; low/high viram ±50% do calibrado"

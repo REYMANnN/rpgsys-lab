@@ -215,7 +215,11 @@ def _sobol_s1(amostras, idx, bins=20, top=10):
     for k in amostras[0][0]:
         if k in ("margem", "H"):
             continue
-        pares = sorted((a[0][k], a[idx]) for a in amostras)
+        xs = [a[0][k] for a in amostras]
+        if not all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in xs) or min(xs) == max(xs):
+            continue  # L7: entrada constante ou não numérica não tem índice (antes vazava ~0,97)
+        # L7: ordenar SÓ por x (empates ficam na ordem aleatória do sorteio, não na de y)
+        pares = sorted(zip(xs, (a[idx] for a in amostras)), key=lambda t: t[0])
         tam = len(pares) // bins
         vb = 0.0
         for b in range(bins):

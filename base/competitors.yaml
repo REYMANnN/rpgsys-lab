@@ -53,3 +53,11 @@ modelo_sistema:
                   nota: "2,9 EF FP4/72 ~40 PF; potência por slot sem fonte (HIPÓTESE)"}
   H200:          {mem_gb: 141, banda_tb_s: 4.8,  fp4: 1979,  fp8: 1979,  potencia_slot_w: 700,  preco_usd: 27000,  inclui_infra: false, bytes_peso: 1.0, rotulo: PUBLICADO,
                   nota: "sem FP4: pesos em FP8"}
+
+# ---- C002: rede de escala por GPU e refrigeração ----
+rede_e_refrigeracao:
+  B300:          {link_tb_s: 1.8,   liquido: true,  rotulo: PUBLICADO}
+  MI355X:        {link_tb_s: 1.075, liquido: true,  rotulo: ESTIMADO, nota: "Infinity Fabric 7 x 153,6 GB/s"}
+  Rubin_VR200:   {link_tb_s: 3.6,   liquido: true,  rotulo: PUBLICADO, nota: "NVLink 6, 260 TB/s / 72"}
+  MI455X_Helios: {link_tb_s: 3.6,   liquido: true,  rotulo: DERIVADO, nota: "UALoE 260 TB/s / 72"}
+  H200:          {link_tb_s: 0.9,   liquido: false, rotulo: PUBLICADO}

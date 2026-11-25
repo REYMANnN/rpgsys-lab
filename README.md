@@ -115,3 +115,15 @@ fabricável" (pesos e critérios em `gates/engenheiro.yaml`).
 - Ligação entre as nossas placas (rede entre chips) entra só como custo, sem
   penalidade de desempenho: favorece a gente. Gate G12.
 - Acesso a base die customizado de HBM (hoje só para gigantes): não é custo, é acesso.
+
+## TCAL001 + C002 + C002L (25/11/2026) — calor, líquido, rede, software imaturo
+
+| Rodada | O que mudou | Veredito | Nominal | Monte Carlo ≥3× |
+|---|---|---|---|---|
+| TCAL001 | condutividade entre dies ajustada no ponto imec 3D (141,7 °C) | APROVADO (k = 2,62; teste 2,5D erra −21,5 °C) | — | — |
+| C002-r1 | térmico ≤ 90 °C obrigatório, prêmio de líquido US$2,5–4,5/W para todos, rede com custo e penalidade, software imaturo | **B (zona cinza)** | 4,15× (HBM4×8 + AMA leve) | 4,6% (73% dos sorteios reprovam no calor) |
+| C002L-r1 | + calor lateral do chip vizinho (resíduo da TCAL001) | **C (reprovado)** | 2,1× custo / 3,5× energia (HBM4×12, sem AMA) | 0% |
+
+Leitura: a vantagem de ≥3× depende de pôr lógica embaixo da memória, e é exatamente isso que esquenta.
+Com o modelo térmico atual, o finalista com AMA fica a 2,4 °C do limite; com o calor lateral, não cabe.
+A placa sem AMA é fresca (11,8 °C de folga, 677 W) mas dá ~2×. Próximo passo obrigatório: simulação térmica 3D do encapsulamento.

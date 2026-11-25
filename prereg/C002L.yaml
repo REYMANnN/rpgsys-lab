@@ -1,0 +1,10 @@
+# PRÉ-REGISTRO C002L — ataque térmico à C002. Escrito ANTES da rodada de 10k da C002,
+# depois de um teste de 20 sorteios (declarado). Motivo físico, não o resultado:
+# a TCAL001 mostrou que o modelo 1D erra -21,5 °C quando há um chip quente AO LADO
+# (imec 2,5D: GPU ~400 W vizinha). Nosso chip de cálculo fica ao lado das pilhas.
+id: C002L
+data: 2026-11-25
+herda_de: prereg/C002.yaml (tudo igual)
+mudanca_unica: "T_pilha += 21,5 °C x (potência do die de cálculo / 400 W) — correção lateral escalada pelo resíduo da TCAL001"
+criterio: "o mesmo da C002"
+leitura: "se a C002 passa e a C002L reprova, a conclusão honesta é: depende de layout térmico que o modelo 1D não resolve -> precisa de simulação 3D (gate novo)"

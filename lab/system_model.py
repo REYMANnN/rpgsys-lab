@@ -39,6 +39,9 @@ class Disp:
     inclui_infra: bool
     bytes_peso: float = 0.5625
     sram_mb: float = 0.0
+    link_tb_s: float | None = None   # C002: rede entre dispositivos (None = sem penalidade, como na C001)
+    liquido: bool = False            # C002: precisa de refrigeração líquida
+    fator_eta: float = 1.0           # C002 adverso: software imaturo
 
 
 @dataclass
@@ -70,7 +73,11 @@ def avaliar(d: Disp, wl: dict, p: dict, n_max_mult: int = 6) -> Resultado:
             bw = (QWEN["denso"] + (QWEN["params"] - QWEN["denso"]) * tocado) * d.bytes_peso * (1 - frac_sram)
             t_mem = bw / (n * d.banda_tb_s * 1e12) + B * ctx * kvt / (n * d.banda_kv_tb_s * 1e12)
             t_calc = B * (2 * QWEN["ativos"] / (d.tf_moe * 1e12) + flops_atencao_por_token(ctx) / (d.tf_atn * 1e12)) / n
-            t = max(t_mem, t_calc) / p["eta"]
+            t_rede = 0.0
+            if d.link_tb_s and n > 1:
+                remoto = B * p.get("bytes_a2a", 0.0) * (n - 1) / n
+                t_rede = max(0.0, remoto / (n * d.link_tb_s * 1e12) - remoto / (n * p.get("link_ref", d.link_tb_s) * 1e12))
+            t = (max(t_mem, t_calc) + t_rede) / (p["eta"] * d.fator_eta)
             duty = L * t / (L * t + Z)
             B_novo = D * duty
             if abs(B_novo - B) < 1e-6 * D:
@@ -83,7 +90,8 @@ def avaliar(d: Disp, wl: dict, p: dict, n_max_mult: int = 6) -> Resultado:
         p_slot = d.potencia_w + (0.0 if d.inclui_infra else p.get("p_infra_w", 0.0))
         p_media = n * p_slot * p["atividade"]
         extra_infra = 0.0 if d.inclui_infra else (p["c_host"] / 8 + p["c_net"] + p["c_rack"] / 8 + d.potencia_w * p["c_pdu"])
-        capex = n * (d.preco_usd + extra_infra + p_slot * p["c_cool"])
+        c_cool = p["c_cool"] + (p.get("premio_liq", 0.0) if d.liquido else 0.0)
+        capex = n * (d.preco_usd + extra_infra + p_slot * c_cool)
         opex = p_media / 1000 * p["H"] * p["p_kwh"] * p["pue"]
         tco = capex + opex
         tokens = tok_s * p["H"] * 3600

@@ -1,0 +1,19 @@
+{
+  "commit": "64905a0c3349e45c10bafb2a327e56dfeca1f66e",
+  "inputs_sha256": "61a0e77c10bf25468c1b03bf066cc33226534d8f9588abc970fb584b80d20f80",
+  "job": "TCAL001",
+  "outputs": {
+    "T_imec25D_previsto": 38.465384615384615,
+    "T_imec3D_previsto": 141.7,
+    "erro_imec25D": -21.534615384615385,
+    "k_calibrado": 2.6202266943992654,
+    "nota": "teste H100 de campo é só sanidade (condições não publicadas)",
+    "veredito": "APROVADO"
+  },
+  "outputs_sha256": "bbda77c2469867ba70f6b3ba5dbc6a6c86d676e1eba64eb4909066d8b97127c2",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 0.000474,
+  "seed": 0
+}

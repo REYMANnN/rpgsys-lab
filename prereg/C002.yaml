@@ -1,0 +1,26 @@
+# PRÉ-REGISTRO C002 — campanha com física e custos de operação. Escrito antes de rodar.
+id: C002
+data: 2026-11-25
+herda_de: prereg/C001.yaml (métricas, concorrentes, regra do melhor concorrente)
+cargas: "W1, W2, W3 com Z e L_out MEDIDOS (MED001)"
+mudancas_em_relacao_a_C001b:
+  - "restrição térmica dura: pilha HBM no caso CONSERVADOR, parâmetros nominais (k calibrado em TCAL001), com líquido, <= 90 °C; design que passa disso é eliminado"
+  - "densidade do die de cálculo <= 1,0 W/mm²"
+  - "refrigeração: se o design passa no térmico a ar (<= 90 °C) e a placa tem <= 1.000 W, usa ar; senão, líquido com prêmio de US$2,5–4,5/W (nominal 3,5) — o MESMO prêmio para GPUs que precisam de líquido (B300, MI355X, Rubin, MI455X)"
+  - "rede entre dispositivos: penalidade de tempo para rede mais lenta que a referência da calibração (1,8 TB/s), aplicada a todos; nossa rede é variável de projeto (0,1 / 0,4 / 0,8 TB/s) com custo"
+  - "potência de atenção no base die é variável de projeto (25 / 50 / 100 / 150 TFLOP/s por pilha)"
+cenarios:
+  nominal: "valores nominais"
+  adverso: "mesmo adverso da C001 (memória cara, prêmio 0,6, NRE 200M, volume 15k, p_mm2 0,50, W/pilha 50, Z adverso)"
+  software_imaturo: "nominal, mas o nosso eta = 0,6 x eta das GPUs"
+monte_carlo: {sorteios: 10000, semente: 20261125, Z_W1: "triangular(0,6896; 1,9883; 16,8)", fator_eta_nosso: "triangular(0,6; 1,0; 1,0)", inclui: "parâmetros térmicos (o vencedor pode reprovar no térmico num sorteio = conta como falha)"}
+criterio:
+  A_aprovado:
+    - "nominal: A_custo >= 3,0 E A_energia >= 3,0 em W1 e W2"
+    - "adverso: >= 2,0 nas duas, em W1 e W2"
+    - "software imaturo: >= 2,0 nas duas, em W1 e W2"
+    - "Monte Carlo: >= 80% dos sorteios com >= 3,0 nas duas em W1"
+  B_zona_cinza: "nominal >= 3,0, mas algum outro item reprova"
+  C_reprovado: "nominal < 3,0"
+saidas_de_operacao:
+  - "margem térmica (°C) no caso conservador, precisa de líquido (sim/não), potência por placa, kW por rack, W/mm² no die, comparados com o B300"

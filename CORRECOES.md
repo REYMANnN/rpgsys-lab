@@ -11,3 +11,7 @@ Nota de transparência: uma rodada exploratória da C001b com 30 sorteios, feita
 antes da r1, deu nota nominal 4,85x. Esse número otimista motivou a revisão
 adversarial que achou a assimetria. O arquivo dessa rodada foi descartado por
 ser anterior à correção; só valem as rodadas -r1 de 10.000 sorteios.
+
+## C002 (25/11/2026)
+- Antes da rodada de 10k houve um teste de 20 sorteios (apagado; declarado no prereg C002L).
+- C002 e C002L originais tinham índice de Sobol falso (L7). Re-rodados como -r1; vereditos e números de custo/energia idênticos.
