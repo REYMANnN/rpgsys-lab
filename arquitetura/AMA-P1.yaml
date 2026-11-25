@@ -1,0 +1,59 @@
+# AMA-P1 — arquitetura do finalista C003 (G09). Unidades: mm, mm², W.
+# Cada número tem rótulo; os checks estão em lab/arquitetura.py e tests/test_arquitetura.py.
+produto: "AMA-P1 = vencedor nominal da C003"
+fontes:
+  reticle_mm2: {valor: 830, rotulo: PUBLICADO, fonte: "https://www.tomshardware.com/tech-industry/tsmc-mulls-massive-1000w-class-multi-chiplet-processors-with-40x-the-performance-of-standard-models"}
+  cowos_l_5_5x_mm2: {valor: 4719, rotulo: PUBLICADO, nota: "até 12 HBM, substrato 100x100 mm, em volume", fonte: "https://www.anandtech.com/show/21375/tsmc-readies-8x-reticle-size-super-carrier-interposer"}
+  phy_hbm4_mm2: {valor: 15, rotulo: PUBLICADO, nota: "GUC: PHY+controlador HBM4 15 mm² (HBM3E 11)", fonte: "https://www.tomshardware.com/pc-components/dram/hbm-undergoes-major-architectural-shakeup-as-tsmc-and-guc-detail-hbm4-hbm4e-and-c-hbm4e-3nm-base-dies-to-enable-2-5x-performance-boost-with-speeds-of-up-to-12-8gt-s-by-2027"}
+  regra_bordas: {rotulo: PUBLICADO, nota: "HBM em 2 bordas do chip; as outras 2 para E/S fora do encapsulamento", fonte: "https://newsletter.semianalysis.com/p/scaling-the-memory-wall-the-rise-and-roadmap-of-hbm"}
+  oam_mm: {valor: [102, 165], rotulo: PUBLICADO, fonte: "https://www.tomshardware.com/tech-industry/tsmc-super-carrier-cowos-interposer-gets-bigger-enabling-massive-ai-chips-to-reach-9-reticle-sizes-with-12-hbm4-stacks"}
+  pilha_hbm_mm: {valor: [11, 11], rotulo: ESTIMADO}
+  d0_defeitos_cm2: {valor: 0.10, rotulo: ESTIMADO, nota: "3 nm maduro"}
+chip_calculo:   # 2 chips iguais (C0 e C1); cada um tem metade do produto
+  quantidade: 2
+  dimensoes_mm: [33.0, 23.0]       # 86% de ocupação; borda longa 33 mm recebe 3 pilhas em cima e 3 embaixo
+  blocos_mm2:                       # por chip
+    calculo_fp4: {area: 200, rotulo: DERIVADO, nota: "400 mm² do produto / 2; 9,4 TFLOP/s/mm²"}
+    sram_1gb:    {area: 256, rotulo: DERIVADO, nota: "1 GB a 4 MB/mm²"}
+    phy_hbm4_x6: {area: 90,  rotulo: PUBLICADO, nota: "6 x 15 mm²; na borda longa"}
+    d2d_c0_c1:   {area: 15,  rotulo: ESTIMADO, nota: "na borda curta interna; ~10 TB/s"}
+    serdes_224g_x16: {area: 10, rotulo: ESTIMADO, nota: "0,4 TB/s de rede por placa (metade por chip); borda curta externa"}
+    phy_lpddr5x_x4:  {area: 24, rotulo: ESTIMADO, nota: "4 módulos x 128 bits por chip; bumps em área, borda curta externa"}
+    controle_noc:    {area: 60, rotulo: ESTIMADO, nota: "~10% de rede interna, controle, CPU de gerência"}
+  potencia_w:     # por chip
+    calculo: 135.4     # 200 mm² x 9,4 TF x 0,072 pJ
+    sram: 20
+    phy_e_io: 30
+pilha_hbm:
+  quantidade: 12
+  tipo: "HBM4E 12-alta com base personalizada (AMA)"
+  base_ama_por_pilha:
+    blocos: ["8 pistas de atenção (uma por pseudo-canal-par)", "softmax em linha (m, l, O)", "controlador HBM", "D2D para o chip de cálculo"]
+    potencia_logica_w: 29.4   # 15 fixos + 100 TF x 2 x 0,072 pJ (C003)
+    potencia_dram_w: 40
+interposer:
+  tipo: CoWoS-L
+  dimensoes_mm: [71.5, 47.0]
+  microcanais: "embaixo de cada pilha, fora das faixas de bumps do PHY (HIPÓTESE de fabricação)"
+  posicoes:   # canto inferior esquerdo (x, y), mm
+    C0: [1.0, 12.0]
+    C1: [37.0, 12.0]
+    H0: [0.5, 0.5]
+    H1: [12.0, 0.5]
+    H2: [23.5, 0.5]
+    H3: [36.5, 0.5]
+    H4: [48.0, 0.5]
+    H5: [59.5, 0.5]
+    H6: [0.5, 35.5]
+    H7: [12.0, 35.5]
+    H8: [23.5, 35.5]
+    H9: [36.5, 35.5]
+    H10: [48.0, 35.5]
+    H11: [59.5, 35.5]
+placa:
+  formato: "OAM 2.0 (102 x 165 mm)"
+  substrato_mm: [100, 100]
+  lpddr5x: {quantidade: 8, capacidade_gb: 32, potencia_w: 6, posicao: "4 de cada lado curto do encapsulamento"}
+  vrm: {tensao_nucleo_v: 0.75, fases: 32, a_por_fase: 70, rotulo: ESTIMADO}
+  rede: {portas: "2 x 1,6 Tb/s (224G x 8 cada)", rotulo: ESTIMADO}
+  refrigeracao: "placa fria por cima + microcanais por baixo; manifold único; água a 25–35 °C"
