@@ -1,0 +1,58 @@
+# Cargas agênticas de referência. Origem: AMA512_INPUT_WORKLOADS.md (set/2026).
+modelo_referencia:
+  nome: Qwen3-235B-A22B
+  rotulo: PUBLICADO
+  fonte: https://huggingface.co/Qwen/Qwen3-235B-A22B/blob/main/config.json
+  camadas: 94
+  d_model: 4096
+  n_q: 64
+  n_kv: 4
+  head_dim: 128
+  n_experts: 128
+  top_k: 8
+  moe_inter: 1536
+  parametros_totais: 235000000000
+  parametros_ativos: 22000000000
+
+modelo_denso:
+  nome: Llama-3.1-70B
+  rotulo: PUBLICADO
+  fonte: https://huggingface.co/meta-llama/Llama-3.1-70B/blob/main/config.json
+  camadas: 80
+  d_model: 8192
+  n_q: 64
+  n_kv: 8
+  head_dim: 128
+  parametros_totais: 70600000000
+  parametros_ativos: 70600000000
+
+workloads:
+  W1:
+    nome: coding agents
+    demanda_agentes: {nominal: 64, low: 64, high: 1024, rotulo: HIPÓTESE, nota: "PROPOSTO na AMA; sem pesquisa de mercado"}
+    ctx_dist: {32768: 0.30, 131072: 0.50, 262144: 0.15, 524288: 0.05}
+    ctx_dist_rotulo: HIPÓTESE
+    l_out_tokens: {nominal: 40, rotulo: MEDIDO, fonte: "TraceLab, n=5.211 invocações, 200 trajetórias SWE-smith (p50 19, p90 101, p99 277)"}
+    z_think_s: {nominal: 3.0, low: 0.5, high: 30.0, adverso: 10.0, rotulo: ESTIMADO, nota: "NÃO MEDIDO e é o parâmetro dominante"}
+    slo_tbt_p95_s: {nominal: 0.050, rotulo: HIPÓTESE}
+    slo_ttft_s: {nominal: null, rotulo: UNKNOWN}
+  W2:
+    nome: research agents
+    demanda_agentes: {nominal: 64, low: 64, high: 1024, rotulo: HIPÓTESE}
+    ctx_dist: {32768: 0.10, 131072: 0.30, 262144: 0.45, 524288: 0.15}
+    ctx_dist_rotulo: HIPÓTESE
+    l_out_tokens: {nominal: 40, rotulo: MEDIDO, fonte: "TraceLab (mesma distribuição de W1)"}
+    z_think_s: {nominal: 5.0, low: 1.0, high: 30.0, adverso: 15.0, rotulo: ESTIMADO}
+    slo_tbt_p95_s: {nominal: 0.100, rotulo: HIPÓTESE}
+    slo_ttft_s: {nominal: null, rotulo: UNKNOWN}
+  W3:
+    nome: persistent enterprise agents
+    demanda_agentes: {nominal: 64, low: 64, high: 1024, rotulo: HIPÓTESE}
+    ctx_dist: {32768: 0.40, 131072: 0.45, 262144: 0.10, 524288: 0.05}
+    ctx_dist_rotulo: HIPÓTESE
+    l_out_tokens: {nominal: 40, rotulo: MEDIDO, fonte: "TraceLab"}
+    z_think_s: {nominal: 20.0, low: 5.0, high: 120.0, adverso: 40.0, rotulo: ESTIMADO}
+    slo_tbt_p95_s: {nominal: 0.200, rotulo: HIPÓTESE}
+    slo_ttft_s: {nominal: null, rotulo: UNKNOWN}
+
+horizonte_h: {nominal: 26280, low: 17520, high: 43800, rotulo: HIPÓTESE, nota: "2/3/5 anos"}

@@ -27,3 +27,12 @@ pip install -r requirements.txt
 python -m pytest -q
 python run_local.py 42
 ```
+
+## Fase 1 — base fixa e pré-registro
+
+- `base/` — cargas de referência, parâmetros de tecnologia/custo/operação e
+  concorrentes, cada um com rótulo, faixa e fonte. `python -m lab.params`
+  lista erros bloqueantes e dívidas de fonte.
+- `prereg/C001.yaml` — primeira campanha: existe design de pilha própria com
+  vantagem >= 3x em custo E energia por token contra a melhor GPU comprável?
+  Travado por hash em `prereg/LOCK.txt`; a CI falha se ele mudar.

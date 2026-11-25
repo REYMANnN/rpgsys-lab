@@ -1,0 +1,42 @@
+# Concorrentes contra os quais a meta de 3x é medida. O juiz usa o MELHOR
+# concorrente comprável (min TCO), não o mais conveniente.
+# Origem: AMA512_INPUT_COMPETITORS.md (set/2026) + atualizações nov/2026.
+
+B300:
+  memoria_gb: {valor: 288, rotulo: PUBLICADO}
+  banda_tb_s: {valor: 8.0, rotulo: PUBLICADO}
+  fp4_denso_tflops: {valor: 15000, rotulo: PUBLICADO}
+  tdp_w: {valor: 1400, rotulo: PUBLICADO}
+  preco_usd: {nominal: 86500, low: 83000, high: 90000, rotulo: DERIVADO, nota: "GB300 NVL72 US$6,0–6,5M / 72", preco_inclui_infra: true}
+  disponibilidade: volume
+
+MI355X:
+  memoria_gb: {valor: 288, rotulo: PUBLICADO}
+  banda_tb_s: {valor: 8.0, rotulo: PUBLICADO}
+  fp8_denso_tflops: {valor: 5033, rotulo: PUBLICADO}
+  tdp_w: {valor: 1400, rotulo: PUBLICADO}
+  preco_usd: {nominal: 30000, low: 25000, high: 40000, rotulo: ESTIMADO, nota: "AMD não publica preço", preco_inclui_infra: false}
+  disponibilidade: volume
+
+Rubin_VR200:
+  memoria_gb: {valor: 288, rotulo: PUBLICADO, fonte: "https://aiweekly.co/alerts/nvidia-vera-rubin-vr200-slashes-inference-cost-by-10x"}
+  banda_tb_s: {valor: 22.0, rotulo: PUBLICADO}
+  preco_gpu_usd: {nominal: 55000, low: 50000, high: 60000, rotulo: ESTIMADO,
+     fonte: "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-memory-costs-soar-485-percent-latest-ai-systems-now-cost-usd7-8-million-to-build-memory-now-comprises-25-percent-of-the-total-cost-rubin-gpus-a-mere-usd50-000-apiece",
+     nota: "Morgan Stanley: US$55k por GPU em volume para hyperscalers"}
+  preco_rack_usd: {nominal: 7800000, low: 5000000, high: 8800000, rotulo: ESTIMADO, nota: "Morgan Stanley ~US$7,8M; cotações US$5–7M; teto US$8,8M", preco_inclui_infra: true}
+  potencia_rack_kw: {nominal: 200, low: 180, high: 220, rotulo: ESTIMADO, fonte: "https://semianalysis.com/?p=150461904", nota: "180 kW Max-Q, 220 kW Max-P"}
+  disponibilidade: "produção 2H2026; primeiros racks entregues"
+
+MI455X_Helios:
+  memoria_gb: {valor: 432, rotulo: PUBLICADO}
+  banda_tb_s: {valor: 23.3, rotulo: PUBLICADO}
+  preco_usd: {nominal: 72900, low: 60000, high: 90000, rotulo: DERIVADO, nota: "rack ~US$5,25M / 72", preco_inclui_infra: true}
+  disponibilidade: 2H2026
+
+H200:
+  memoria_gb: {valor: 141, rotulo: PUBLICADO}
+  banda_tb_s: {valor: 4.8, rotulo: PUBLICADO}
+  tdp_w: {valor: 700, rotulo: PUBLICADO}
+  preco_usd: {nominal: 27000, low: 22000, high: 32000, rotulo: PUBLICADO, preco_inclui_infra: false}
+  nota: "geração anterior; entra porque estoque barato é ameaça real (achado do CERT V3)"

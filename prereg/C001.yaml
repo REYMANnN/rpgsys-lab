@@ -1,0 +1,60 @@
+# PRÉ-REGISTRO C001 — commitado ANTES de qualquer modelo rodar.
+# Alterar este arquivo depois da rodada invalida a campanha.
+id: C001
+titulo: Existe um design de pilha própria pelo menos 3x mais eficiente que a melhor GPU comprável?
+data: 2026-11-25
+autor: Claude (aprovação de escopo: Renan)
+
+hipotese: >
+  Existe pelo menos um ponto de projeto de pilha própria (chip, organização de
+  memória, placa) cuja vantagem de custo por token E cuja vantagem de energia
+  por token são ambas >= 3,0x contra o melhor concorrente comprável, entregando
+  o mesmo serviço.
+
+metricas:
+  A_custo: "min_j TCO_j(w) / TCO_nosso(w), mesmo serviço (mesma demanda, modelo, precisão, SLO, horizonte)"
+  A_energia: "(tokens por joule nosso) / (tokens por joule do melhor concorrente no mesmo workload)"
+  base_de_preco: "PREÇO AO CLIENTE com margem bruta nossa de 40%; base de CUSTO relatada em paralelo"
+  concorrentes: [B300, MI355X, Rubin_VR200, MI455X_Helios, H200]
+  regra_do_concorrente: "o MELHOR concorrente por workload e por métrica, não o mais conveniente"
+
+workloads_obrigatorios: [W1, W2]
+workloads_relatados: [W3]
+
+cenarios:
+  nominal: "valores nominais de base/*.yaml"
+  adverso: "Z adverso; HBM no high; premium 0,60; NRE 200M; volume 15k; p_mm2 0,50; W/pilha 50; e_bit 0,7; melhor concorrente em cada métrica"
+  monte_carlo: {sorteios: 10000, semente: 20261125, distribuicao: "triangular(low, nominal, high) por parâmetro, independentes"}
+
+criterio:
+  A_aprovado:
+    - "nominal: A_custo >= 3,0 E A_energia >= 3,0 em W1 e W2"
+    - "adverso: A_custo >= 2,0 E A_energia >= 2,0 em W1 e W2"
+    - "Monte Carlo: >= 80% dos sorteios com A_custo >= 3,0 E A_energia >= 3,0 em W1"
+  B_zona_cinza: "nominal >= 3,0 mas adverso ou Monte Carlo reprovam -> volta para o Renan antes de qualquer ação"
+  C_reprovado: "nominal < 3,0 em W1 ou W2 -> nenhum design desta campanha segue para RTL"
+
+controles:
+  positivo:
+    - "o modelo aplicado a uma GPU contra ela mesma dá 1,00x (+-0,01)"
+    - "o modelo reproduz throughput publicado de pelo menos 2 GPUs com erro <= 20% por ponto e 1 ponto cego, ANTES da campanha"
+  negativo:
+    - "a 'placa burra' (mesma memória, sem a lógica junto da memória) não pode passar no critério A"
+  regra: "se um controle falhar, a campanha inteira é inválida"
+
+restricoes_de_projeto:
+  - "só tecnologias de memória COMERCIAL, COMERCIAL 2026 ou AMOSTRADO; nada SEM DEMONSTRAÇÃO (ex.: 96 GB/pilha)"
+  - "células DRAM compradas de terceiros; organização, base die, SRAM, placa e rack são livres"
+  - "limite de controle de exportação por chip: valor a confirmar com advogado; a campanha roda COM e SEM a restrição e relata os dois"
+
+correcoes_de_vies_aplicadas:
+  - "W por pilha HBM: faixa 29–80 W (antes 30 W sem fonte)"
+  - "FLOP por MAC contado uma vez"
+  - "host amortizado por placa"
+  - "custo da pilha de software no NRE"
+
+saida_obrigatoria:
+  - "fronteira de Pareto (A_custo x A_energia) por workload"
+  - "veredito A/B/C com os números"
+  - "índices de sensibilidade (Sobol) dos 10 parâmetros que mais movem o resultado"
+  - "manifesto com hash de cada job"
