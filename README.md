@@ -46,3 +46,6 @@ python run_local.py 42
   ponto cego GB200), eta = 0,181.
 - Limite: no mesmo GB200 o software variou 1,8x entre versões; `eta` entra nas
   campanhas como faixa aplicada aos dois lados.
+- Sensibilidade registrada: o batch por GPU de P1 e P2 não foi publicado
+  (HIPÓTESE 256). P1 não depende dele. O ponto cego P2 só passa se o batch for
+  >= ~128 por GPU (128: -17,7%; 64: -44%, reprova).
