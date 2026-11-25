@@ -1,0 +1,58 @@
+name: lab-ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  testes:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q
+      - run: python run_local.py 42 > manifest_github.json && cat manifest_github.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: manifest-github
+          path: manifest_github.json
+
+  modal:
+    needs: testes
+    runs-on: ubuntu-24.04
+    env:
+      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt modal
+      - name: Pula se o token do Modal não estiver configurado
+        id: check
+        run: |
+          if [ -z "$MODAL_TOKEN_ID" ]; then echo "skip=true" >> "$GITHUB_OUTPUT"; echo "Segredos do Modal ausentes: job pulado."; fi
+      - name: Roda o mesmo job no Modal
+        if: steps.check.outputs.skip != 'true'
+        run: modal run modal_app.py --seed 42 --out manifest_modal.json
+      - name: Compara os hashes GitHub x Modal
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          python run_local.py 42 > manifest_github.json
+          python - <<'PY'
+          import json
+          g = json.load(open("manifest_github.json")); m = json.load(open("manifest_modal.json"))
+          assert g["inputs_sha256"] == m["inputs_sha256"], "entradas divergem"
+          assert g["outputs_sha256"] == m["outputs_sha256"], "saídas divergem"
+          print("OK: GitHub e Modal produziram o mesmo hash:", g["outputs_sha256"])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: steps.check.outputs.skip != 'true'
+        with:
+          name: manifest-modal
+          path: manifest_modal.json
