@@ -127,3 +127,18 @@ fabricável" (pesos e critérios em `gates/engenheiro.yaml`).
 Leitura: a vantagem de ≥3× depende de pôr lógica embaixo da memória, e é exatamente isso que esquenta.
 Com o modelo térmico atual, o finalista com AMA fica a 2,4 °C do limite; com o calor lateral, não cabe.
 A placa sem AMA é fresca (11,8 °C de folga, 677 W) mas dá ~2×. Próximo passo obrigatório: simulação térmica 3D do encapsulamento.
+
+## C003 (25/11/2026) — placa com AMA: memória e calor atacados
+
+Vencedora: HBM4×12 + AMA (100 TFLOP/s por pilha) + 8 LPDDR5X para sessões ociosas + microcanais por baixo da pilha.
+
+| Item | Resultado |
+|---|---|
+| Nominal vs melhor GPU (W1/W2) | custo 4,33× / 4,36× · energia 7,7× / 7,8× |
+| Temperatura da base da pilha | 52 °C (62 °C com o teto publicado da Microsoft; 112 °C sem microcanal) |
+| Só memória cara (com repasse simétrico 0,5) | 3,1× custo (era ~1× quando só nós pagávamos a alta — L8) |
+| Só tempo de espera adverso (10–15 s) | 2,6× / 1,9× custo — é este, não a memória, que derruba o adverso |
+| Tudo adverso junto | 1,45× / 1,04× custo · 4,3× / 3,1× energia |
+| Software imaturo (60%) | 2,6× custo · 4,7× energia |
+| Monte Carlo 10k | ≥3×: 16,7% · ≥2×: 72,6% · mediana custo 2,4×, energia 4,8× · falha térmica 4,4% |
+| Veredito | **B (zona cinza)** |

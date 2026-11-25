@@ -8,9 +8,9 @@ gates:
   - {id: G03, peso: 2,  nome: "Erros viram verificações permanentes", status: 1, evidencia: "LICOES.md"}
   - {id: G04, peso: 6,  nome: "Modelo de desempenho calibrado contra GPUs reais", status: 1, evidencia: "results/CAL001.json"}
   - {id: G05, peso: 5,  nome: "Carga agêntica medida (tempo de espera, tamanho de resposta)", status: 0.5, evidencia: "results/MED001.json", limite: "dados de benchmark; falta uso real em produção"}
-  - {id: G06, peso: 10, nome: "Campanha econômica com veredito A (>= 3x custo e energia, robusto)", status: 0.5, evidencia: "results/C002-r1_mc10000.json", limite: "C002 = B (4,15x nominal; adverso e Monte Carlo reprovam); C002L (correção lateral) = C (2,1x)"}
+  - {id: G06, peso: 10, nome: "Campanha econômica com veredito A (>= 3x custo e energia, robusto)", status: 0.5, evidencia: "results/C003_mc10000.json", limite: "C003 = B (4,33x; adverso 1,04x puxado pelo tempo de espera adverso; MC 17% >=3x, 73% >=2x). C002 = B (4,15x nominal; adverso e Monte Carlo reprovam); C002L (correção lateral) = C (2,1x)"}
   - {id: G07, peso: 6,  nome: "Térmico da pilha e do chip calibrado contra medição", status: 0.5, evidencia: "results/TCAL001.json", limite: "1 ponto ajustado (imec 3D) + 1 teste (imec 2,5D, erro -21,5 °C: falta calor lateral); simulação, não medição de bancada"}
-  - {id: G08, peso: 6,  nome: "Finalista passa no térmico com margem", status: 0.5, evidencia: "results/C002-r1_mc10000.json", limite: "finalista com AMA: margem 2,4 °C e reprova em 73% dos sorteios; placa sem AMA passa com 11,8 °C mas só dá 2,1x"}
+  - {id: G08, peso: 6,  nome: "Finalista passa no térmico com margem", status: 0.5, evidencia: "results/C002-r1_mc10000.json", limite: "C003: com microcanais por baixo, 52 °C (62 °C com teto Microsoft); sem eles, 112 °C. Microcanal no interposer é HIPÓTESE de fabricação"}
   - {id: G09, peso: 5,  nome: "Arquitetura do finalista especificada (blocos, interfaces, orçamento de área e potência)", status: 0, evidencia: null}
   - {id: G10, peso: 10, nome: "RTL dos blocos críticos do finalista verificado (testes + prova formal)", status: 0, evidencia: null, limite: "RTL de atenção da AMA antiga existe, mas não é do finalista"}
   - {id: G11, peso: 8,  nome: "Síntese e layout em PDK aberto com timing fechado (blocos críticos)", status: 0, evidencia: null}

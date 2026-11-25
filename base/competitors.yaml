@@ -61,3 +61,10 @@ rede_e_refrigeracao:
   Rubin_VR200:   {link_tb_s: 3.6,   liquido: true,  rotulo: PUBLICADO, nota: "NVLink 6, 260 TB/s / 72"}
   MI455X_Helios: {link_tb_s: 3.6,   liquido: true,  rotulo: DERIVADO, nota: "UALoE 260 TB/s / 72"}
   H200:          {link_tb_s: 0.9,   liquido: false, rotulo: PUBLICADO}
+
+memoria_gpu:  # tipo de HBM de cada GPU (para repassar a alta de preço — C003)
+  B300: hbm3e_usd_gb
+  MI355X: hbm3e_usd_gb
+  H200: hbm3e_usd_gb
+  Rubin_VR200: hbm4_usd_gb
+  MI455X_Helios: hbm4_usd_gb

@@ -117,3 +117,14 @@ c002:
   bytes_alltoall_por_token: {nominal: 6160000, low: 6160000, high: 6160000, unidade: bytes, rotulo: DERIVADO, nota: "d_model 4096 x top-8 x ida e volta x 1 byte x 94 camadas"}
   densidade_max_w_mm2: {nominal: 1.0, low: 1.0, high: 1.0, unidade: W/mm², rotulo: PUBLICADO, fonte: "https://semiengineering.com/full-fidelity-thermal-simulation-at-floorplanning-speed-for-2-5d-ai-accelerator-packages/", nota: "aceleradores atuais já passam de 1 W/mm²; usamos 1,0 como teto conservador"}
   fator_eta_software_imaturo: {nominal: 0.6, low: 0.4, high: 0.8, unidade: x eta das GPUs, rotulo: HIPÓTESE, nota: "cenário adverso: nosso software novo rende 60% do software maduro das GPUs"}
+
+# ---- C003 ----
+c003:
+  repasse_memoria_gpu: {nominal: 0.5, low: 0.25, high: 1.0, unidade: fração, rotulo: HIPÓTESE, critico: true,
+     nota: "quanto da alta do HBM chega ao preço da GPU (contratos longos amortecem). Antes: 0 (assimetria, L8)"}
+  h_microcanal_w_m2k: {nominal: 300000, low: 100000, high: 600000, unidade: W/m²K, rotulo: HIPÓTESE, critico: true,
+     fonte: "https://news.microsoft.com/source/features/innovation/microfluidics-liquid-cooling-ai-chips/",
+     nota: "canais gravados no silício por baixo da pilha (interposer). Microsoft: até 3x melhor que placa fria; nominal = igual à placa fria (conservador)"}
+  espessura_interposer_um: {nominal: 100, low: 100, high: 100, unidade: µm, rotulo: ESTIMADO}
+  usd_microcanal_por_placa: {nominal: 400, low: 150, high: 1200, unidade: US$, rotulo: HIPÓTESE, nota: "etapas extras de gravação, vedação e manifold"}
+  yield_microcanal: {nominal: 0.95, low: 0.85, high: 0.99, unidade: fração, rotulo: HIPÓTESE}

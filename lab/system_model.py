@@ -42,6 +42,8 @@ class Disp:
     link_tb_s: float | None = None   # C002: rede entre dispositivos (None = sem penalidade, como na C001)
     liquido: bool = False            # C002: precisa de refrigeração líquida
     fator_eta: float = 1.0           # C002 adverso: software imaturo
+    cap_rapida_gb: float | None = None  # C003: memória em camadas — só esta parte é HBM (o resto é lenta)
+    banda_lenta_tb_s: float = 0.0       # C003: banda da camada lenta (troca de KV de sessões ociosas)
 
 
 @dataclass
@@ -86,6 +88,14 @@ def avaliar(d: Disp, wl: dict, p: dict, n_max_mult: int = 6) -> Resultado:
             B = 0.5 * B + 0.5 * B_novo
         if t > slo:
             continue
+        if d.cap_rapida_gb is not None:
+            # sessões ativas (com folga 1,5x) + pesos precisam caber na HBM; ociosas ficam na camada lenta
+            if n * d.cap_rapida_gb * 1e9 * 0.9 < W + min(D, 1.5 * B) * ctx * kvt:
+                continue
+            # cada turno traz o KV da sessão de volta e o devolve: 2 x ctx x kvt por turno
+            turnos_s = (B / t) / L
+            if 2 * turnos_s * ctx * kvt > 0.5 * n * d.banda_lenta_tb_s * 1e12:
+                continue
         tok_s = B / t
         p_slot = d.potencia_w + (0.0 if d.inclui_infra else p.get("p_infra_w", 0.0))
         p_media = n * p_slot * p["atividade"]

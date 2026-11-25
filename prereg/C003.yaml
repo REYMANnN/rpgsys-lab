@@ -1,0 +1,14 @@
+# PRÉ-REGISTRO C003 — atacar memória e calor da placa com AMA. Escrito antes de rodar.
+id: C003
+data: 2026-11-25
+herda_de: prereg/C002L.yaml (inclui SEMPRE a correção de calor lateral)
+mudancas:
+  - "memória cara também encarece as GPUs: preço += mem_gb x (preço do cenário - nominal) x repasse (0,5; faixa 0,25–1,0)"
+  - "memória em camadas: opção de 0, 8 ou 16 módulos LPDDR5X (32 GB) guardando o KV das sessões ociosas; a HBM só precisa caber pesos + sessões ativas x 1,5; a troca de KV por turno precisa caber em 50% da banda LPDDR"
+  - "refrigeração por baixo: opção de microcanais no interposer embaixo da pilha (caminho em paralelo com a placa fria de cima); custo US$400/placa (150–1200), rendimento 0,95"
+  - "potência fixa da AMA continua PARÂMETRO (15 W, 8–30), não alavanca grátis; reporta-se quanto ela precisaria ser para dar 10 °C de folga"
+restricoes: "T <= 90 °C no caso conservador nominal (com lateral); <= 1,0 W/mm²"
+cenarios: {nominal: "", adverso: "C002 adverso + repasse às GPUs", software_imaturo: "eta x 0,6"}
+monte_carlo: "10.000 sorteios do vencedor nominal; inclui repasse, h_microcanal, térmicos; falha térmica conta como falha"
+criterio: "o mesmo da C002 (A: nominal >=3 e adverso >=2 e imaturo >=2 e MC >=80%; B: só nominal >=3; C: nominal <3)"
+pergunta_extra: "qual é a melhor placa COM AMA (mesmo se não for a vencedora geral)? reporta-se nas mesmas métricas"

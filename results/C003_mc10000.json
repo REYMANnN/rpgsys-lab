@@ -1,0 +1,3399 @@
+{
+  "commit": "f5e36bf8e705862f1513a4c83e782b3b1b891302",
+  "inputs_sha256": "52acdbbef43f2f94620ef84f2d427df35790aae57e8a4e76132d8b74b17dec8f",
+  "job": "C003",
+  "outputs": {
+    "adverso": {
+      "eliminados_fisica": 4896,
+      "gpus": {
+        "W1": {
+          "B300": [
+            12.64,
+            0.0465,
+            8
+          ],
+          "H200": [
+            9.697,
+            0.0474,
+            16
+          ],
+          "MI355X": [
+            6.46,
+            0.0532,
+            8
+          ],
+          "MI455X_Helios": [
+            4.302,
+            0.1011,
+            3
+          ],
+          "Rubin_VR200": [
+            6.409,
+            0.0824,
+            4
+          ]
+        },
+        "W2": {
+          "B300": [
+            19.596,
+            0.03,
+            7
+          ],
+          "H200": [
+            14.358,
+            0.032,
+            14
+          ],
+          "MI355X": [
+            10.013,
+            0.0343,
+            7
+          ],
+          "MI455X_Helios": [
+            7.539,
+            0.0577,
+            5
+          ],
+          "Rubin_VR200": [
+            12.921,
+            0.0409,
+            7
+          ]
+        },
+        "W3": {
+          "B300": [
+            12.165,
+            0.0483,
+            4
+          ],
+          "H200": [
+            9.645,
+            0.0476,
+            8
+          ],
+          "MI355X": [
+            6.217,
+            0.0553,
+            4
+          ],
+          "MI455X_Helios": [
+            5.884,
+            0.0739,
+            3
+          ],
+          "Rubin_VR200": [
+            10.493,
+            0.0503,
+            4
+          ]
+        }
+      },
+      "melhor_com_ama": [
+        {
+          "W1": {
+            "A_custo": 1.5775,
+            "A_energia": 3.094,
+            "bits": 3998406672031.8066,
+            "custo_usd_mtok": 2.7274,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0386,
+            "pot": 1988.48,
+            "tok_por_j": 0.3128
+          },
+          "W2": {
+            "A_custo": 1.6392,
+            "A_energia": 3.2151,
+            "bits": 2089217999545.645,
+            "custo_usd_mtok": 4.599,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0133,
+            "pot": 2982.72,
+            "tok_por_j": 0.1855
+          },
+          "W3": {
+            "A_custo": 1.3999,
+            "A_energia": 2.7457,
+            "bits": 1030195327246.615,
+            "custo_usd_mtok": 4.2035,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0139,
+            "pot": 1988.48,
+            "tok_por_j": 0.203
+          },
+          "args": [
+            50,
+            2048,
+            "HBM3E",
+            12,
+            true,
+            100,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram2048|AMA|tf100|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.4417,
+            "T_liq_C": 39.413,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.587,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 562,
+            "asp": 66842,
+            "bom": 21702,
+            "mfg": 40105,
+            "potencia_w": 993,
+            "preco_usd": 83125,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5775,
+            "A_energia": 3.094,
+            "bits": 3998406672031.8066,
+            "custo_usd_mtok": 2.7274,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0386,
+            "pot": 1988.48,
+            "tok_por_j": 0.3128
+          },
+          "W2": {
+            "A_custo": 1.6392,
+            "A_energia": 3.2151,
+            "bits": 2089215066664.0767,
+            "custo_usd_mtok": 4.599,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0133,
+            "pot": 2982.72,
+            "tok_por_j": 0.1855
+          },
+          "W3": {
+            "A_custo": 1.3999,
+            "A_energia": 2.7457,
+            "bits": 1030195327246.615,
+            "custo_usd_mtok": 4.2035,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0139,
+            "pot": 1988.48,
+            "tok_por_j": 0.203
+          },
+          "args": [
+            50,
+            2048,
+            "HBM3E",
+            12,
+            true,
+            150,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram2048|AMA|tf150|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.6795,
+            "T_liq_C": 39.6483,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.3517,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 562,
+            "asp": 66842,
+            "bom": 21702,
+            "mfg": 40105,
+            "potencia_w": 993,
+            "preco_usd": 83125,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5726,
+            "A_energia": 3.1286,
+            "bits": 4040335077179.043,
+            "custo_usd_mtok": 2.7359,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0392,
+            "pot": 1953.28,
+            "tok_por_j": 0.3163
+          },
+          "W2": {
+            "A_custo": 1.6337,
+            "A_energia": 3.2502,
+            "bits": 2184893687079.2192,
+            "custo_usd_mtok": 4.6144,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.014,
+            "pot": 2929.92,
+            "tok_por_j": 0.1875
+          },
+          "W3": {
+            "A_custo": 1.3987,
+            "A_energia": 2.7827,
+            "bits": 1071344099668.2101,
+            "custo_usd_mtok": 4.2069,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0145,
+            "pot": 1953.28,
+            "tok_por_j": 0.2057
+          },
+          "args": [
+            50,
+            1024,
+            "HBM3E",
+            12,
+            true,
+            100,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram1024|AMA|tf100|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.4417,
+            "T_liq_C": 39.413,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.587,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 306,
+            "asp": 66584,
+            "bom": 21571,
+            "mfg": 39951,
+            "potencia_w": 971,
+            "preco_usd": 82854,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        }
+      ],
+      "n_ok": 6912,
+      "top10": [
+        {
+          "W1": {
+            "A_custo": 1.5775,
+            "A_energia": 3.094,
+            "bits": 3998406672031.8066,
+            "custo_usd_mtok": 2.7274,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0386,
+            "pot": 1988.48,
+            "tok_por_j": 0.3128
+          },
+          "W2": {
+            "A_custo": 1.6392,
+            "A_energia": 3.2151,
+            "bits": 2089217999545.645,
+            "custo_usd_mtok": 4.599,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0133,
+            "pot": 2982.72,
+            "tok_por_j": 0.1855
+          },
+          "W3": {
+            "A_custo": 1.3999,
+            "A_energia": 2.7457,
+            "bits": 1030195327246.615,
+            "custo_usd_mtok": 4.2035,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0139,
+            "pot": 1988.48,
+            "tok_por_j": 0.203
+          },
+          "args": [
+            50,
+            2048,
+            "HBM3E",
+            12,
+            true,
+            100,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram2048|AMA|tf100|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.4417,
+            "T_liq_C": 39.413,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.587,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 562,
+            "asp": 66842,
+            "bom": 21702,
+            "mfg": 40105,
+            "potencia_w": 993,
+            "preco_usd": 83125,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5775,
+            "A_energia": 3.094,
+            "bits": 3998406672031.8066,
+            "custo_usd_mtok": 2.7274,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0386,
+            "pot": 1988.48,
+            "tok_por_j": 0.3128
+          },
+          "W2": {
+            "A_custo": 1.6392,
+            "A_energia": 3.2151,
+            "bits": 2089215066664.0767,
+            "custo_usd_mtok": 4.599,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0133,
+            "pot": 2982.72,
+            "tok_por_j": 0.1855
+          },
+          "W3": {
+            "A_custo": 1.3999,
+            "A_energia": 2.7457,
+            "bits": 1030195327246.615,
+            "custo_usd_mtok": 4.2035,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0139,
+            "pot": 1988.48,
+            "tok_por_j": 0.203
+          },
+          "args": [
+            50,
+            2048,
+            "HBM3E",
+            12,
+            true,
+            150,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram2048|AMA|tf150|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.6795,
+            "T_liq_C": 39.6483,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.3517,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 562,
+            "asp": 66842,
+            "bom": 21702,
+            "mfg": 40105,
+            "potencia_w": 993,
+            "preco_usd": 83125,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5726,
+            "A_energia": 3.1286,
+            "bits": 4040335077179.043,
+            "custo_usd_mtok": 2.7359,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0392,
+            "pot": 1953.28,
+            "tok_por_j": 0.3163
+          },
+          "W2": {
+            "A_custo": 1.6337,
+            "A_energia": 3.2502,
+            "bits": 2184893687079.2192,
+            "custo_usd_mtok": 4.6144,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.014,
+            "pot": 2929.92,
+            "tok_por_j": 0.1875
+          },
+          "W3": {
+            "A_custo": 1.3987,
+            "A_energia": 2.7827,
+            "bits": 1071344099668.2101,
+            "custo_usd_mtok": 4.2069,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0145,
+            "pot": 1953.28,
+            "tok_por_j": 0.2057
+          },
+          "args": [
+            50,
+            1024,
+            "HBM3E",
+            12,
+            true,
+            100,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram1024|AMA|tf100|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.4417,
+            "T_liq_C": 39.413,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.587,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 306,
+            "asp": 66584,
+            "bom": 21571,
+            "mfg": 39951,
+            "potencia_w": 971,
+            "preco_usd": 82854,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5726,
+            "A_energia": 3.1286,
+            "bits": 4040335077179.043,
+            "custo_usd_mtok": 2.7359,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0392,
+            "pot": 1953.28,
+            "tok_por_j": 0.3163
+          },
+          "W2": {
+            "A_custo": 1.6337,
+            "A_energia": 3.2502,
+            "bits": 2184891784613.7207,
+            "custo_usd_mtok": 4.6144,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.014,
+            "pot": 2929.92,
+            "tok_por_j": 0.1875
+          },
+          "W3": {
+            "A_custo": 1.3987,
+            "A_energia": 2.7827,
+            "bits": 1071344099668.2101,
+            "custo_usd_mtok": 4.2069,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0145,
+            "pot": 1953.28,
+            "tok_por_j": 0.2057
+          },
+          "args": [
+            50,
+            1024,
+            "HBM3E",
+            12,
+            true,
+            150,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram1024|AMA|tf150|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.6795,
+            "T_liq_C": 39.6483,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.3517,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 306,
+            "asp": 66584,
+            "bom": 21571,
+            "mfg": 39951,
+            "potencia_w": 971,
+            "preco_usd": 82854,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5691,
+            "A_energia": 3.1569,
+            "bits": 4071504586760.416,
+            "custo_usd_mtok": 2.742,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0396,
+            "pot": 1926.08,
+            "tok_por_j": 0.3192
+          },
+          "W2": {
+            "A_custo": 1.6297,
+            "A_energia": 3.279,
+            "bits": 2256004648657.7065,
+            "custo_usd_mtok": 4.6256,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0145,
+            "pot": 2889.12,
+            "tok_por_j": 0.1892
+          },
+          "W3": {
+            "A_custo": 1.3979,
+            "A_energia": 2.8126,
+            "bits": 1102222399362.9048,
+            "custo_usd_mtok": 4.2093,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.015,
+            "pot": 1926.08,
+            "tok_por_j": 0.2079
+          },
+          "args": [
+            50,
+            256,
+            "HBM3E",
+            12,
+            true,
+            100,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram256|AMA|tf100|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.4417,
+            "T_liq_C": 39.413,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.587,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 114,
+            "asp": 66391,
+            "bom": 21472,
+            "mfg": 39835,
+            "potencia_w": 954,
+            "preco_usd": 82650,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5691,
+            "A_energia": 3.1569,
+            "bits": 4071504586760.416,
+            "custo_usd_mtok": 2.742,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0396,
+            "pot": 1926.08,
+            "tok_por_j": 0.3192
+          },
+          "W2": {
+            "A_custo": 1.6297,
+            "A_energia": 3.279,
+            "bits": 2256003296527.5137,
+            "custo_usd_mtok": 4.6256,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0145,
+            "pot": 2889.12,
+            "tok_por_j": 0.1892
+          },
+          "W3": {
+            "A_custo": 1.3979,
+            "A_energia": 2.8126,
+            "bits": 1102222399362.9048,
+            "custo_usd_mtok": 4.2093,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.015,
+            "pot": 1926.08,
+            "tok_por_j": 0.2079
+          },
+          "args": [
+            50,
+            256,
+            "HBM3E",
+            12,
+            true,
+            150,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram256|AMA|tf150|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.6795,
+            "T_liq_C": 39.6483,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.3517,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 114,
+            "asp": 66391,
+            "bom": 21472,
+            "mfg": 39835,
+            "potencia_w": 954,
+            "preco_usd": 82650,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5679,
+            "A_energia": 3.1675,
+            "bits": 4081841951467.284,
+            "custo_usd_mtok": 2.744,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0398,
+            "pot": 1916.48,
+            "tok_por_j": 0.3202
+          },
+          "W2": {
+            "A_custo": 1.6285,
+            "A_energia": 3.2897,
+            "bits": 2279576827504.958,
+            "custo_usd_mtok": 4.6293,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0147,
+            "pot": 2874.72,
+            "tok_por_j": 0.1898
+          },
+          "W3": {
+            "A_custo": 1.3977,
+            "A_energia": 2.8236,
+            "bits": 1112515424988.5796,
+            "custo_usd_mtok": 4.2101,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0151,
+            "pot": 1916.48,
+            "tok_por_j": 0.2087
+          },
+          "args": [
+            50,
+            0,
+            "HBM3E",
+            12,
+            true,
+            100,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram0|AMA|tf100|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.4417,
+            "T_liq_C": 39.413,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.587,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 50,
+            "asp": 66327,
+            "bom": 21439,
+            "mfg": 39796,
+            "potencia_w": 948,
+            "preco_usd": 82582,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5679,
+            "A_energia": 3.1675,
+            "bits": 4081841951467.284,
+            "custo_usd_mtok": 2.744,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0398,
+            "pot": 1916.48,
+            "tok_por_j": 0.3202
+          },
+          "W2": {
+            "A_custo": 1.6285,
+            "A_energia": 3.2897,
+            "bits": 2279575822829.0127,
+            "custo_usd_mtok": 4.6293,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0147,
+            "pot": 2874.72,
+            "tok_por_j": 0.1898
+          },
+          "W3": {
+            "A_custo": 1.3977,
+            "A_energia": 2.8236,
+            "bits": 1112515424988.5796,
+            "custo_usd_mtok": 4.2101,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0151,
+            "pot": 1916.48,
+            "tok_por_j": 0.2087
+          },
+          "args": [
+            50,
+            0,
+            "HBM3E",
+            12,
+            true,
+            150,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc50|sram0|AMA|tf150|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 39.6795,
+            "T_liq_C": 39.6483,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 1.8189,
+            "liquido": false,
+            "margem_C": 50.3517,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 50,
+            "asp": 66327,
+            "bom": 21439,
+            "mfg": 39796,
+            "potencia_w": 948,
+            "preco_usd": 82582,
+            "tf_fp4": 470,
+            "tpp": 1880
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5658,
+            "A_energia": 3.0628,
+            "bits": 4071503655208.329,
+            "custo_usd_mtok": 2.7477,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0396,
+            "pot": 1985.28,
+            "tok_por_j": 0.3096
+          },
+          "W2": {
+            "A_custo": 1.6264,
+            "A_energia": 3.1812,
+            "bits": 2256027643517.123,
+            "custo_usd_mtok": 4.6351,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0145,
+            "pot": 2977.92,
+            "tok_por_j": 0.1836
+          },
+          "W3": {
+            "A_custo": 1.3951,
+            "A_energia": 2.7287,
+            "bits": 1102222399362.9048,
+            "custo_usd_mtok": 4.218,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.015,
+            "pot": 1985.28,
+            "tok_por_j": 0.2017
+          },
+          "args": [
+            100,
+            256,
+            "HBM3E",
+            12,
+            true,
+            50,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc100|sram256|AMA|tf50|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 41.0228,
+            "T_liq_C": 40.9967,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 3.6378,
+            "liquido": false,
+            "margem_C": 49.0033,
+            "ok": true,
+            "p_logica_pilha_w": 22.2
+          },
+          "meta": {
+            "area_mm2": 164,
+            "asp": 66451,
+            "bom": 21503,
+            "mfg": 39871,
+            "potencia_w": 991,
+            "preco_usd": 82713,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 1.5658,
+            "A_energia": 3.0628,
+            "bits": 4071504586760.416,
+            "custo_usd_mtok": 2.7477,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.0396,
+            "pot": 1985.28,
+            "tok_por_j": 0.3096
+          },
+          "W2": {
+            "A_custo": 1.6264,
+            "A_energia": 3.1812,
+            "bits": 2256003296527.5137,
+            "custo_usd_mtok": 4.6351,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0145,
+            "pot": 2977.92,
+            "tok_por_j": 0.1836
+          },
+          "W3": {
+            "A_custo": 1.3951,
+            "A_energia": 2.7287,
+            "bits": 1102222399362.9048,
+            "custo_usd_mtok": 4.218,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 2,
+            "passo_s": 0.015,
+            "pot": 1985.28,
+            "tok_por_j": 0.2017
+          },
+          "args": [
+            100,
+            256,
+            "HBM3E",
+            12,
+            true,
+            100,
+            0.1,
+            8,
+            true
+          ],
+          "design": "HBM3Ex12|calc100|sram256|AMA|tf100|link0.1|lp8|mc",
+          "fisica": {
+            "T_ar_C": 41.2606,
+            "T_liq_C": 41.2319,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 3.6378,
+            "liquido": false,
+            "margem_C": 48.7681,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 164,
+            "asp": 66451,
+            "bom": 21503,
+            "mfg": 39871,
+            "potencia_w": 991,
+            "preco_usd": 82713,
+            "tf_fp4": 940,
+            "tpp": 3760
+          }
+        }
+      ],
+      "vencedor_com_ama_aqui": {
+        "W1": {
+          "A_custo": 1.4535,
+          "A_energia": 4.2827,
+          "bits": 864486615408.5396,
+          "custo_usd_mtok": 2.96,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 2,
+          "passo_s": 0.0041,
+          "pot": 2406.08,
+          "tok_por_j": 0.433
+        },
+        "W2": {
+          "A_custo": 1.0409,
+          "A_energia": 3.0671,
+          "bits": 119134870044.6226,
+          "custo_usd_mtok": 7.2421,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 3,
+          "passo_s": 0.0004,
+          "pot": 3609.12,
+          "tok_por_j": 0.177
+        },
+        "W3": {
+          "A_custo": 0.8561,
+          "A_energia": 2.5225,
+          "bits": 89952766506.8667,
+          "custo_usd_mtok": 6.8734,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 2,
+          "passo_s": 0.0006,
+          "pot": 2406.08,
+          "tok_por_j": 0.1865
+        },
+        "args": [
+          400,
+          2048,
+          "HBM4",
+          12,
+          true,
+          100,
+          0.4,
+          8,
+          true
+        ],
+        "design": "HBM4x12|calc400|sram2048|AMA|tf100|link0.4|lp8|mc",
+        "fisica": {
+          "T_ar_C": 52.174,
+          "T_liq_C": 52.1453,
+          "dens_w_mm2": 0.6768,
+          "lateral_C": 14.5512,
+          "liquido": true,
+          "margem_C": 37.8547,
+          "ok": true,
+          "p_logica_pilha_w": 29.4
+        },
+        "meta": {
+          "area_mm2": 912,
+          "asp": 128250,
+          "bom": 53020,
+          "mfg": 76950,
+          "potencia_w": 1254,
+          "preco_usd": 155660,
+          "tf_fp4": 3760,
+          "tpp": 15040
+        }
+      },
+      "vencedor_geral_aqui": {
+        "W1": {
+          "A_custo": 1.4535,
+          "A_energia": 4.2827,
+          "bits": 864486615408.5396,
+          "custo_usd_mtok": 2.96,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 2,
+          "passo_s": 0.0041,
+          "pot": 2406.08,
+          "tok_por_j": 0.433
+        },
+        "W2": {
+          "A_custo": 1.0409,
+          "A_energia": 3.0671,
+          "bits": 119134870044.6226,
+          "custo_usd_mtok": 7.2421,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 3,
+          "passo_s": 0.0004,
+          "pot": 3609.12,
+          "tok_por_j": 0.177
+        },
+        "W3": {
+          "A_custo": 0.8561,
+          "A_energia": 2.5225,
+          "bits": 89952766506.8667,
+          "custo_usd_mtok": 6.8734,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 2,
+          "passo_s": 0.0006,
+          "pot": 2406.08,
+          "tok_por_j": 0.1865
+        },
+        "args": [
+          400,
+          2048,
+          "HBM4",
+          12,
+          true,
+          100,
+          0.4,
+          8,
+          true
+        ],
+        "design": "HBM4x12|calc400|sram2048|AMA|tf100|link0.4|lp8|mc",
+        "fisica": {
+          "T_ar_C": 52.174,
+          "T_liq_C": 52.1453,
+          "dens_w_mm2": 0.6768,
+          "lateral_C": 14.5512,
+          "liquido": true,
+          "margem_C": 37.8547,
+          "ok": true,
+          "p_logica_pilha_w": 29.4
+        },
+        "meta": {
+          "area_mm2": 912,
+          "asp": 128250,
+          "bom": 53020,
+          "mfg": 76950,
+          "potencia_w": 1254,
+          "preco_usd": 155660,
+          "tf_fp4": 3760,
+          "tpp": 15040
+        }
+      }
+    },
+    "guardas": [],
+    "monte_carlo": {
+      "com_ama": {
+        "A_custo_p10_p50_p90": [
+          1.7088,
+          2.4098,
+          3.2417
+        ],
+        "A_energia_p10_p50_p90": [
+          3.4732,
+          4.835,
+          6.3125
+        ],
+        "design": "HBM4x12|calc400|sram2048|AMA|tf100|link0.4|lp8|mc",
+        "falha_fisica": 430,
+        "frac_passa_2x": 0.7263,
+        "frac_passa_3x": 0.1701,
+        "sobol_S1_A_custo": {
+          "Z": 0.3764,
+          "ama_k": 0.0187,
+          "eta": 0.0425,
+          "fator_eta": 0.1156,
+          "hbm4_usd_gb": 0.1476,
+          "premium": 0.0862,
+          "usd_link": 0.0142,
+          "volume": 0.014,
+          "y_mc": 0.0114,
+          "yield": 0.0493
+        },
+        "sobol_S1_A_energia": {
+          "Z": 0.4479,
+          "ama_k": 0.0219,
+          "ama_w": 0.0322,
+          "eta": 0.0537,
+          "fator_eta": 0.1331,
+          "p_infra_w": 0.0243,
+          "pj_flop": 0.0239,
+          "repasse": 0.0035,
+          "sram_w_mb": 0.0048,
+          "w_pilha": 0.168
+        },
+        "sorteios": 10000
+      },
+      "geral": {
+        "A_custo_p10_p50_p90": [
+          1.7105,
+          2.415,
+          3.2278
+        ],
+        "A_energia_p10_p50_p90": [
+          3.4774,
+          4.8273,
+          6.2765
+        ],
+        "design": "HBM4x12|calc400|sram2048|AMA|tf100|link0.4|lp8|mc",
+        "falha_fisica": 443,
+        "frac_passa_2x": 0.7262,
+        "frac_passa_3x": 0.167,
+        "sobol_S1_A_custo": {
+          "Z": 0.3803,
+          "ama_k": 0.0183,
+          "eta": 0.0565,
+          "fator_eta": 0.1136,
+          "hbm4_usd_gb": 0.1392,
+          "premium": 0.0845,
+          "usd_link": 0.0161,
+          "volume": 0.0145,
+          "y_mc": 0.0159,
+          "yield": 0.0483
+        },
+        "sobol_S1_A_energia": {
+          "Z": 0.4485,
+          "ama_k": 0.0224,
+          "ama_w": 0.0331,
+          "eta": 0.0629,
+          "fator_eta": 0.1309,
+          "p_infra_w": 0.0274,
+          "pj_flop": 0.0196,
+          "sram_mb_mm2": 0.0041,
+          "sram_w_mb": 0.0035,
+          "w_pilha": 0.1617
+        },
+        "sorteios": 10000
+      }
+    },
+    "nominal": {
+      "eliminados_fisica": 4320,
+      "gpus": {
+        "W1": {
+          "B300": [
+            11.613,
+            0.05,
+            12
+          ],
+          "H200": [
+            8.487,
+            0.0534,
+            23
+          ],
+          "MI355X": [
+            5.875,
+            0.0573,
+            12
+          ],
+          "MI455X_Helios": [
+            3.634,
+            0.1096,
+            5
+          ],
+          "Rubin_VR200": [
+            5.43,
+            0.0932,
+            5
+          ]
+        },
+        "W2": {
+          "B300": [
+            18.548,
+            0.0313,
+            10
+          ],
+          "H200": [
+            13.011,
+            0.0348,
+            17
+          ],
+          "MI355X": [
+            9.38,
+            0.0359,
+            10
+          ],
+          "MI455X_Helios": [
+            5.826,
+            0.0684,
+            5
+          ],
+          "Rubin_VR200": [
+            8.812,
+            0.0574,
+            7
+          ]
+        },
+        "W3": {
+          "B300": [
+            10.281,
+            0.0565,
+            4
+          ],
+          "H200": [
+            7.52,
+            0.0603,
+            8
+          ],
+          "MI355X": [
+            5.201,
+            0.0647,
+            4
+          ],
+          "MI455X_Helios": [
+            3.229,
+            0.1234,
+            3
+          ],
+          "Rubin_VR200": [
+            4.854,
+            0.1043,
+            4
+          ]
+        }
+      },
+      "melhor_com_ama": [
+        {
+          "W1": {
+            "A_custo": 4.333,
+            "A_energia": 7.7165,
+            "bits": 4437343617155.116,
+            "custo_usd_mtok": 0.8388,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0098,
+            "pot": 3292.32,
+            "tok_por_j": 0.8457
+          },
+          "W2": {
+            "A_custo": 4.3597,
+            "A_energia": 7.7641,
+            "bits": 4596608101234.861,
+            "custo_usd_mtok": 1.3363,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3292.32,
+            "tok_por_j": 0.5308
+          },
+          "W3": {
+            "A_custo": 4.1845,
+            "A_energia": 7.4521,
+            "bits": 4362512868074.914,
+            "custo_usd_mtok": 0.7716,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3292.32,
+            "tok_por_j": 0.9194
+          },
+          "ama_w_para_10C_folga": 40.0,
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            12,
+            true,
+            100,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram2048|AMA|tf100|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 51.8437,
+            "T_liq_C": 51.8186,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 38.1814,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 47460,
+            "bom": 22188,
+            "mfg": 28476,
+            "potencia_w": 1122,
+            "preco_usd": 69943,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.333,
+            "A_energia": 7.7165,
+            "bits": 4437343617155.116,
+            "custo_usd_mtok": 0.8388,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0098,
+            "pot": 3292.32,
+            "tok_por_j": 0.8457
+          },
+          "W2": {
+            "A_custo": 4.6439,
+            "A_energia": 8.2701,
+            "bits": 4028211521870.275,
+            "custo_usd_mtok": 1.2546,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0081,
+            "pot": 3292.32,
+            "tok_por_j": 0.5654
+          },
+          "W3": {
+            "A_custo": 4.1845,
+            "A_energia": 7.4521,
+            "bits": 4362512868074.914,
+            "custo_usd_mtok": 0.7716,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3292.32,
+            "tok_por_j": 0.9194
+          },
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram2048|AMA|tf150|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 47460,
+            "bom": 22188,
+            "mfg": 28476,
+            "potencia_w": 1122,
+            "preco_usd": 69943,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.3119,
+            "A_energia": 6.932,
+            "bits": 5426220540521.579,
+            "custo_usd_mtok": 0.8429,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0166,
+            "pot": 2700.0,
+            "tok_por_j": 0.7598
+          },
+          "W2": {
+            "A_custo": 4.4963,
+            "A_energia": 7.2284,
+            "bits": 2176510864585.3833,
+            "custo_usd_mtok": 1.2957,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0034,
+            "pot": 4500.0,
+            "tok_por_j": 0.4942
+          },
+          "W3": {
+            "A_custo": 4.1795,
+            "A_energia": 6.7192,
+            "bits": 5144770896686.777,
+            "custo_usd_mtok": 0.7725,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0161,
+            "pot": 2700.0,
+            "tok_por_j": 0.829
+          },
+          "args": [
+            200,
+            0,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc200|sram0|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 44.8059,
+            "T_liq_C": 44.7782,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 7.2756,
+            "liquido": false,
+            "margem_C": 45.2218,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 200,
+            "asp": 46886,
+            "bom": 21896,
+            "mfg": 28132,
+            "potencia_w": 875,
+            "preco_usd": 52687,
+            "tf_fp4": 1880,
+            "tpp": 7520
+          }
+        }
+      ],
+      "n_ok": 7488,
+      "top10": [
+        {
+          "W1": {
+            "A_custo": 4.333,
+            "A_energia": 7.7165,
+            "bits": 4437343617155.116,
+            "custo_usd_mtok": 0.8388,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0098,
+            "pot": 3292.32,
+            "tok_por_j": 0.8457
+          },
+          "W2": {
+            "A_custo": 4.3597,
+            "A_energia": 7.7641,
+            "bits": 4596608101234.861,
+            "custo_usd_mtok": 1.3363,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3292.32,
+            "tok_por_j": 0.5308
+          },
+          "W3": {
+            "A_custo": 4.1845,
+            "A_energia": 7.4521,
+            "bits": 4362512868074.914,
+            "custo_usd_mtok": 0.7716,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3292.32,
+            "tok_por_j": 0.9194
+          },
+          "ama_w_para_10C_folga": 40.0,
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            12,
+            true,
+            100,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram2048|AMA|tf100|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 51.8437,
+            "T_liq_C": 51.8186,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 38.1814,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 47460,
+            "bom": 22188,
+            "mfg": 28476,
+            "potencia_w": 1122,
+            "preco_usd": 69943,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.333,
+            "A_energia": 7.7165,
+            "bits": 4437343617155.116,
+            "custo_usd_mtok": 0.8388,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0098,
+            "pot": 3292.32,
+            "tok_por_j": 0.8457
+          },
+          "W2": {
+            "A_custo": 4.6439,
+            "A_energia": 8.2701,
+            "bits": 4028211521870.275,
+            "custo_usd_mtok": 1.2546,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0081,
+            "pot": 3292.32,
+            "tok_por_j": 0.5654
+          },
+          "W3": {
+            "A_custo": 4.1845,
+            "A_energia": 7.4521,
+            "bits": 4362512868074.914,
+            "custo_usd_mtok": 0.7716,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3292.32,
+            "tok_por_j": 0.9194
+          },
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram2048|AMA|tf150|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 47460,
+            "bom": 22188,
+            "mfg": 28476,
+            "potencia_w": 1122,
+            "preco_usd": 69943,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.3119,
+            "A_energia": 6.932,
+            "bits": 5426220540521.579,
+            "custo_usd_mtok": 0.8429,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0166,
+            "pot": 2700.0,
+            "tok_por_j": 0.7598
+          },
+          "W2": {
+            "A_custo": 4.4963,
+            "A_energia": 7.2284,
+            "bits": 2176510864585.3833,
+            "custo_usd_mtok": 1.2957,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0034,
+            "pot": 4500.0,
+            "tok_por_j": 0.4942
+          },
+          "W3": {
+            "A_custo": 4.1795,
+            "A_energia": 6.7192,
+            "bits": 5144770896686.777,
+            "custo_usd_mtok": 0.7725,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0161,
+            "pot": 2700.0,
+            "tok_por_j": 0.829
+          },
+          "args": [
+            200,
+            0,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc200|sram0|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 44.8059,
+            "T_liq_C": 44.7782,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 7.2756,
+            "liquido": false,
+            "margem_C": 45.2218,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 200,
+            "asp": 46886,
+            "bom": 21896,
+            "mfg": 28132,
+            "potencia_w": 875,
+            "preco_usd": 52687,
+            "tf_fp4": 1880,
+            "tpp": 7520
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.3071,
+            "A_energia": 6.8953,
+            "bits": 5420499271078.141,
+            "custo_usd_mtok": 0.8438,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0166,
+            "pot": 2714.4,
+            "tok_por_j": 0.7557
+          },
+          "W2": {
+            "A_custo": 4.4913,
+            "A_energia": 7.1901,
+            "bits": 2171749802964.0205,
+            "custo_usd_mtok": 1.2972,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0034,
+            "pot": 4524.0,
+            "tok_por_j": 0.4916
+          },
+          "W3": {
+            "A_custo": 4.1749,
+            "A_energia": 6.6835,
+            "bits": 5138990271819.72,
+            "custo_usd_mtok": 0.7734,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0161,
+            "pot": 2714.4,
+            "tok_por_j": 0.8246
+          },
+          "args": [
+            200,
+            256,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc200|sram256|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 44.8059,
+            "T_liq_C": 44.7782,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 7.2756,
+            "liquido": false,
+            "margem_C": 45.2218,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 264,
+            "asp": 46934,
+            "bom": 21920,
+            "mfg": 28160,
+            "potencia_w": 881,
+            "preco_usd": 52738,
+            "tf_fp4": 1880,
+            "tpp": 7520
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.3048,
+            "A_energia": 7.7648,
+            "bits": 4497692428873.475,
+            "custo_usd_mtok": 0.8443,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.01,
+            "pot": 3237.12,
+            "tok_por_j": 0.851
+          },
+          "W2": {
+            "A_custo": 4.3779,
+            "A_energia": 7.8965,
+            "bits": 4615005521797.043,
+            "custo_usd_mtok": 1.3308,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3237.12,
+            "tok_por_j": 0.5399
+          },
+          "W3": {
+            "A_custo": 4.1548,
+            "A_energia": 7.4942,
+            "bits": 4416850619356.733,
+            "custo_usd_mtok": 0.7771,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0101,
+            "pot": 3237.12,
+            "tok_por_j": 0.9246
+          },
+          "args": [
+            400,
+            1024,
+            "HBM4",
+            12,
+            true,
+            100,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram1024|AMA|tf100|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 51.8437,
+            "T_liq_C": 51.8186,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 38.1814,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 656,
+            "asp": 47267,
+            "bom": 22090,
+            "mfg": 28360,
+            "potencia_w": 1099,
+            "preco_usd": 69741,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.3048,
+            "A_energia": 7.7648,
+            "bits": 4497692428873.475,
+            "custo_usd_mtok": 0.8443,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.01,
+            "pot": 3237.12,
+            "tok_por_j": 0.851
+          },
+          "W2": {
+            "A_custo": 4.6246,
+            "A_energia": 8.3415,
+            "bits": 4123004424401.168,
+            "custo_usd_mtok": 1.2598,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0083,
+            "pot": 3237.12,
+            "tok_por_j": 0.5703
+          },
+          "W3": {
+            "A_custo": 4.1548,
+            "A_energia": 7.4942,
+            "bits": 4416850619356.733,
+            "custo_usd_mtok": 0.7771,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0101,
+            "pot": 3237.12,
+            "tok_por_j": 0.9246
+          },
+          "args": [
+            400,
+            1024,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram1024|AMA|tf150|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 656,
+            "asp": 47267,
+            "bom": 22090,
+            "mfg": 28360,
+            "potencia_w": 1099,
+            "preco_usd": 69741,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.2934,
+            "A_energia": 6.7991,
+            "bits": 5403335462747.824,
+            "custo_usd_mtok": 0.8465,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0166,
+            "pot": 2752.8,
+            "tok_por_j": 0.7452
+          },
+          "W2": {
+            "A_custo": 4.477,
+            "A_energia": 7.0898,
+            "bits": 2157466618099.9314,
+            "custo_usd_mtok": 1.3013,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0034,
+            "pot": 4588.0,
+            "tok_por_j": 0.4847
+          },
+          "W3": {
+            "A_custo": 4.1616,
+            "A_energia": 6.5903,
+            "bits": 5121648397218.548,
+            "custo_usd_mtok": 0.7758,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0161,
+            "pot": 2752.8,
+            "tok_por_j": 0.8131
+          },
+          "args": [
+            200,
+            1024,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc200|sram1024|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 44.8059,
+            "T_liq_C": 44.7782,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 7.2756,
+            "liquido": false,
+            "margem_C": 45.2218,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 456,
+            "asp": 47078,
+            "bom": 21994,
+            "mfg": 28247,
+            "potencia_w": 897,
+            "preco_usd": 52889,
+            "tf_fp4": 1880,
+            "tpp": 7520
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.2842,
+            "A_energia": 7.802,
+            "bits": 4542353780334.697,
+            "custo_usd_mtok": 0.8483,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0101,
+            "pot": 3196.32,
+            "tok_por_j": 0.8551
+          },
+          "W2": {
+            "A_custo": 4.3915,
+            "A_energia": 7.9973,
+            "bits": 4628803587218.679,
+            "custo_usd_mtok": 1.3267,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3196.32,
+            "tok_por_j": 0.5468
+          },
+          "W3": {
+            "A_custo": 4.1331,
+            "A_energia": 7.5267,
+            "bits": 4457090050190.162,
+            "custo_usd_mtok": 0.7812,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0103,
+            "pot": 3196.32,
+            "tok_por_j": 0.9286
+          },
+          "args": [
+            400,
+            256,
+            "HBM4",
+            12,
+            true,
+            100,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram256|AMA|tf100|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 51.8437,
+            "T_liq_C": 51.8186,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 38.1814,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 464,
+            "asp": 47123,
+            "bom": 22016,
+            "mfg": 28274,
+            "potencia_w": 1082,
+            "preco_usd": 69589,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.2842,
+            "A_energia": 7.802,
+            "bits": 4542353780334.697,
+            "custo_usd_mtok": 0.8483,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0101,
+            "pot": 3196.32,
+            "tok_por_j": 0.8551
+          },
+          "W2": {
+            "A_custo": 4.6105,
+            "A_energia": 8.3962,
+            "bits": 4193068766082.3057,
+            "custo_usd_mtok": 1.2636,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0085,
+            "pot": 3196.32,
+            "tok_por_j": 0.5741
+          },
+          "W3": {
+            "A_custo": 4.1331,
+            "A_energia": 7.5267,
+            "bits": 4457090050190.162,
+            "custo_usd_mtok": 0.7812,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0103,
+            "pot": 3196.32,
+            "tok_por_j": 0.9286
+          },
+          "args": [
+            400,
+            256,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram256|AMA|tf150|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 464,
+            "asp": 47123,
+            "bom": 22016,
+            "mfg": 28274,
+            "potencia_w": 1082,
+            "preco_usd": 69589,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 4.2772,
+            "A_energia": 7.8109,
+            "bits": 4557130033463.09,
+            "custo_usd_mtok": 0.8497,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0102,
+            "pot": 3184.32,
+            "tok_por_j": 0.8561
+          },
+          "W2": {
+            "A_custo": 4.3958,
+            "A_energia": 8.0275,
+            "bits": 4633402942359.224,
+            "custo_usd_mtok": 1.3254,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0099,
+            "pot": 3184.32,
+            "tok_por_j": 0.5489
+          },
+          "W3": {
+            "A_custo": 4.1258,
+            "A_energia": 7.5343,
+            "bits": 4470408197316.329,
+            "custo_usd_mtok": 0.7826,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0103,
+            "pot": 3184.32,
+            "tok_por_j": 0.9295
+          },
+          "args": [
+            400,
+            0,
+            "HBM4",
+            12,
+            true,
+            100,
+            0.4,
+            8,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram0|AMA|tf100|link0.4|lp8|mc",
+          "fisica": {
+            "T_ar_C": 51.8437,
+            "T_liq_C": 51.8186,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 38.1814,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 400,
+            "asp": 47075,
+            "bom": 21992,
+            "mfg": 28245,
+            "potencia_w": 1077,
+            "preco_usd": 69538,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        }
+      ]
+    },
+    "software_imaturo": {
+      "eliminados_fisica": 4320,
+      "gpus": {
+        "W1": {
+          "B300": [
+            11.613,
+            0.05,
+            12
+          ],
+          "H200": [
+            8.487,
+            0.0534,
+            23
+          ],
+          "MI355X": [
+            5.875,
+            0.0573,
+            12
+          ],
+          "MI455X_Helios": [
+            3.634,
+            0.1096,
+            5
+          ],
+          "Rubin_VR200": [
+            5.43,
+            0.0932,
+            5
+          ]
+        },
+        "W2": {
+          "B300": [
+            18.548,
+            0.0313,
+            10
+          ],
+          "H200": [
+            13.011,
+            0.0348,
+            17
+          ],
+          "MI355X": [
+            9.38,
+            0.0359,
+            10
+          ],
+          "MI455X_Helios": [
+            5.826,
+            0.0684,
+            5
+          ],
+          "Rubin_VR200": [
+            8.812,
+            0.0574,
+            7
+          ]
+        },
+        "W3": {
+          "B300": [
+            10.281,
+            0.0565,
+            4
+          ],
+          "H200": [
+            7.52,
+            0.0603,
+            8
+          ],
+          "MI355X": [
+            5.201,
+            0.0647,
+            4
+          ],
+          "MI455X_Helios": [
+            3.229,
+            0.1234,
+            3
+          ],
+          "Rubin_VR200": [
+            4.854,
+            0.1043,
+            4
+          ]
+        }
+      },
+      "melhor_com_ama": [
+        {
+          "W1": {
+            "A_custo": 3.2877,
+            "A_energia": 5.4601,
+            "bits": 5579411893638.035,
+            "custo_usd_mtok": 1.1054,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0188,
+            "pot": 3165.6,
+            "tok_por_j": 0.5984
+          },
+          "W2": {
+            "A_custo": 3.131,
+            "A_energia": 5.1998,
+            "bits": 3934590011125.731,
+            "custo_usd_mtok": 1.8608,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0079,
+            "pot": 5276.0,
+            "tok_por_j": 0.3555
+          },
+          "W3": {
+            "A_custo": 3.1352,
+            "A_energia": 5.2068,
+            "bits": 5287101671795.876,
+            "custo_usd_mtok": 1.0298,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0185,
+            "pot": 3165.6,
+            "tok_por_j": 0.6424
+          },
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram2048|AMA|tf150|link0.4|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 47460,
+            "bom": 22188,
+            "mfg": 28476,
+            "potencia_w": 1069,
+            "preco_usd": 61185,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.2654,
+            "A_energia": 5.4938,
+            "bits": 5629736504115.13,
+            "custo_usd_mtok": 1.113,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0191,
+            "pot": 3110.4,
+            "tok_por_j": 0.6021
+          },
+          "W2": {
+            "A_custo": 3.1017,
+            "A_energia": 5.2183,
+            "bits": 4094562186910.7646,
+            "custo_usd_mtok": 1.8783,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0083,
+            "pot": 5184.0,
+            "tok_por_j": 0.3568
+          },
+          "W3": {
+            "A_custo": 3.1122,
+            "A_energia": 5.236,
+            "bits": 5332701219071.431,
+            "custo_usd_mtok": 1.0374,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0188,
+            "pot": 3110.4,
+            "tok_por_j": 0.646
+          },
+          "args": [
+            400,
+            1024,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram1024|AMA|tf150|link0.4|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 656,
+            "asp": 47267,
+            "bom": 22090,
+            "mfg": 28360,
+            "potencia_w": 1046,
+            "preco_usd": 60983,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.094,
+            "A_energia": 4.6264,
+            "bits": 5943990892504.602,
+            "custo_usd_mtok": 1.1747,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0239,
+            "pot": 3165.6,
+            "tok_por_j": 0.5071
+          },
+          "W2": {
+            "A_custo": 3.1812,
+            "A_energia": 4.7568,
+            "bits": 4728735827083.277,
+            "custo_usd_mtok": 1.8314,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0105,
+            "pot": 5276.0,
+            "tok_por_j": 0.3252
+          },
+          "W3": {
+            "A_custo": 2.9073,
+            "A_energia": 4.3473,
+            "bits": 5594657983342.857,
+            "custo_usd_mtok": 1.1105,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0237,
+            "pot": 3165.6,
+            "tok_por_j": 0.5363
+          },
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram2048|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 47460,
+            "bom": 22188,
+            "mfg": 28476,
+            "potencia_w": 1069,
+            "preco_usd": 53291,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        }
+      ],
+      "n_ok": 7488,
+      "top10": [
+        {
+          "W1": {
+            "A_custo": 3.2877,
+            "A_energia": 5.4601,
+            "bits": 5579411893638.035,
+            "custo_usd_mtok": 1.1054,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0188,
+            "pot": 3165.6,
+            "tok_por_j": 0.5984
+          },
+          "W2": {
+            "A_custo": 3.131,
+            "A_energia": 5.1998,
+            "bits": 3934590011125.731,
+            "custo_usd_mtok": 1.8608,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0079,
+            "pot": 5276.0,
+            "tok_por_j": 0.3555
+          },
+          "W3": {
+            "A_custo": 3.1352,
+            "A_energia": 5.2068,
+            "bits": 5287101671795.876,
+            "custo_usd_mtok": 1.0298,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0185,
+            "pot": 3165.6,
+            "tok_por_j": 0.6424
+          },
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram2048|AMA|tf150|link0.4|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 47460,
+            "bom": 22188,
+            "mfg": 28476,
+            "potencia_w": 1069,
+            "preco_usd": 61185,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.2654,
+            "A_energia": 5.4938,
+            "bits": 5629736504115.13,
+            "custo_usd_mtok": 1.113,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0191,
+            "pot": 3110.4,
+            "tok_por_j": 0.6021
+          },
+          "W2": {
+            "A_custo": 3.1017,
+            "A_energia": 5.2183,
+            "bits": 4094562186910.7646,
+            "custo_usd_mtok": 1.8783,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0083,
+            "pot": 5184.0,
+            "tok_por_j": 0.3568
+          },
+          "W3": {
+            "A_custo": 3.1122,
+            "A_energia": 5.236,
+            "bits": 5332701219071.431,
+            "custo_usd_mtok": 1.0374,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0188,
+            "pot": 3110.4,
+            "tok_por_j": 0.646
+          },
+          "args": [
+            400,
+            1024,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram1024|AMA|tf150|link0.4|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 656,
+            "asp": 47267,
+            "bom": 22090,
+            "mfg": 28360,
+            "potencia_w": 1046,
+            "preco_usd": 60983,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.094,
+            "A_energia": 4.6264,
+            "bits": 5943990892504.602,
+            "custo_usd_mtok": 1.1747,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0239,
+            "pot": 3165.6,
+            "tok_por_j": 0.5071
+          },
+          "W2": {
+            "A_custo": 3.1812,
+            "A_energia": 4.7568,
+            "bits": 4728735827083.277,
+            "custo_usd_mtok": 1.8314,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0105,
+            "pot": 5276.0,
+            "tok_por_j": 0.3252
+          },
+          "W3": {
+            "A_custo": 2.9073,
+            "A_energia": 4.3473,
+            "bits": 5594657983342.857,
+            "custo_usd_mtok": 1.1105,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0237,
+            "pot": 3165.6,
+            "tok_por_j": 0.5363
+          },
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram2048|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 47460,
+            "bom": 22188,
+            "mfg": 28476,
+            "potencia_w": 1069,
+            "preco_usd": 53291,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.2491,
+            "A_energia": 5.5199,
+            "bits": 5667039950883.959,
+            "custo_usd_mtok": 1.1186,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0193,
+            "pot": 3069.6,
+            "tok_por_j": 0.605
+          },
+          "W2": {
+            "A_custo": 3.0805,
+            "A_energia": 5.2335,
+            "bits": 4211618597876.0435,
+            "custo_usd_mtok": 1.8912,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0086,
+            "pot": 5116.0,
+            "tok_por_j": 0.3578
+          },
+          "W3": {
+            "A_custo": 3.0954,
+            "A_energia": 5.2587,
+            "bits": 5366530456561.988,
+            "custo_usd_mtok": 1.0431,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0191,
+            "pot": 3069.6,
+            "tok_por_j": 0.6488
+          },
+          "args": [
+            400,
+            256,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram256|AMA|tf150|link0.4|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 464,
+            "asp": 47123,
+            "bom": 22016,
+            "mfg": 28274,
+            "potencia_w": 1029,
+            "preco_usd": 60831,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.0796,
+            "A_energia": 4.6627,
+            "bits": 5987003935905.02,
+            "custo_usd_mtok": 1.1801,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0242,
+            "pot": 3110.4,
+            "tok_por_j": 0.511
+          },
+          "W2": {
+            "A_custo": 3.1555,
+            "A_energia": 4.7775,
+            "bits": 4871253308912.531,
+            "custo_usd_mtok": 1.8463,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0109,
+            "pot": 5184.0,
+            "tok_por_j": 0.3266
+          },
+          "W3": {
+            "A_custo": 2.8929,
+            "A_energia": 4.3799,
+            "bits": 5633813030760.779,
+            "custo_usd_mtok": 1.1161,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.024,
+            "pot": 3110.4,
+            "tok_por_j": 0.5404
+          },
+          "args": [
+            400,
+            1024,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram1024|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 656,
+            "asp": 47267,
+            "bom": 22090,
+            "mfg": 28360,
+            "potencia_w": 1046,
+            "preco_usd": 53088,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.0743,
+            "A_energia": 4.0676,
+            "bits": 6014652147542.278,
+            "custo_usd_mtok": 1.1822,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 4,
+            "passo_s": 0.0253,
+            "pot": 3446.4,
+            "tok_por_j": 0.4458
+          },
+          "W2": {
+            "A_custo": 3.1457,
+            "A_energia": 4.1621,
+            "bits": 4701999669576.541,
+            "custo_usd_mtok": 1.852,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 7,
+            "passo_s": 0.0105,
+            "pot": 6031.2,
+            "tok_por_j": 0.2846
+          },
+          "W3": {
+            "A_custo": 2.8957,
+            "A_energia": 3.8313,
+            "bits": 5641761810619.313,
+            "custo_usd_mtok": 1.115,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 4,
+            "passo_s": 0.025,
+            "pot": 3446.4,
+            "tok_por_j": 0.4727
+          },
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            8,
+            true,
+            100,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x8|calc400|sram2048|AMA|tf100|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 51.8437,
+            "T_liq_C": 51.8186,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": false,
+            "margem_C": 38.1814,
+            "ok": true,
+            "p_logica_pilha_w": 29.4
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 33865,
+            "bom": 15255,
+            "mfg": 20319,
+            "potencia_w": 827,
+            "preco_usd": 38981,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.0743,
+            "A_energia": 4.0676,
+            "bits": 6014652147542.278,
+            "custo_usd_mtok": 1.1822,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 4,
+            "passo_s": 0.0253,
+            "pot": 3446.4,
+            "tok_por_j": 0.4458
+          },
+          "W2": {
+            "A_custo": 3.1457,
+            "A_energia": 4.1621,
+            "bits": 4701999419429.927,
+            "custo_usd_mtok": 1.852,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 7,
+            "passo_s": 0.0105,
+            "pot": 6031.2,
+            "tok_por_j": 0.2846
+          },
+          "W3": {
+            "A_custo": 2.8957,
+            "A_energia": 3.8313,
+            "bits": 5641761810619.313,
+            "custo_usd_mtok": 1.115,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 4,
+            "passo_s": 0.025,
+            "pot": 3446.4,
+            "tok_por_j": 0.4727
+          },
+          "args": [
+            400,
+            2048,
+            "HBM4",
+            8,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x8|calc400|sram2048|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": false,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 912,
+            "asp": 33865,
+            "bom": 15255,
+            "mfg": 20319,
+            "potencia_w": 827,
+            "preco_usd": 38981,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.2436,
+            "A_energia": 5.526,
+            "bits": 5679393019827.364,
+            "custo_usd_mtok": 1.1205,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0194,
+            "pot": 3057.6,
+            "tok_por_j": 0.6057
+          },
+          "W2": {
+            "A_custo": 3.0735,
+            "A_energia": 5.2362,
+            "bits": 4250107611331.04,
+            "custo_usd_mtok": 1.8956,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0087,
+            "pot": 5096.0,
+            "tok_por_j": 0.358
+          },
+          "W3": {
+            "A_custo": 3.0897,
+            "A_energia": 5.2638,
+            "bits": 5377738355623.3125,
+            "custo_usd_mtok": 1.045,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0191,
+            "pot": 3057.6,
+            "tok_por_j": 0.6494
+          },
+          "args": [
+            400,
+            0,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.4,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram0|AMA|tf150|link0.4|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 400,
+            "asp": 47075,
+            "bom": 21992,
+            "mfg": 28245,
+            "potencia_w": 1024,
+            "preco_usd": 60781,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.0691,
+            "A_energia": 4.6904,
+            "bits": 6018989572659.12,
+            "custo_usd_mtok": 1.1842,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0244,
+            "pot": 3069.6,
+            "tok_por_j": 0.5141
+          },
+          "W2": {
+            "A_custo": 3.137,
+            "A_energia": 4.7941,
+            "bits": 4975704450632.124,
+            "custo_usd_mtok": 1.8572,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0112,
+            "pot": 5116.0,
+            "tok_por_j": 0.3278
+          },
+          "W3": {
+            "A_custo": 2.8823,
+            "A_energia": 4.4049,
+            "bits": 5662958619160.736,
+            "custo_usd_mtok": 1.1202,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0243,
+            "pot": 3069.6,
+            "tok_por_j": 0.5435
+          },
+          "args": [
+            400,
+            256,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram256|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 464,
+            "asp": 47123,
+            "bom": 22016,
+            "mfg": 28274,
+            "potencia_w": 1029,
+            "preco_usd": 52936,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        },
+        {
+          "W1": {
+            "A_custo": 3.0655,
+            "A_energia": 4.6975,
+            "bits": 6029600537026.009,
+            "custo_usd_mtok": 1.1856,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0245,
+            "pot": 3057.6,
+            "tok_por_j": 0.5149
+          },
+          "W2": {
+            "A_custo": 3.1307,
+            "A_energia": 4.7975,
+            "bits": 5010077436287.324,
+            "custo_usd_mtok": 1.8609,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 5,
+            "passo_s": 0.0113,
+            "pot": 5096.0,
+            "tok_por_j": 0.328
+          },
+          "W3": {
+            "A_custo": 2.8787,
+            "A_energia": 4.4112,
+            "bits": 5672632824404.954,
+            "custo_usd_mtok": 1.1216,
+            "gpu_custo": "MI455X_Helios",
+            "gpu_energia": "MI455X_Helios",
+            "n": 3,
+            "passo_s": 0.0243,
+            "pot": 3057.6,
+            "tok_por_j": 0.5442
+          },
+          "args": [
+            400,
+            0,
+            "HBM4",
+            12,
+            true,
+            150,
+            0.1,
+            0,
+            true
+          ],
+          "design": "HBM4x12|calc400|sram0|AMA|tf150|link0.1|lp0|mc",
+          "fisica": {
+            "T_ar_C": 52.0815,
+            "T_liq_C": 52.0538,
+            "dens_w_mm2": 0.6768,
+            "lateral_C": 14.5512,
+            "liquido": true,
+            "margem_C": 37.9462,
+            "ok": true,
+            "p_logica_pilha_w": 36.6
+          },
+          "meta": {
+            "area_mm2": 400,
+            "asp": 47075,
+            "bom": 21992,
+            "mfg": 28245,
+            "potencia_w": 1024,
+            "preco_usd": 52886,
+            "tf_fp4": 3760,
+            "tpp": 15040
+          }
+        }
+      ],
+      "vencedor_com_ama_aqui": {
+        "W1": {
+          "A_custo": 2.6307,
+          "A_energia": 4.685,
+          "bits": 5836607073348.537,
+          "custo_usd_mtok": 1.3815,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 3,
+          "passo_s": 0.0222,
+          "pot": 3292.32,
+          "tok_por_j": 0.5135
+        },
+        "W2": {
+          "A_custo": 2.6058,
+          "A_energia": 4.6406,
+          "bits": 6305864464414.975,
+          "custo_usd_mtok": 2.2358,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 4,
+          "passo_s": 0.0177,
+          "pot": 4389.76,
+          "tok_por_j": 0.3173
+        },
+        "W3": {
+          "A_custo": 2.6026,
+          "A_energia": 4.6349,
+          "bits": 5425612400172.858,
+          "custo_usd_mtok": 1.2406,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 3,
+          "passo_s": 0.0206,
+          "pot": 3292.32,
+          "tok_por_j": 0.5718
+        },
+        "args": [
+          400,
+          2048,
+          "HBM4",
+          12,
+          true,
+          100,
+          0.4,
+          8,
+          true
+        ],
+        "design": "HBM4x12|calc400|sram2048|AMA|tf100|link0.4|lp8|mc",
+        "fisica": {
+          "T_ar_C": 51.8437,
+          "T_liq_C": 51.8186,
+          "dens_w_mm2": 0.6768,
+          "lateral_C": 14.5512,
+          "liquido": true,
+          "margem_C": 38.1814,
+          "ok": true,
+          "p_logica_pilha_w": 29.4
+        },
+        "meta": {
+          "area_mm2": 912,
+          "asp": 47460,
+          "bom": 22188,
+          "mfg": 28476,
+          "potencia_w": 1122,
+          "preco_usd": 69943,
+          "tf_fp4": 3760,
+          "tpp": 15040
+        }
+      },
+      "vencedor_geral_aqui": {
+        "W1": {
+          "A_custo": 2.6307,
+          "A_energia": 4.685,
+          "bits": 5836607073348.537,
+          "custo_usd_mtok": 1.3815,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 3,
+          "passo_s": 0.0222,
+          "pot": 3292.32,
+          "tok_por_j": 0.5135
+        },
+        "W2": {
+          "A_custo": 2.6058,
+          "A_energia": 4.6406,
+          "bits": 6305864464414.975,
+          "custo_usd_mtok": 2.2358,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 4,
+          "passo_s": 0.0177,
+          "pot": 4389.76,
+          "tok_por_j": 0.3173
+        },
+        "W3": {
+          "A_custo": 2.6026,
+          "A_energia": 4.6349,
+          "bits": 5425612400172.858,
+          "custo_usd_mtok": 1.2406,
+          "gpu_custo": "MI455X_Helios",
+          "gpu_energia": "MI455X_Helios",
+          "n": 3,
+          "passo_s": 0.0206,
+          "pot": 3292.32,
+          "tok_por_j": 0.5718
+        },
+        "args": [
+          400,
+          2048,
+          "HBM4",
+          12,
+          true,
+          100,
+          0.4,
+          8,
+          true
+        ],
+        "design": "HBM4x12|calc400|sram2048|AMA|tf100|link0.4|lp8|mc",
+        "fisica": {
+          "T_ar_C": 51.8437,
+          "T_liq_C": 51.8186,
+          "dens_w_mm2": 0.6768,
+          "lateral_C": 14.5512,
+          "liquido": true,
+          "margem_C": 38.1814,
+          "ok": true,
+          "p_logica_pilha_w": 29.4
+        },
+        "meta": {
+          "area_mm2": 912,
+          "asp": 47460,
+          "bom": 22188,
+          "mfg": 28476,
+          "potencia_w": 1122,
+          "preco_usd": 69943,
+          "tf_fp4": 3760,
+          "tpp": 15040
+        }
+      }
+    },
+    "veredito": {
+      "com_ama": {
+        "adverso": 1.041,
+        "classe": "B_ZONA_CINZA",
+        "imaturo": 2.606,
+        "mc_frac": 0.1701,
+        "nominal": 4.333
+      },
+      "geral": {
+        "adverso": 1.041,
+        "classe": "B_ZONA_CINZA",
+        "imaturo": 2.606,
+        "mc_frac": 0.167,
+        "nominal": 4.333
+      }
+    }
+  },
+  "outputs_sha256": "9c821242bc643c5f818d889a00235a7591ca2a3ed06d52c3e750c5467e145b6f",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 187.837382,
+  "seed": 20261126
+}

@@ -16,3 +16,8 @@ antes de todo veredito. O erro não pode voltar sem a CI ficar vermelha.
 O cálculo de Sobol ordenava pares (x, y); com x constante, a ordem virava a de y e o índice dava ~0,97 para
 variáveis que nem variam. Correção: pular entradas constantes/não numéricas e ordenar só por x.
 Check permanente: tests/test_sobol.py. Os resultados C002/C002L foram re-rodados como -r1; os originais ficam guardados.
+
+## L8 — cenário adverso assimétrico (C002, 25/11/2026)
+No adverso "memória cara", só a nossa HBM encarecia; as GPUs usam a mesma HBM e ficavam com preço de tabela.
+Correção (C003): a alta de preço é repassada às GPUs por um fator de repasse (0,25–1,0, nominal 0,5).
+Check permanente: tests/test_simetria_memoria.py.
