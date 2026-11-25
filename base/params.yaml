@@ -87,3 +87,8 @@ memoria_commodity:
      fonte: "https://wccftech.com/mobile-dram-prices-expected-to-increase-by-100-quarter-over-quarter-as-long-term-agreements-now-getting-signed-at-prices-as-high-as-21-gb/",
      nota: "contratos LTA entre US$7,8 e 21/GB; módulo LPDDR5 ~US$19,3–19,8/GB no 2T26"}
   gddr7_usd_gb: {nominal: 15.0, low: 10.0, high: 25.0, unidade: US$/GB, rotulo: HIPÓTESE, critico: true, nota: "sem fonte direta"}
+
+# ---- Revisão r1 (achada na revisão adversarial da C001b, antes de qualquer alerta) ----
+infra_energia:
+  p_infra_w_por_acel: {nominal: 250, low: 150, high: 400, unidade: W, rotulo: ESTIMADO,
+     nota: "CPU, RAM, placa de rede e ventilação do servidor + fatia do switch, por acelerador. Aplicado a quem NÃO tem preço/potência de rack (nós, MI355X, H200)"}

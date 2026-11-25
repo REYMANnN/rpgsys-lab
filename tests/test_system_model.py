@@ -31,3 +31,11 @@ def test_simetria_mesma_eta_para_todos():
     q = dict(p); q["eta"] = p["eta"] * 2
     g = gpus(C)[0]
     assert avaliar(g, wl, q).passo_s < avaliar(g, wl, p).passo_s
+
+
+def test_simetria_energia_de_infra_entra_para_quem_nao_tem_preco_de_rack():
+    q = dict(p); q["p_infra_w"] = 250.0
+    g = next(x for x in gpus(C) if x.nome == "MI355X")
+    assert avaliar(g, wl, q).tok_por_j < avaliar(g, wl, dict(p, p_infra_w=0.0)).tok_por_j
+    r = next(x for x in gpus(C) if x.nome == "Rubin_VR200")
+    assert avaliar(r, wl, q).tok_por_j == avaliar(r, wl, dict(p, p_infra_w=0.0)).tok_por_j

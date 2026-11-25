@@ -1,0 +1,93 @@
+{
+  "commit": "c650e2df5b1f76638eaa146c1ab2683cbd1e0dbe",
+  "inputs_sha256": "95ac38fc2b5a9c6e156f6f082d22cb3e70ff4687fd492bcb7fb553ef846a0530",
+  "job": "MED001",
+  "outputs": {
+    "gaia": {
+      "L_out": {
+        "media": 180.6362,
+        "mediana": 101,
+        "n": 1377,
+        "p90": 369,
+        "p99": 1399
+      },
+      "Z_faixa_media": {
+        "high": 4.3839,
+        "low": 3.1434,
+        "metodo": "IC95 bootstrap por sessão"
+      },
+      "Z_media_por_modelo": {
+        "claude-sonnet-4-6": 3.7152
+      },
+      "Z_s": {
+        "media": 3.7152,
+        "mediana": 2.1824,
+        "n": 1283,
+        "p90": 6.5715,
+        "p99": 31.4844
+      },
+      "sessoes": 94,
+      "workload": "W2"
+    },
+    "swebench": {
+      "L_out": {
+        "media": 212.2129,
+        "mediana": 102,
+        "n": 23356,
+        "p90": 534,
+        "p99": 1248
+      },
+      "Z_faixa_media": {
+        "high": 2.282,
+        "low": 0.6896,
+        "metodo": "min/max entre modelos"
+      },
+      "Z_media_por_modelo": {
+        "claude-sonnet-4-6": 0.9856,
+        "deepseek-v3.1": 0.6896,
+        "minimax-m2.5": 2.282
+      },
+      "Z_s": {
+        "media": 1.9883,
+        "mediana": 0.7063,
+        "n": 22691,
+        "p90": 1.3125,
+        "p99": 10.2203
+      },
+      "sessoes": 665,
+      "workload": "W1"
+    },
+    "wildclaw": {
+      "L_out": {
+        "media": 338.3469,
+        "mediana": 145,
+        "n": 147,
+        "p90": 614,
+        "p99": 2727
+      },
+      "Z_faixa_media": {
+        "high": 4.6465,
+        "low": 0.9668,
+        "metodo": "IC95 bootstrap por sessão"
+      },
+      "Z_media_por_modelo": {
+        "claude-opus-4-6": 2.6099
+      },
+      "Z_s": {
+        "media": 2.6099,
+        "mediana": 0.1537,
+        "n": 139,
+        "p90": 8.1704,
+        "p99": 30.1
+      },
+      "sessoes": 8,
+      "workload": "W3"
+    }
+  },
+  "outputs_sha256": "bb5e1369648780251594fb7b5042027fb1bc5815771657ed290b4bb554e171f2",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 0.172178,
+  "seed": 20261125
+}

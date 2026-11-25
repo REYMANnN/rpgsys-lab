@@ -80,9 +80,10 @@ def avaliar(d: Disp, wl: dict, p: dict, n_max_mult: int = 6) -> Resultado:
         if t > slo:
             continue
         tok_s = B / t
-        p_media = n * d.potencia_w * p["atividade"]
+        p_slot = d.potencia_w + (0.0 if d.inclui_infra else p.get("p_infra_w", 0.0))
+        p_media = n * p_slot * p["atividade"]
         extra_infra = 0.0 if d.inclui_infra else (p["c_host"] / 8 + p["c_net"] + p["c_rack"] / 8 + d.potencia_w * p["c_pdu"])
-        capex = n * (d.preco_usd + extra_infra + d.potencia_w * p["c_cool"])
+        capex = n * (d.preco_usd + extra_infra + p_slot * p["c_cool"])
         opex = p_media / 1000 * p["H"] * p["p_kwh"] * p["pue"]
         tco = capex + opex
         tokens = tok_s * p["H"] * 3600

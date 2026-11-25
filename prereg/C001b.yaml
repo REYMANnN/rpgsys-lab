@@ -1,0 +1,13 @@
+# PRÉ-REGISTRO C001b — idêntico à C001 (mesmos critérios, concorrentes, espaço
+# de designs, cenário adverso e semente), EXCETO:
+id: C001b
+data: 2026-11-25
+base: prereg/C001.yaml (critérios herdados sem alteração)
+mudancas:
+  - "Z e L_out nominais de W1, W2, W3 passam aos valores MEDIDOS em results/MED001.json (base/workloads_med001.yaml)"
+  - "Monte Carlo de Z em W1: triangular(low=0,6896 [MED001 mínimo entre modelos], moda=1,9883 [MED001 média], high=16,8 [TraceLab, uso real com ferramentas longas])"
+  - "L_out no Monte Carlo fixo no valor medido de W1 (212,2)"
+nao_muda: "cenário adverso usa os mesmos Z adversos da C001 (10 / 15 / 40 s), para isolar o efeito da medição"
+leitura: >
+  A C001 continua REPROVADA e registrada. A C001b responde: com o tempo de
+  espera e o tamanho de resposta medidos, o veredito muda?

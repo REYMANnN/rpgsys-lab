@@ -27,7 +27,7 @@ FAIXAS = {  # chave do dicionário p -> caminho no params.yaml (para Monte Carlo
     "nre": ("empresa", "nre_usd"), "volume": ("empresa", "volume_placas"), "software": ("empresa", "software_usd"),
     "tf_mm2": ("projeto", "tf_fp4_por_mm2"), "pj_flop": ("projeto", "pj_por_flop_fp4"), "sram_mb_mm2": ("projeto", "sram_mb_por_mm2"),
     "sram_w_mb": ("projeto", "sram_w_por_mb"), "ama_k": ("projeto", "ama_k_banda_interna"), "ama_tf": ("projeto", "ama_tf_fp8_por_pilha"),
-    "ama_w": ("projeto", "ama_w_logica_por_pilha"), "atividade": ("projeto", "atividade_media"), "eta": ("projeto", "eta_sistema"),
+    "ama_w": ("projeto", "ama_w_logica_por_pilha"), "p_infra_w": ("infra_energia", "p_infra_w_por_acel"), "atividade": ("projeto", "atividade_media"), "eta": ("projeto", "eta_sistema"),
 }
 
 
@@ -53,13 +53,18 @@ def sorteio(P, rng):
     return p
 
 
-def workloads(Wy, cenario):
+def workloads(Wy, cenario, overlay=None):
     out = {}
     for k in ("W1", "W2", "W3"):
         w = Wy["workloads"][k]
         ctx = sum(int(c) * f for c, f in w["ctx_dist"].items())
         Z = w["z_think_s"]["adverso"] if cenario == "adverso" else w["z_think_s"]["nominal"]
-        out[k] = dict(D=w["demanda_agentes"]["nominal"], ctx=ctx, Z=Z, L_out=w["l_out_tokens"]["nominal"],
+        L = w["l_out_tokens"]["nominal"]
+        if overlay:
+            L = overlay[k]["l_out_tokens"]["nominal"]
+            if cenario != "adverso":
+                Z = overlay[k]["z_think_s"]["nominal"]
+        out[k] = dict(D=w["demanda_agentes"]["nominal"], ctx=ctx, Z=Z, L_out=L,
                       slo=w["slo_tbt_p95_s"]["nominal"])
     return out
 
@@ -115,7 +120,7 @@ def campanha(inputs, seed):
     res = {}
     for cen in ("nominal", "adverso"):
         p = params_nominais(P) if cen == "nominal" else adverso(params_nominais(P))
-        wls = workloads(Wy, cen)
+        wls = workloads(Wy, cen, inputs.get("overlay"))
         refs = {w: melhor_gpu(gs, wl, p) for w, wl in wls.items()}
         gpu_tab = {w: {k: (round(r.custo_usd_mtok, 3), round(r.tok_por_j, 3), r.n) if r.ok else None
                        for k, r in refs[w][2].items()} for w in wls}
@@ -136,8 +141,9 @@ def campanha(inputs, seed):
     amostras = []
     for _ in range(N):
         p = sorteio(P, rng)
-        wls = {"W1": workloads(Wy, "nominal")["W1"]}
-        p["Z"] = wls["W1"]["Z"] = rng.triangular(0.5, 30.0, 3.0)
+        wls = {"W1": workloads(Wy, "nominal", inputs.get("overlay"))["W1"]}
+        z_lo, z_hi, z_mode = inputs.get("z_mc", (0.5, 30.0, 3.0))
+        p["Z"] = wls["W1"]["Z"] = rng.triangular(z_lo, z_hi, z_mode)
         refs = {"W1": melhor_gpu(gs, wls["W1"], p)}
         o = avaliar_design(P_mem, p, args, wls, refs, False)
         if o and o.get("W1"):
@@ -154,7 +160,7 @@ def campanha(inputs, seed):
     t1 = nom["top10"][0]
     res["controles"] = {}
     p = params_nominais(P)
-    wls = workloads(Wy, "nominal")
+    wls = workloads(Wy, "nominal", inputs.get("overlay"))
     g = gs[0]
     r = avaliar(g, wls["W1"], p)
     res["controles"]["positivo_gpu_vs_ela_mesma"] = round(r.custo_usd_mtok / avaliar(g, wls["W1"], p).custo_usd_mtok, 6)
@@ -221,11 +227,16 @@ def _arred(x):
 
 
 if __name__ == "__main__":
-    assert prereg_travado("C001"), "pré-registro C001 alterado"
     mc_n = int(sys.argv[1]) if len(sys.argv) > 1 else 10000
+    camp = sys.argv[2] if len(sys.argv) > 2 else "C001"
+    assert prereg_travado("C001") and prereg_travado(camp), "pré-registro alterado"
     inputs = {"params": load("params.yaml"), "workloads": load("workloads.yaml"),
               "competitors": load("competitors.yaml"), "mc_n": mc_n}
-    man = run_job("C001", lambda i, s: _arred(campanha(i, s)), inputs, seed=20261125)
+    if camp == "C001b":
+        inputs["overlay"] = load("workloads_med001.yaml")
+        inputs["z_mc"] = (0.6896, 16.8, 1.9883)
+    man = run_job(camp, lambda i, s: _arred(campanha(i, s)), inputs, seed=20261125)
     (ROOT / "results").mkdir(exist_ok=True)
-    (ROOT / "results" / f"C001_mc{mc_n}.json").write_text(man.to_json(), encoding="utf-8")
+    rev = sys.argv[3] if len(sys.argv) > 3 else ""
+    (ROOT / "results" / f"{camp}{rev}_mc{mc_n}.json").write_text(man.to_json(), encoding="utf-8")
     print(json.dumps(man.outputs["veredito"], indent=2))

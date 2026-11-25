@@ -66,3 +66,30 @@ Arquivo: `results/C001_mc10000.json` (hash de saída no manifesto).
 - Controle negativo: a mesma placa sem a lógica junto da memória fica em 0,92x;
   a lógica é o que cria a vantagem. Controle positivo: 1,000.
 - Limite de exportação (TPP < 4.800): não muda o melhor design (TPP 1.880).
+
+## MED001 — tempo de espera e tamanho de resposta medidos
+
+`results/MED001.json` (dados: `data/lmcache_timing.parquet`, extraídos de
+DiscoPosse/lmcache-agentic-traces por `jobs/extract_med001.py`).
+
+| | Z médio medido | Z assumido na C001 | resposta média medida | assumida |
+|---|---|---|---|---|
+| W1 código (665 sessões) | 1,99 s | 3,0 s | 212 tokens | 40 |
+| W2 pesquisa (94 sessões) | 3,72 s | 5,0 s | 181 tokens | 40 |
+| W3 empresa (8 sessões, fraco) | 2,61 s | 20 s | 338 tokens | 40 |
+
+## Correção r1 e campanhas -r1
+
+Ver `CORRECOES.md`. Energia de servidor/rede passou a entrar de forma simétrica.
+
+| campanha | veredito | nominal (min W1/W2) | adverso | Monte Carlo >= 3x |
+|---|---|---|---|---|
+| C001 (original) | C | 1,91x | 0,92x | 0,26% |
+| C001-r1 | C | 1,87x | 0,92x | 0,15% |
+| C001b-r1 (Z e resposta medidos) | **B — zona cinza** | **4,78x** | 1,13x | 38,3% |
+
+C001b-r1, melhor design: 12 pilhas HBM4 com atenção no base die (AMA),
+200 mm² de cálculo, 2 GB de SRAM. W1: custo 5,14x, energia 8,09x. Dentro do
+limite de exportação (TPP < 4.800): 8 pilhas HBM4 + AMA, custo 4,09x,
+energia 6,94x. Maior incerteza: Z (54% da variância do custo); preço da HBM4 (17%).
+Controle negativo (mesma placa sem AMA): 2,17x — não passa no critério A.

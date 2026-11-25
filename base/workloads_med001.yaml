@@ -1,0 +1,15 @@
+# Sobreposição medida (MED001) — usada pela C001b. A C001 continua usando
+# base/workloads.yaml sem alteração, para continuar reproduzível.
+fonte: results/MED001.json (DiscoPosse/lmcache-agentic-traces, pre_gap e output_length)
+W1:
+  z_think_s: {nominal: 1.9883, low: 0.6896, high: 2.282, rotulo: MEDIDO, nota: "swebench, 22.691 intervalos, 665 sessões, 3 modelos"}
+  l_out_tokens: {nominal: 212.2, rotulo: MEDIDO}
+W2:
+  z_think_s: {nominal: 3.7152, low: 3.1434, high: 4.3839, rotulo: MEDIDO, nota: "gaia, 1.283 intervalos, 94 sessões, 1 modelo"}
+  l_out_tokens: {nominal: 180.6, rotulo: MEDIDO}
+W3:
+  z_think_s: {nominal: 2.6099, low: 0.9668, high: 4.6465, rotulo: MEDIDO, nota: "wildclaw, só 8 sessões: amostra fraca"}
+  l_out_tokens: {nominal: 338.3, rotulo: MEDIDO}
+referencia_independente:
+  tracelab_latencia_media_ferramenta_s: {nominal: 16.8, rotulo: PUBLICADO, fonte: "https://arxiv.org/pdf/2606.30560",
+     nota: "Claude Code e Codex em uso real; ferramentas longas (build/teste) puxam a média para cima"}
