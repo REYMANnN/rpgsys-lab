@@ -1,0 +1,25 @@
+# PRÉ-REGISTRO MED001 — medição do tempo de espera Z e do tamanho de saída L_out.
+# Escrito ANTES de baixar os dados brutos. Só as estatísticas resumidas do
+# cartão do dataset (mediana 0,71 s, média 2,08 s, p95 3,73 s, geral) foram lidas.
+id: MED001
+data: 2026-11-25
+fonte_primaria:
+  dataset: DiscoPosse/lmcache-agentic-traces (Hugging Face)
+  url: https://huggingface.co/datasets/DiscoPosse/lmcache-agentic-traces
+  campo_Z: "pre_gap = segundos entre o último token da resposta N-1 e o envio do pedido N (tempo de ferramenta/espera, sem inferência)"
+  campo_L_out: output_length
+metodo:
+  - "descartar a 1ª iteração de cada sessão (pre_gap = 0 por definição)"
+  - "fonte da sessão = prefixo do session_id antes de '__'"
+  - "W1 (código) <- swebench; W2 (pesquisa) <- gaia; W3 (empresa) <- wildclaw"
+  - "estatística que entra no modelo: MÉDIA de Z e de L_out por fonte (o modelo de população fechada depende da média)"
+  - "faixa low/high: menor e maior média entre os modelos de IA da mesma fonte; se houver só um modelo, IC 95% por bootstrap (2.000 reamostragens de sessões, semente 20261125)"
+  - "também relatar mediana, p90, p99 e nº de iterações"
+saida: results/MED001.json
+uso: >
+  O resultado atualiza base/workloads.yaml com rótulo MEDIDO. A C001 NÃO é
+  reaberta nem reinterpretada: roda-se uma campanha nova, C001b, idêntica à
+  C001 exceto pelos parâmetros medidos, e as duas ficam lado a lado.
+limites_conhecidos:
+  - "traces de benchmarks automatizados: ferramentas rápidas e sem humano no loop; produção real pode ter Z maior"
+  - "tempo ocioso do usuário entre tarefas não está no pre_gap"
