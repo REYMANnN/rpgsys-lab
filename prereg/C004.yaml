@@ -1,0 +1,22 @@
+# PRÉ-REGISTRO C004 — treino, compactação e conversa curta; uma placa ou duas. Escrito antes de rodar.
+id: C004
+data: 2026-11-25
+cargas:
+  W1_W2: "agente de contexto longo (MED001), como na C003"
+  WK: "tráfego real Kimi (MED002): 1.024 sessões, contexto 8.596, resposta 182, espera 2,91 s"
+  T1_pretreino: "Qwen3-235B-A22B em FP8: 6 x 22e9 FLOP/token; memória 16 B/parâmetro (pesos, gradientes, Adam) x 1,2"
+  T2_destilacao: "professor Qwen3-235B-A22B (inferência FP8, 2 x 22e9) + aluno 8B denso treinando (6 x 8e9); memória 235 GB + 8e9 x 16 B, x 1,2"
+calibracao_treino:
+  ponto: "Llama 3.1 405B FP8 em 576 H100: MFU 42,71% (NVIDIA NGC DGXC)"
+  fonte: "https://catalog.ngc.nvidia.com/orgs/nvidia/teams/dgxc-benchmarking/resources/llama31-405b-dgxc-benchmarking-b"
+  uso: "MFU 0,427 para todos (simetria); rede de referência da calibração 0,9 TB/s (NVLink H100); quem tem rede mais lenta paga a diferença, metade sobreposta ao cálculo"
+treino_modelo: "tempo por token = cálculo/(n x pico FP8 x MFU) + 0,5 x penalidade de rede; custo = TCO / tokens; energia = potência x atividade 0,9 x PUE / tokens/s; n = menor que cabe, até 4x"
+espaco: "C003 + área de cálculo 800 e 1200 mm² por placa"
+mistura: {W1: 0.20, W2: 0.20, WK: 0.30, T1: 0.15, T2: 0.15}
+nota_por_carga: "min(vantagem de custo, vantagem de energia) contra a melhor GPU daquela carga"
+nota_da_mistura: "média geométrica ponderada das notas por carga"
+perguntas:
+  - "melhor placa para cada carga e quanto ela ganha (ou perde)"
+  - "melhor placa ÚNICA para a mistura"
+  - "melhor PAR (uma de inferência + uma de cálculo; cada carga usa a melhor das duas) e quanto o par ganha sobre a única"
+cenarios: {nominal: "", software_imaturo: "nosso eta e nossa MFU x 0,6"}

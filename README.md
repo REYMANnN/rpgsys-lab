@@ -153,3 +153,18 @@ Vencedora: HBM4×12 + AMA (100 TFLOP/s por pilha) + 8 LPDDR5X para sessões ocio
 | SW001–SW003 | Qwen3-0.6B real gerando com a atenção no simulador: int8 por cabeça reprova (79,5%); K por canal (sem mudar o RTL) iguala o FP8 que as GPUs usam (96,8% vs 96,5% top-1; perplexidade −1,3% vs +0,2%) |
 | MED002 tráfego real | Kimi/Mooncake, 23.608 pedidos: espera mediana 2,9 s, contexto médio 8,6 mil tokens; nesse contexto curto a vantagem cai para ~1,5x custo / 2,7x energia — a placa é para agentes de contexto longo |
 | G17 | `python reproduzir.py` confere tudo por hash |
+
+## C004 (25/11/2026) — treino, compactação, conversa curta; uma placa ou duas
+
+| Carga | Melhor placa nossa vs melhor GPU (MI455X) — custo / energia |
+|---|---|
+| Agente contexto longo (W1) | 4,8x / 8,0x |
+| Conversa curta real (Kimi) | 2,8x / 4,6x (placa nova: cálculo 800 mm², SRAM 256 MB, AMA leve) |
+| Pré-treino 235B | **0,44x / 0,50x (perde)** |
+| Destilação 235B -> 8B | **0,50x / 0,46x (perde)** |
+| Placa única para a mistura | nota 1,55 (inferência 2,5–4,5x; treino 0,25–0,34x) |
+| Par (inferência + cálculo) | nota 1,82 (+18%), mas a de cálculo continua perdendo no treino |
+
+Leitura: a vantagem da AMA é na geração com memória longa. Treino e destilação são cálculo bruto + muita memória;
+aí pesam o preço por FLOP, a rede e a infraestrutura por placa, e as GPUs de 3 nm ganham. Sensibilidade com densidade
+de 3 nm (L14): treino 0,62x — ainda perde.

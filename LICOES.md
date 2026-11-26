@@ -42,3 +42,8 @@ Correção: reproduzir.py compara o hash das saídas sem campos voláteis (lista
 lab/arquitetura.py divide a potência do encapsulamento inteiro (1.204 W) por 0,75 V = 1.605 A. As pilhas HBM têm trilhos
 próprios; o trilho do núcleo de cálculo carrega ~370 W (~500 A). A PI001-r1 reprovou com o trilho único; o próximo passo
 é a rede de alimentação por trilho (núcleo, base da AMA, DRAM), registrada antes de rodar.
+## L14 — densidade de cálculo de geração antiga num projeto de 3 nm (C004, aberto)
+tf_fp4_por_mm2 = 9,4 veio do B300 (4 nm), mas o nosso silício é custeado como 3 nm e os rivais (Rubin, MI455X) são 3 nm.
+Isso pesa contra nós onde o cálculo manda (treino). Sensibilidade exploratória (declarada, não pré-registrada):
+com 15–20 TFLOP/s/mm² o treino melhora de 0,44x para 0,48–0,62x, ainda perdendo. Próximo passo: medir a densidade
+3 nm com fonte (área de die do Rubin/MI455X) e trocar o parâmetro por registro.
