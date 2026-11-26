@@ -21,3 +21,16 @@ Check permanente: tests/test_sobol.py. Os resultados C002/C002L foram re-rodados
 No adverso "memória cara", só a nossa HBM encarecia; as GPUs usam a mesma HBM e ficavam com preço de tabela.
 Correção (C003): a alta de preço é repassada às GPUs por um fator de repasse (0,25–1,0, nominal 0,5).
 Check permanente: tests/test_simetria_memoria.py.
+
+## L9 — tabela (ROM) vira estado livre na prova formal (G10, 25/11/2026)
+A tabela da exponencial estava como Array de constantes; o Amaranth/Yosys a trata como memória e, na k-indução,
+o conteúdo inicial não é garantido — o solver achou um contraexemplo com a tabela "errada". O hardware simulado
+estava certo, mas a prova não valia. Correção: tabela como lógica combinacional (case). Check permanente: a prova
+formal roda no CI (formal/ama_formal.py).
+## L10 — estouro do acumulador l acima de 65.536 tokens (G10)
+l tinha 32 bits; com contexto de 137 mil tokens e escores parecidos, l passa de 2^32. Corrigido para 40 bits e
+provado formalmente (P2: l <= tokens x 2^16 < 2^40 para até 16 milhões de tokens).
+## L11 — k-indução da pista da AMA não fecha (G10, aberto)
+A verificação limitada (BMC) a partir do reset passa; a k-indução (depth 3 e 8) devolve contraexemplos com estados
+inalcançáveis cujos sinais intermediários no VCD não batem com a lógica (a tabela isolada foi verificada e está certa).
+Hipótese: estado escondido do domínio de clock/reset no RTLIL. Até fechar, o placar conta G10 como parcial.

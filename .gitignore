@@ -5,3 +5,7 @@ manifest_*.json
 .env
 *.toml.secret
 .secrets/
+sintese/orfs/
+formal/ama/
+formal/ama.il
+formal/ama.sby

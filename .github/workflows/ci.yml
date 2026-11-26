@@ -58,3 +58,37 @@ jobs:
         with:
           name: manifest-modal
           path: manifest_modal.json
+
+  rtl_formal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install amaranth amaranth-yosys yowasp-yosys z3-solver pyyaml pytest
+      - run: python -m pytest -q tests/test_rtl_ama.py
+      - run: python formal/ama_formal.py
+
+  sintese_asap7:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install amaranth amaranth-yosys pyyaml
+      - run: python sintese/gerar_verilog.py
+      - run: docker pull openroad/orfs:latest
+      - run: |
+          docker run --rm -v ${{ github.workspace }}/sintese:/work openroad/orfs:latest bash -c \
+            "source /OpenROAD-flow-scripts/env.sh && make -C /OpenROAD-flow-scripts/flow DESIGN_CONFIG=/work/config.mk WORK_HOME=/work/orfs" 2>&1 | tail -80
+      - run: sudo chown -R $USER sintese/orfs && python sintese/extrair.py sintese/orfs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sintese-asap7
+          path: |
+            results/G11_sintese.json
+            sintese/orfs/reports
+            sintese/orfs/results/asap7/ama_pista/base/6_final.gds
+            sintese/orfs/logs
