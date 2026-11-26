@@ -1,0 +1,9 @@
+# PRÉ-REGISTRO SW003 — controle que faltou na SW001/SW002 (declarado: escrito depois de ver SW002 reprovar por pouco
+# no top-1 com perplexidade MELHOR que a referência). Pergunta: o limiar de 97% é razoável? Para isso, mede-se o que
+# as GPUs fazem hoje: cache KV em FP8 (E4M3) com escala por cabeça, atenção comum.
+id: SW003
+data: 2026-11-25
+braco_controle_fp8: "K e V em FP8 E4M3 (escala por cabeça medida no prompt x1,25), atenção sdpa em FP32"
+comparacao: "AMA braço A e B (SW002) contra o controle FP8, mesmos textos e tokens"
+criterio_nao_inferioridade: "AMA aprovada se top-1 >= top-1(FP8) - 1,0 p.p. E perplexidade_rel <= perplexidade_rel(FP8) + 1,0 p.p."
+nota: "SW001 e SW002 continuam REPROVADAS no critério absoluto delas; este é um critério novo, de comparação justa"

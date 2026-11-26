@@ -142,3 +142,14 @@ Vencedora: HBM4×12 + AMA (100 TFLOP/s por pilha) + 8 LPDDR5X para sessões ocio
 | Software imaturo (60%) | 2,6× custo · 4,7× energia |
 | Monte Carlo 10k | ≥3×: 16,7% · ≥2×: 72,6% · mediana custo 2,4×, energia 4,8× · falha térmica 4,4% |
 | Veredito | **B (zona cinza)** |
+
+## Rodada 25/11 noite — estresse, planta, RTL, software, tráfego real
+
+| Item | Resultado |
+|---|---|
+| S001 estresse (12 fatores) | só 2 quebram sozinhos o ">= 2x": espera do agente >= 16,8 s e nosso software a 40%; 60 de 66 duplas seguem >= 2x; tempestade moderada 1,8x custo / 4,5x energia; severa 0,75x / 2,7x |
+| G09 planta AMA-P1 | 2 chips de cálculo 33 x 23 mm + 12 HBM4E/AMA em CoWoS-L 71,5 x 47 mm; 1.252 W por placa; correção: 4,25x custo / 7,05x energia |
+| G10 RTL | pista da AMA em Amaranth: bit a bit com a referência; BMC formal de 8 ciclos (CI); 2 bugs achados e corrigidos (L9, L10) |
+| SW001–SW003 | Qwen3-0.6B real gerando com a atenção no simulador: int8 por cabeça reprova (79,5%); K por canal (sem mudar o RTL) iguala o FP8 que as GPUs usam (96,8% vs 96,5% top-1; perplexidade −1,3% vs +0,2%) |
+| MED002 tráfego real | Kimi/Mooncake, 23.608 pedidos: espera mediana 2,9 s, contexto médio 8,6 mil tokens; nesse contexto curto a vantagem cai para ~1,5x custo / 2,7x energia — a placa é para agentes de contexto longo |
+| G17 | `python reproduzir.py` confere tudo por hash |

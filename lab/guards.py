@@ -12,7 +12,11 @@ class GuardaFalhou(RuntimeError):
 
 
 def salvar_resultado(caminho: Path, texto: str) -> None:
-    """L5: resultado é imutável."""
+    """L5: resultado é imutável. Com LAB_REPRO_DIR, grava a reprodução lá (para comparar hashes)."""
+    import os
+    if os.environ.get("LAB_REPRO_DIR"):
+        caminho = Path(os.environ["LAB_REPRO_DIR"]) / caminho.name
+        caminho.parent.mkdir(parents=True, exist_ok=True)
     if caminho.exists():
         raise GuardaFalhou(f"{caminho} já existe; use novo sufixo de revisão (L5)")
     caminho.write_text(texto, encoding="utf-8")

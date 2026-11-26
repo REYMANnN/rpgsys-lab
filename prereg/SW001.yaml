@@ -1,0 +1,13 @@
+# PRÉ-REGISTRO SW001 — um modelo real (Qwen3-0.6B, PyTorch/transformers) gerando com a atenção de decodificação
+# executada no simulador bit a bit da AMA (sw/ama_numpy.py == rtl/ama_pista.py). Escrito antes de rodar.
+id: SW001
+data: 2026-11-25
+modelo: "Qwen/Qwen3-0.6B (pesos oficiais, BF16->FP32 na CPU)"
+o_que_roda_na_AMA: "toda atenção de decodificação (1 token por vez): q·K, softmax em linha e soma ponderada de V, em int8 + ponto fixo"
+o_que_nao: "pré-preenchimento do prompt (atenção comum) e a divisão final O/l (no chip de cálculo, em FP32)"
+quantizacao: "K e V int8 simétricos, escala fixa por camada e cabeça KV medida no prompt (x1,25 de margem, satura); q int8 por cabeça a cada passo"
+texto: "3 trechos fixos (português, inglês, código), prompt 128 tokens + 128 tokens avaliados com teacher forcing"
+metricas: [concordancia_top1, kl_medio, perplexidade_rel]
+criterio:
+  aprovado: "concordância top-1 >= 97% E aumento de perplexidade <= 3% (média dos 3 trechos)"
+  reprovado: "caso contrário"

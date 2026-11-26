@@ -1,0 +1,72 @@
+{
+  "commit": "5c9e8463f35f3f6a73e94ca8a0dad932543e94f9",
+  "inputs_sha256": "c2e6f18ca9c868a48898d664f1e0e6ebda476a9290d518b3c25904b71aeebbb6",
+  "job": "MED002",
+  "outputs": {
+    "entrada_media": 8596.2421,
+    "passo_15ms": {
+      "Z_media_s": 22.4989,
+      "Z_mediana_s": 2.955,
+      "Z_negativos": 4781,
+      "Z_p10_s": 2.056,
+      "Z_p90_s": 23.729,
+      "ctx_media_encadeados": 8717.5257,
+      "encadeados": 23030,
+      "frac_encadeados": 0.9755
+    },
+    "passo_30ms": {
+      "Z_media_s": 24.7685,
+      "Z_mediana_s": 2.91,
+      "Z_negativos": 6837,
+      "Z_p10_s": 2.039,
+      "Z_p90_s": 26.43,
+      "ctx_media_encadeados": 8717.5257,
+      "encadeados": 23030,
+      "frac_encadeados": 0.9755
+    },
+    "passo_60ms": {
+      "Z_media_s": 25.932,
+      "Z_mediana_s": 2.82,
+      "Z_negativos": 7931,
+      "Z_p10_s": 1.26,
+      "Z_p90_s": 26.821,
+      "ctx_media_encadeados": 8717.5257,
+      "encadeados": 23030,
+      "frac_encadeados": 0.9755
+    },
+    "pedidos": 23608,
+    "produto_C003_em_W_kimi": {
+      "Z_media": {
+        "A_custo": 1.0674,
+        "A_energia": 1.9009,
+        "Z_s": 24.7685,
+        "gpu_custo": "MI455X_Helios",
+        "gpu_energia": "MI455X_Helios",
+        "n": 1
+      },
+      "Z_mediana": {
+        "A_custo": 1.5383,
+        "A_energia": 2.7395,
+        "Z_s": 2.91,
+        "gpu_custo": "MI455X_Helios",
+        "gpu_energia": "MI455X_Helios",
+        "n": 1
+      },
+      "Z_p90": {
+        "A_custo": 1.0566,
+        "A_energia": 1.8817,
+        "Z_s": 26.43,
+        "gpu_custo": "MI455X_Helios",
+        "gpu_energia": "MI455X_Helios",
+        "n": 1
+      }
+    },
+    "saida_media": 182.1339
+  },
+  "outputs_sha256": "2059af6fbcbff0b86060430196e954e239bd0bde210db6fd48765cb1c07eb249",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 126.798322,
+  "seed": 0
+}

@@ -34,3 +34,7 @@ provado formalmente (P2: l <= tokens x 2^16 < 2^40 para até 16 milhões de toke
 A verificação limitada (BMC) a partir do reset passa; a k-indução (depth 3 e 8) devolve contraexemplos com estados
 inalcançáveis cujos sinais intermediários no VCD não batem com a lógica (a tabela isolada foi verificada e está certa).
 Hipótese: estado escondido do domínio de clock/reset no RTLIL. Até fechar, o placar conta G10 como parcial.
+
+## L12 — tempo de relógio dentro do resultado quebra a comparação de reprodução (G17)
+SW002A reproduziu idêntico em todas as métricas, mas o hash mudou porque o campo "segundos" estava nas saídas.
+Correção: reproduzir.py compara o hash das saídas sem campos voláteis (lista VOLATEIS).

@@ -1,0 +1,12 @@
+# PRÉ-REGISTRO MED002 — tempo de espera (Z), contexto e resposta medidos em TRÁFEGO REAL de produção
+# (Mooncake/Kimi, traço "tool and agent", 23.608 pedidos em 1 hora). Escrito antes de olhar a distribuição.
+id: MED002
+data: 2026-11-25
+reconstrucao_de_sessao: >
+  o pedido j continua o pedido i se: t_i < t_j; todos os blocos de i menos o último aparecem no início de j;
+  i tem >= 2 blocos; e entrada_j >= entrada_i + saida_i (o turno seguinte contém o anterior e a resposta).
+  Entre os candidatos, o mais recente.
+Z: "Z = (t_j - t_i) - saida_i x passo; passo = 30 ms (faixa 15–60 ms; reporta-se os três)"
+saidas: "Z mediana/média/p90, fração de pedidos encadeados, contexto médio dos encadeados, saída média"
+uso: "uma carga W_kimi (Z, contexto e L_out medidos) entra como 4ª carga; o produto C003 é reavaliado nela"
+criterio_do_produto: "consideravelmente melhor (>= 2x custo e energia) em W_kimi"

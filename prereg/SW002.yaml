@@ -1,0 +1,10 @@
+# PRÉ-REGISTRO SW002 — iteração de projeto DEPOIS da SW001 (reprovada: top-1 79,5%, perplexidade +6,9%).
+# Diagnóstico (sintético, declarado): o erro vem da quantização int8 de K/V, não da aritmética da AMA
+# (int8 sozinho: 7,63% de erro; int8 + AMA: 7,62%). Duas variantes, ambas registradas antes de rodar:
+id: SW002
+data: 2026-11-25
+herda_de: prereg/SW001.yaml (mesmo modelo, textos, métricas e critério)
+braco_A: "K com escala POR CANAL (fixa, medida no prompt x1,25), dobrada na consulta q antes de quantizar q -> nenhuma mudança no RTL"
+braco_B: "A + V com expoente por token (potência de 2, 0..15): o += (b*v) << e_t -> RTL ganha um deslocador por pista e o acumulador vai de 48 para 64 bits"
+criterio: "o mesmo da SW001 para cada braço (top-1 >= 97% E perplexidade <= +3%)"
+nota: "SW001 continua registrada como REPROVADA; esta é a versão 2 do esquema numérico"

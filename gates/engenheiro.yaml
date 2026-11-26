@@ -7,17 +7,17 @@ gates:
   - {id: G02, peso: 3,  nome: "Base de premissas rotulada, sem erro bloqueante", status: 1, evidencia: "base/params.yaml"}
   - {id: G03, peso: 2,  nome: "Erros viram verificações permanentes", status: 1, evidencia: "LICOES.md"}
   - {id: G04, peso: 6,  nome: "Modelo de desempenho calibrado contra GPUs reais", status: 1, evidencia: "results/CAL001.json"}
-  - {id: G05, peso: 5,  nome: "Carga agêntica medida (tempo de espera, tamanho de resposta)", status: 0.5, evidencia: "results/MED001.json", limite: "dados de benchmark; falta uso real em produção"}
-  - {id: G06, peso: 10, nome: "Campanha econômica com veredito A (>= 3x custo e energia, robusto)", status: 0.5, evidencia: "results/C003_mc10000.json", limite: "C003 = B (4,33x; adverso 1,04x puxado pelo tempo de espera adverso; MC 17% >=3x, 73% >=2x). C002 = B (4,15x nominal; adverso e Monte Carlo reprovam); C002L (correção lateral) = C (2,1x)"}
+  - {id: G05, peso: 5,  nome: "Carga agêntica medida (tempo de espera, tamanho de resposta)", status: 1, evidencia: "results/MED002.json", limite: "tráfego real Kimi/Mooncake (1 h, 23.608 pedidos); sessões reconstruídas por prefixo (heurística); 29% de intervalos negativos descartados"}
+  - {id: G06, peso: 10, nome: "Campanha econômica com veredito A (>= 3x custo e energia, robusto)", status: 0.5, evidencia: "results/C003_mc10000.json", limite: "MED002: em tráfego real de contexto curto (8,6 mil tokens) a vantagem cai para ~1,5x custo / 2,7x energia. C003 = B (4,33x; adverso 1,04x puxado pelo tempo de espera adverso; MC 17% >=3x, 73% >=2x). C002 = B (4,15x nominal; adverso e Monte Carlo reprovam); C002L (correção lateral) = C (2,1x)"}
   - {id: G07, peso: 6,  nome: "Térmico da pilha e do chip calibrado contra medição", status: 0.5, evidencia: "results/TCAL001.json", limite: "1 ponto ajustado (imec 3D) + 1 teste (imec 2,5D, erro -21,5 °C: falta calor lateral); simulação, não medição de bancada"}
   - {id: G08, peso: 6,  nome: "Finalista passa no térmico com margem", status: 0.5, evidencia: "results/C002-r1_mc10000.json", limite: "C003: com microcanais por baixo, 52 °C (62 °C com teto Microsoft); sem eles, 112 °C. Microcanal no interposer é HIPÓTESE de fabricação"}
-  - {id: G09, peso: 5,  nome: "Arquitetura do finalista especificada (blocos, interfaces, orçamento de área e potência)", status: 0, evidencia: null}
-  - {id: G10, peso: 10, nome: "RTL dos blocos críticos do finalista verificado (testes + prova formal)", status: 0, evidencia: null, limite: "RTL de atenção da AMA antiga existe, mas não é do finalista"}
+  - {id: G09, peso: 5,  nome: "Arquitetura do finalista especificada (blocos, interfaces, orçamento de área e potência)", status: 1, evidencia: "arquitetura/AMA-P1.yaml", limite: "planta checada por código (retículo, CoWoS-L 5,5x, 2 bordas, folgas, VRM, OAM); números de PHY/D2D/SerDes ESTIMADOS"}
+  - {id: G10, peso: 10, nome: "RTL dos blocos críticos do finalista verificado (testes + prova formal)", status: 0.5, evidencia: "rtl/ama_pista.py", limite: "bit a bit contra referência (150+ casos) e BMC formal de 8 ciclos no CI; k-indução não fecha (L11); só a pista, não o base die inteiro"}
   - {id: G11, peso: 8,  nome: "Síntese e layout em PDK aberto com timing fechado (blocos críticos)", status: 0, evidencia: null}
   - {id: G12, peso: 5,  nome: "Rede entre chips e escala modelada", status: 0.5, evidencia: "results/C002-r1_mc10000.json", limite: "penalidade de banda simétrica; topologia e congestionamento não simulados"}
-  - {id: G13, peso: 5,  nome: "Software: PyTorch/SGLang rodando sobre o simulador", status: 0, evidencia: null}
+  - {id: G13, peso: 5,  nome: "Software: PyTorch/SGLang rodando sobre o simulador", status: 0.5, evidencia: "results/SW002A.json", limite: "Qwen3-0.6B (PyTorch) gerando com a atenção no simulador bit a bit: não-inferior ao FP8 (SW003); sem SGLang/serviço"}
   - {id: G14, peso: 8,  nome: "Placa: esquemático, layout e DRC em formato padrão", status: 0, evidencia: null}
   - {id: G15, peso: 6,  nome: "Integridade de energia e de sinal da placa", status: 0, evidencia: null}
   - {id: G16, peso: 4,  nome: "Ar/líquido e rack simulados (CFD) e calibrados", status: 0, evidencia: null}
-  - {id: G17, peso: 4,  nome: "Pacote do engenheiro: um comando reproduz tudo", status: 0, evidencia: null}
+  - {id: G17, peso: 4,  nome: "Pacote do engenheiro: um comando reproduz tudo", status: 1, evidencia: "reproduzir.py", limite: "um comando confere todos os resultados vigentes por hash; formal no CI; históricos reproduzíveis no commit de origem"}
   - {id: G18, peso: 3,  nome: "Revisão por engenheiro independente", status: 0, evidencia: null}
