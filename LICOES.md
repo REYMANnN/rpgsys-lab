@@ -50,3 +50,7 @@ com 15–20 TFLOP/s/mm² o treino melhora de 0,44x para 0,48–0,62x, ainda perd
 ## L15 — teste passa na minha máquina e quebra no CI por dependência ausente (26/11/2026)
 tests/test_sw_ama.py importa numpy, que não estava em requirements.txt; o gancho local passou porque numpy existe aqui.
 Correção: numpy no requirements. Check permanente: o CI é a referência; nenhum resultado conta com CI vermelho.
+
+## L16 — a pista da AMA não fecha 1 GHz em ASAP7 (G11)
+Caminho crítico: multiplicação do acumulador (48 x 17 bits) e soma no mesmo ciclo -> 323 MHz. Próximo passo: dividir
+em 3 estágios de pipeline e refazer a síntese; até lá a G11 conta como parcial.

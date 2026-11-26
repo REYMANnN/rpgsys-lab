@@ -168,3 +168,9 @@ Vencedora: HBM4×12 + AMA (100 TFLOP/s por pilha) + 8 LPDDR5X para sessões ocio
 Leitura: a vantagem da AMA é na geração com memória longa. Treino e destilação são cálculo bruto + muita memória;
 aí pesam o preço por FLOP, a rede e a infraestrutura por placa, e as GPUs de 3 nm ganham. Sensibilidade com densidade
 de 3 nm (L14): treino 0,62x — ainda perde.
+
+## G11 — síntese física da pista da AMA (ASAP7, 26/11/2026)
+Roteada de ponta a ponta no OpenROAD: 5.479 µm² de células, DRC = 0, GDS em results/sintese_asap7/.
+Velocidade: 323 MHz (alvo 1 GHz não fechou: o multiplicador 48x17 do acumulador num ciclo só é o caminho crítico).
+Checagem cruzada com a economia: 100 TFLOP/s por pilha pedem ~9672 pistas = ~120 mm² em 7 nm
+(~1/3 disso em 3 nm, dentro de um base die de ~121 mm²) e ~17 W; o modelo econômico usava 14 W + 15 W fixos. Mesma ordem de grandeza.

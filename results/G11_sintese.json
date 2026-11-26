@@ -1,0 +1,14 @@
+{
+ "plataforma": "ASAP7 (7 nm preditivo, aberto)",
+ "alvo_periodo_ps": 1000,
+ "area_celulas_um2": 5479.09,
+ "area_die_um2": 12925.2,
+ "utilizacao": 0.440211,
+ "setup_wns_ps": -2094.95,
+ "hold_wns_ps": 19.0602,
+ "fmax_mhz": 323.107,
+ "potencia_w_no_alvo": 0.00541858,
+ "queda_ir_pior_v": 0.00321736,
+ "drc_violacoes": 0,
+ "gds": "results/sintese_asap7/6_final.gds.gz"
+}
