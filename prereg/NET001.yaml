@@ -1,0 +1,11 @@
+# PRÉ-REGISTRO NET001 — rede entre placas (G12). Escrito antes de rodar.
+id: NET001
+data: 2026-11-25
+pergunta: "a penalidade de rede usada nas campanhas (só banda, relativa a 1,8 TB/s) subestima o tempo real?"
+simulacao: >
+  fluxo por enlace, passo a passo do decode: para cada camada MoE (94), um all-to-all de ida e um de volta entre as n placas
+  do produto; cada placa manda B/n x top-8 x d_model bytes, distribuídos pelos destinos conforme o roteamento sorteado
+  (experts uniformes, 1.000 passos); tempo de cada all-to-all = max(bytes no enlace mais carregado / banda) + latência fixa.
+topologias: {chave_unica: "cada placa liga num switch com 0,4 TB/s", anel: "sem switch, 2 vizinhos, 0,2 TB/s cada"}
+latencia_por_all_to_all_us: {nossa: 3.0, faixa: [1.5, 6.0], gpu_nvlink: 1.0}
+criterio: "se o tempo simulado ficar <= 1,10 x o tempo do modelo das campanhas (passo inteiro, não só rede) a penalidade do modelo está validada; senão, refazer o produto com a penalidade simulada"

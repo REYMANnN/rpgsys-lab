@@ -1,0 +1,12 @@
+# PRÉ-REGISTRO PI001 — integridade de energia e de sinal, primeira passada (G15). Escrito antes de rodar.
+id: PI001
+data: 2026-11-25
+energia:
+  alvo: "impedância da rede de alimentação do núcleo <= Z_alvo = 5% x 0,75 V / (50% x corrente de pico) em 1 kHz–1 GHz"
+  queda_dc: "<= 3% de 0,75 V com a corrente de pico (placa + encapsulamento)"
+  transitorio: "degrau de 50% da corrente em 1 µs: mínimo de tensão >= 0,75 x (1 - 5%)"
+  modelo: "rede RLC concentrada: VRM (malha de controle), capacitores de massa, MLCC na placa, capacitores no encapsulamento e no die; valores ESTIMADOS de literatura, com faixa"
+sinal:
+  serdes_224g: "perda do canal (encapsulamento + trilha na placa + conector OAM) <= 32 dB em 56 GHz"
+  lpddr5x: "trilha <= 50 mm e skew dentro de 5 ps (LPDDR5X 8.533 MT/s)"
+criterio: "APROVADO se energia e sinal passam no nominal; ZONA_CINZA se passam só no otimista"

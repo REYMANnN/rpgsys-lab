@@ -1,0 +1,65 @@
+{
+  "commit": "ffb00e96a47718a1115eef4d3ba2877fe1840c6d",
+  "inputs_sha256": "4168081bcec00a500f73f99571391a9f8eeaf0ea79f4ae5d313a17928e19c610",
+  "job": "PI001",
+  "outputs": {
+    "corrente_pico_a": 1604.8000000000002,
+    "lpddr5x": {
+      "nota": "8 módulos a 4 por lado curto, <= 40 mm do encapsulamento (planta)",
+      "ok": true,
+      "trilha_mm": 40
+    },
+    "nominal": {
+      "dc_ok": false,
+      "f_do_pico_hz": 218221815.01385963,
+      "ok": false,
+      "queda_dc_pct": 4.279466666666668,
+      "transitorio_ok": false,
+      "v_min_transitorio": 0.7044334506890769,
+      "z_max_ohm": 0.0002793170137262383,
+      "z_ok": false
+    },
+    "otimista": {
+      "dc_ok": false,
+      "f_do_pico_hz": 4529950.841744241,
+      "ok": false,
+      "queda_dc_pct": 3.2096000000000005,
+      "transitorio_ok": true,
+      "v_min_transitorio": 0.7172822932870326,
+      "z_max_ohm": 0.0001727785985282336,
+      "z_ok": false
+    },
+    "pessimista": {
+      "dc_ok": false,
+      "f_do_pico_hz": 185686915.53430375,
+      "ok": false,
+      "queda_dc_pct": 6.419200000000001,
+      "transitorio_ok": false,
+      "v_min_transitorio": 0.6827202061272035,
+      "z_max_ohm": 0.0005868837482069398,
+      "z_ok": false
+    },
+    "serdes_224g": {
+      "nominal": {
+        "ok": true,
+        "perda_db": 19.8
+      },
+      "otimista": {
+        "ok": true,
+        "perda_db": 13.9
+      },
+      "pessimista": {
+        "ok": true,
+        "perda_db": 27.0
+      }
+    },
+    "veredito": "REPROVADO",
+    "z_alvo_ohm": 4.673479561316052e-05
+  },
+  "outputs_sha256": "d84567f36952c13175ce65d6e15906ee481f559a9697741cf2edf36e30d2650c",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 0.023123,
+  "seed": 0
+}

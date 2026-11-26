@@ -15,3 +15,8 @@ ser anterior à correção; só valem as rodadas -r1 de 10.000 sorteios.
 ## C002 (25/11/2026)
 - Antes da rodada de 10k houve um teste de 20 sorteios (apagado; declarado no prereg C002L).
 - C002 e C002L originais tinham índice de Sobol falso (L7). Re-rodados como -r1; vereditos e números de custo/energia idênticos.
+
+## PI001 (25/11/2026)
+- Um teste fora do repositório mostrou queda DC de 19–36%: o modelo não tinha o sensoriamento remoto do VRM (o regulador
+  mede a tensão no die e compensa a queda do caminho). Era erro de física do modelo, não de parâmetro. Corrigido
+  (linha de carga 0,015–0,030 mΩ, valores ESTIMADOS) e rodado como PI001-r1. Os critérios do prereg não mudaram.

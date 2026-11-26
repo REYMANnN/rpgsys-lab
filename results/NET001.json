@@ -1,0 +1,84 @@
+{
+  "commit": "ffb00e96a47718a1115eef4d3ba2877fe1840c6d",
+  "inputs_sha256": "952a01974bd1daa899888d4a17378346a4ce2c26ff73cd4701e59a386027bf8d",
+  "job": "NET001",
+  "outputs": {
+    "W1": {
+      "B_tokens_por_passo": 32.6917,
+      "anel_lat1.5": {
+        "passo_simulado_s": 0.0102,
+        "razao_vs_modelo": 1.0427,
+        "rede_por_passo_s": 0.0004
+      },
+      "anel_lat3.0": {
+        "passo_simulado_s": 0.0105,
+        "razao_vs_modelo": 1.0715,
+        "rede_por_passo_s": 0.0007
+      },
+      "anel_lat6.0": {
+        "passo_simulado_s": 0.011,
+        "razao_vs_modelo": 1.1292,
+        "rede_por_passo_s": 0.0013
+      },
+      "chave_unica_lat1.5": {
+        "passo_simulado_s": 0.0102,
+        "razao_vs_modelo": 1.0417,
+        "rede_por_passo_s": 0.0004
+      },
+      "chave_unica_lat3.0": {
+        "passo_simulado_s": 0.0105,
+        "razao_vs_modelo": 1.0705,
+        "rede_por_passo_s": 0.0007
+      },
+      "chave_unica_lat6.0": {
+        "passo_simulado_s": 0.011,
+        "razao_vs_modelo": 1.1282,
+        "rede_por_passo_s": 0.0013
+      },
+      "n_placas": 3,
+      "passo_modelo_s": 0.0098
+    },
+    "W2": {
+      "B_tokens_por_passo": 20.8564,
+      "anel_lat1.5": {
+        "passo_simulado_s": 0.0103,
+        "razao_vs_modelo": 1.0373,
+        "rede_por_passo_s": 0.0004
+      },
+      "anel_lat3.0": {
+        "passo_simulado_s": 0.0106,
+        "razao_vs_modelo": 1.0657,
+        "rede_por_passo_s": 0.0007
+      },
+      "anel_lat6.0": {
+        "passo_simulado_s": 0.0112,
+        "razao_vs_modelo": 1.1224,
+        "rede_por_passo_s": 0.0012
+      },
+      "chave_unica_lat1.5": {
+        "passo_simulado_s": 0.0103,
+        "razao_vs_modelo": 1.0366,
+        "rede_por_passo_s": 0.0004
+      },
+      "chave_unica_lat3.0": {
+        "passo_simulado_s": 0.0106,
+        "razao_vs_modelo": 1.065,
+        "rede_por_passo_s": 0.0006
+      },
+      "chave_unica_lat6.0": {
+        "passo_simulado_s": 0.0112,
+        "razao_vs_modelo": 1.1217,
+        "rede_por_passo_s": 0.0012
+      },
+      "n_placas": 3,
+      "passo_modelo_s": 0.0099
+    },
+    "veredito": "VALIDADO"
+  },
+  "outputs_sha256": "f8fe3466668eaecb5a234a4324a3562d07fb3563252fe38fb7cee4d148347191",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "runner": "local",
+  "seconds": 0.070312,
+  "seed": 1
+}

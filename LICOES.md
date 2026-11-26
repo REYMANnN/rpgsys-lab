@@ -38,3 +38,7 @@ Hipótese: estado escondido do domínio de clock/reset no RTLIL. Até fechar, o 
 ## L12 — tempo de relógio dentro do resultado quebra a comparação de reprodução (G17)
 SW002A reproduziu idêntico em todas as métricas, mas o hash mudou porque o campo "segundos" estava nas saídas.
 Correção: reproduzir.py compara o hash das saídas sem campos voláteis (lista VOLATEIS).
+## L13 — corrente do núcleo calculada como se o encapsulamento todo fosse um único trilho (G15, aberto)
+lab/arquitetura.py divide a potência do encapsulamento inteiro (1.204 W) por 0,75 V = 1.605 A. As pilhas HBM têm trilhos
+próprios; o trilho do núcleo de cálculo carrega ~370 W (~500 A). A PI001-r1 reprovou com o trilho único; o próximo passo
+é a rede de alimentação por trilho (núcleo, base da AMA, DRAM), registrada antes de rodar.
