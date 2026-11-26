@@ -47,3 +47,6 @@ tf_fp4_por_mm2 = 9,4 veio do B300 (4 nm), mas o nosso silício é custeado como 
 Isso pesa contra nós onde o cálculo manda (treino). Sensibilidade exploratória (declarada, não pré-registrada):
 com 15–20 TFLOP/s/mm² o treino melhora de 0,44x para 0,48–0,62x, ainda perdendo. Próximo passo: medir a densidade
 3 nm com fonte (área de die do Rubin/MI455X) e trocar o parâmetro por registro.
+## L15 — teste passa na minha máquina e quebra no CI por dependência ausente (26/11/2026)
+tests/test_sw_ama.py importa numpy, que não estava em requirements.txt; o gancho local passou porque numpy existe aqui.
+Correção: numpy no requirements. Check permanente: o CI é a referência; nenhum resultado conta com CI vermelho.
